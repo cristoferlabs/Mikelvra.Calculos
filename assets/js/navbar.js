@@ -134,11 +134,15 @@
 
     buildDrawerLinks(scope);
 
-    if (toggle) toggle.addEventListener("click", function () {
-      var drawer = document.getElementById("navDrawer");
-      if (drawer && !drawer.hidden) closeDrawer();
-      else openDrawer();
-    });
+    // En móvil el hamburger está oculto; el dock "Explorar" es el único trigger.
+    // Se deja el listener por si se reactiva en un breakpoint futuro.
+    if (toggle) {
+      toggle.addEventListener("click", function () {
+        var drawer = document.getElementById("navDrawer");
+        if (drawer && !drawer.hidden) closeDrawer();
+        else openDrawer();
+      });
+    }
     if (closeBtn) closeBtn.addEventListener("click", closeDrawer);
     if (backdrop) backdrop.addEventListener("click", closeDrawer);
     if (explore) explore.addEventListener("click", openDrawer);
@@ -150,6 +154,10 @@
       dock.querySelectorAll("a.dock-item").forEach(function (a) {
         if (a.getAttribute("data-path") === current) a.classList.add("active");
       });
+      if (/^\/generadores\//.test(current)) {
+        var papeles = dock.querySelector('a.dock-item[data-path="/generadores/carta-renuncia.html"]');
+        if (papeles) papeles.classList.add("active");
+      }
     }
 
     document.body.classList.add("has-bottom-dock");

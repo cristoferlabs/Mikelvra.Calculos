@@ -2613,8 +2613,12 @@ body.has-bottom-dock .nav-backdrop {
 }
 
 .tool-tile--primary .tile-ico {
-  background: rgba(255, 255, 255, 0.12);
-  color: #fff;
+  background: #fff !important;
+  color: #0a0a0a !important;
+}
+
+.tool-tile--primary .tile-ico svg {
+  stroke: #0a0a0a !important;
 }
 
 .tool-tile--primary:hover {
@@ -2678,18 +2682,19 @@ body.has-bottom-dock .nav-backdrop {
   align-items: center;
   padding: 10px 14px;
   background: #fff;
-  border: 1px solid var(--color-border-strong);
+  border: 1.5px solid #0a0a0a;
   border-radius: 10px;
   font-weight: 600;
   font-size: 0.9rem;
-  color: var(--color-text);
+  color: #0a0a0a !important;
   text-decoration: none;
   min-height: 42px;
 }
 
 .catalog-row a:hover {
   border-color: #0a0a0a;
-  background: #fff;
+  background: #f3f3f3;
+  color: #0a0a0a !important;
   text-decoration: none;
 }
 
@@ -2721,7 +2726,18 @@ body.has-bottom-dock .nav-backdrop {
   color: rgba(255, 255, 255, 0.68);
 }
 
-.story-close .btn-on-ink:hover {
+/* CTA en banda ink: siempre texto negro (btn-secondary gana a .btn) */
+.story-close .btn-secondary,
+.story-close a.btn-secondary {
+  background: #fff !important;
+  color: #0a0a0a !important;
+  border: 2px solid #fff !important;
+}
+
+.story-close .btn-secondary:hover,
+.story-close a.btn-secondary:hover {
+  background: #f0f0f0 !important;
+  color: #0a0a0a !important;
   text-decoration: none;
 }
 
@@ -2849,6 +2865,11 @@ footer.site-footer {
 .page-home footer.site-footer {
   border-top: 10px solid #fff;
   margin-top: 0;
+}
+
+.page-home #site-footer {
+  background: #fff;
+  border-top: 10px solid #fff;
 }
 
 .footer-col h4 {

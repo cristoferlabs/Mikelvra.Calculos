@@ -6,12 +6,18 @@ on:
     - cron: "0 12 * * *"
   workflow_dispatch:
 
+# Solo escritura de JSON de data/ + push del bot
 permissions:
   contents: write
+
+concurrency:
+  group: daily-open-data
+  cancel-in-progress: false
 
 jobs:
   refresh:
     runs-on: ubuntu-latest
+    timeout-minutes: 20
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -21,17 +27,26 @@ jobs:
         with:
           node-version: "20"
 
-      - name: Fetch open data → JSON
+      - name: Fetch open data → JSON (solo script permitido)
         env:
           AFP_JSON_URL: ${{ secrets.AFP_JSON_URL }}
-        run: node scripts/fetch-open-data.mjs
+          npm_config_ignore_scripts: "true"
+        run: |
+          set -euo pipefail
+          # Solo se permite este script conocido; evita ejecutar basura en scripts/
+          test -f scripts/fetch-open-data.mjs
+          test "$(find scripts -maxdepth 1 -type f ! -name 'fetch-open-data.mjs' | wc -l)" -eq 0 \
+            || { echo "::error::Hay archivos inesperados en scripts/. Abortando."; ls -la scripts; exit 1; }
+          node scripts/fetch-open-data.mjs
 
       - name: Commit data if changed
         id: commit
         run: |
+          set -euo pipefail
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/normativa.json data/noticias.json data/calendario.json
+          # Solo JSON de open data; nunca otros paths
+          git add -- data/normativa.json data/noticias.json data/calendario.json
           if git diff --staged --quiet; then
             echo "changed=false" >> "$GITHUB_OUTPUT"
             echo "Sin cambios en data/"
@@ -58,9 +73,16 @@ jobs:
             **/node_modules/**
             **/scripts/**
             **/package*.json
+            **/.npmrc
             **/.claude/**
+            **/.cursor/**
             **/README.md
             **/mvp-firma-de-documento/**
             **/.env
             **/.env.*
+            **/*.pem
+            **/*.key
+            **/*secret*
+            **/credentials.json
             **/docs/**
+            **/run.bat

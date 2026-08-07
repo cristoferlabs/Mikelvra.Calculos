@@ -1,10 +1,55 @@
+# Dependencias y basura local
 node_modules/
 .DS_Store
 Thumbs.db
 *.log
+npm-debug.log*
+yarn-error.log*
+.pnpm-store/
+
+# Secretos y credenciales (NUNCA subir)
 .env
 .env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+*.crt
+id_rsa
+id_rsa.*
+id_ed25519
+id_ed25519.*
+*.secret
+*secret*.json
+credentials.json
+service-account*.json
+**/secrets/
+.ftpconfig
+.ftp-deploy-sync-state.json
+.vscode/sftp.json
+.vscode/settings.json
+*.local
+config.local.*
+
+# IDEs / agentes
 .claude/
+.cursor/
+.idea/
+*.swp
+*.swo
+
+# Scripts temporales / probes
 scripts/_probe.mjs
 scripts/_smoke*.js
+scripts/_*.tmp.*
+
+# Proyecto ajeno (no es el sitio estático)
 mvp-firma-de-documento/
+
+# Builds / caches
+dist/
+.cache/
+coverage/
+tmp/
+temp/

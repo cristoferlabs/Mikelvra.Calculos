@@ -130,13 +130,21 @@ Repo: [github.com/cristoferlabs/Mikelvra.Calculos](https://github.com/cristoferl
 
 Sin los secrets FTP, los workflows existen pero el paso de deploy fallará hasta configurarlos.
 
+**Seguridad del repo**
+
+- Secretos solo en GitHub → Settings → Secrets (nunca en el código).
+- `.gitignore` bloquea `.env`, claves, credenciales y el MVP ajeno.
+- `.npmrc` con `ignore-scripts=true` evita lifecycle scripts de npm.
+- Actions: permisos mínimos; el workflow diario solo ejecuta `scripts/fetch-open-data.mjs` y solo hace commit de 3 JSON en `data/`.
+- El deploy FTP **no** sube `scripts/`, `.github/`, `.env`, ni archivos de claves.
+
 UIT / RMV / AF se actualizan editando `data/seed/normativa.base.json` (y volviendo a correr el script o el workflow). Las tasas AFP se refrescan desde API abierta cuando esté disponible; si no, se conservan las del seed.
 
 ## Antes de aplicar a AdSense (checklist)
 
 - Contenido útil y original (calculadoras + disclaimers referenciales). Sin material prohibido.
 - Páginas legales enlazadas desde el footer: Acerca de, Contacto, Privacidad, Términos.
-- Correo real en `legal/contacto.html` (`contacto@mikelvra.com`) creado en el hosting.
+- Correo real en `legal/contacto.html` (`catrrobert@gmail.com`).
 - AdSense **desactivado** en el HTML/JS hasta aprobación (slots comentados; `.ad-slot` en `display:none`).
 - `ads.txt` con placeholder: cuando tengas el publisher ID (`pub-…`), descomenta/actualiza la línea de Google.
 - HTTPS en `mikelvra.com`, `sitemap.xml` en Search Console, navegación completa.

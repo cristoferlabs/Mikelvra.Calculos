@@ -460,16 +460,101 @@ img {
   box-shadow: 0 10px 24px rgba(19, 41, 75, 0.14);
 }
 
-.tool-card .icon-badge {
+/* ---------- Iconos UI neutros (SVG, sin emoji) ---------- */
+
+.ui-ico,
+.mega-ico,
+.dock-ico,
+.tile-ico,
+.gen-ico,
+.icon-badge {
+  display: inline-grid;
+  place-items: center;
+  flex-shrink: 0;
+  line-height: 0;
+  color: inherit;
+}
+
+.ui-ico svg,
+.mega-ico svg,
+.dock-ico svg,
+.tile-ico svg,
+.gen-ico svg,
+.icon-badge svg {
+  display: block;
+  width: 1.15em;
+  height: 1.15em;
+  stroke: currentColor;
+  fill: none;
+  stroke-width: 1.75;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.mega-card .mega-ico {
+  flex-shrink: 0;
+  width: 42px;
+  height: 42px;
+  display: grid;
+  place-items: center;
+  background: var(--color-surface-alt);
+  border-radius: 12px;
+  font-size: 1.15rem;
+  color: var(--color-text);
+}
+
+.mega-card .mega-ico svg {
+  width: 20px;
+  height: 20px;
+}
+
+.tile-ico {
+  width: 40px;
+  height: 40px;
+  border-radius: 12px;
+  background: #f3f3f3;
+  color: #0a0a0a;
+  font-size: 1.1rem;
+  margin-bottom: 4px;
+}
+
+.tile-ico svg {
+  width: 20px;
+  height: 20px;
+}
+
+.gen-panel-title .gen-ico {
+  width: 28px;
+  height: 28px;
+  border-radius: 8px;
+  background: #0a0a0a;
+  color: #fff;
+  font-size: 0.85rem;
+}
+
+.gen-panel-title .gen-ico svg {
+  width: 14px;
+  height: 14px;
+}
+
+.icon-badge {
   width: 44px;
   height: 44px;
   border-radius: 50%;
   background: var(--color-warning-bg);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.4rem;
-  transition: transform 0.15s ease;
+  font-size: 1.15rem;
+  color: var(--color-text);
+}
+
+.dock-ico svg {
+  width: 20px;
+  height: 20px;
+}
+
+.dock-item-main .dock-ico svg {
+  width: 22px;
+  height: 22px;
+  stroke: #fff;
 }
 
 .tool-card:hover .icon-badge {
@@ -2045,15 +2130,7 @@ footer.site-footer a:hover {
 }
 
 .mega-card .mega-ico {
-  flex-shrink: 0;
-  width: 42px;
-  height: 42px;
-  display: grid;
-  place-items: center;
-  background: var(--color-surface-alt);
-  border-radius: 12px;
-  font-size: 1.15rem;
-  color: inherit;
+  /* estilos base en bloque .ui-ico arriba */
 }
 
 .mega-card .mega-text {
@@ -2114,10 +2191,13 @@ footer.site-footer a:hover {
 .nav-drawer-close {
   background: var(--color-surface-alt);
   border: none;
-  width: 40px;
+  min-width: 40px;
   height: 40px;
+  padding: 0 12px;
   border-radius: 12px;
-  font-size: 1rem;
+  font-size: 0.82rem;
+  font-weight: 600;
+  font-family: var(--font-ui);
   cursor: pointer;
   color: var(--color-text);
 }

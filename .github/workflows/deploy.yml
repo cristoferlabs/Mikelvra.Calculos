@@ -5,7 +5,6 @@ on:
     branches: [main]
   workflow_dispatch:
 
-# Mínimos privilegios: solo lee el repo; secretos FTP vienen de GitHub Secrets
 permissions:
   contents: read
 
@@ -16,7 +15,7 @@ concurrency:
 jobs:
   deploy:
     runs-on: ubuntu-latest
-    timeout-minutes: 15
+    timeout-minutes: 20
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -26,28 +25,39 @@ jobs:
       - name: Validar secrets FTP
         run: |
           missing=0
-          for name in FTP_SERVER FTP_USERNAME FTP_PASSWORD FTP_SERVER_DIR; do
-            # No imprime el valor; solo comprueba que exista
+          for name in FTP_SERVER FTP_USERNAME FTP_PASSWORD; do
             if [ -z "${!name}" ]; then
               echo "::error::Falta el secret $name en Settings → Secrets"
               missing=1
             fi
           done
+          # Aviso si el server parece URL web (causa típica de timeout)
+          case "${FTP_SERVER}" in
+            http://*|https://*|www.*)
+              echo "::error::FTP_SERVER no debe ser una URL web. Usa el host FTP de cPanel (ej. ftp.mikelvra.com), sin https://"
+              missing=1
+              ;;
+          esac
           exit $missing
         env:
           FTP_SERVER: ${{ secrets.FTP_SERVER }}
           FTP_USERNAME: ${{ secrets.FTP_USERNAME }}
           FTP_PASSWORD: ${{ secrets.FTP_PASSWORD }}
-          FTP_SERVER_DIR: ${{ secrets.FTP_SERVER_DIR }}
 
-      - name: Deploy via FTP to cPanel
+      - name: Deploy via FTPS to cPanel
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
           server: ${{ secrets.FTP_SERVER }}
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
-          server-dir: ${{ secrets.FTP_SERVER_DIR }}
-          protocol: ftp
+          # Si el usuario FTP ya entra en public_html → ./
+          # Si usas la cuenta principal → public_html/
+          server-dir: ${{ secrets.FTP_SERVER_DIR || './' }}
+          protocol: ftps
+          security: loose
+          port: 21
+          timeout: 190000
+          log-level: verbose
           dangerous-clean-slate: false
           exclude: |
             **/.git*

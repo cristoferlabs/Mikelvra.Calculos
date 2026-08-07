@@ -118,15 +118,20 @@ Repo: [github.com/cristoferlabs/Mikelvra.Calculos](https://github.com/cristoferl
 
 1. Push a la rama `main` (este directorio es la raíz del sitio; no subas `mvp-firma-de-documento/`).
 2. En el repo → **Settings → Secrets and variables → Actions**, crea:
-   - `FTP_SERVER` — host FTP de cPanel (ej. `ftp.mikelvra.com`)
-   - `FTP_USERNAME`
+   - `FTP_SERVER` — host FTP de cPanel (**sin** `https://`). En FTP Accounts → *Configure FTP Client* copia el servidor (suele ser `ftp.mikelvra.com` o un hostname tipo `server123.web-hosting.com`).
+   - `FTP_USERNAME` — ej. `mikelvra@mikelvra.com`
    - `FTP_PASSWORD`
-   - `FTP_SERVER_DIR` — normalmente `public_html/` (con slash final)
+   - `FTP_SERVER_DIR` — `./` si el FTP ya entra en `public_html`; o `public_html/` con la cuenta principal
    - Opcional: `AFP_JSON_URL` — mirror JSON de tasas AFP
 3. Workflows incluidos:
    - `.github/workflows/daily-open-data.yml` — cron diario (~07:00 Perú): descarga AFP + fuentes, escribe JSON, commit si hay cambios, FTP deploy.
-   - `.github/workflows/deploy.yml` — deploy FTP en cada push a `main`/`master`.
-4. Prueba manual: Actions → *Daily open data* o *Deploy site* → **Run workflow**.
+   - `.github/workflows/deploy.yml` — deploy FTPS en cada push a `main`.
+4. Prueba manual: Actions → *Deploy site* → **Run workflow**.
+
+Si sale `Timeout (control socket)`:
+- Revisa que `FTP_SERVER` no sea `mikelvra.com` con https ni la IP bloqueada; usa el host exacto de *Configure FTP Client*.
+- En el hosting, desactiva bloqueo de IPs extranjeras / “FTP IP deny” si existe (GitHub Actions conecta desde fuera).
+- El workflow usa `protocol: ftps` + `security: loose`. Si aún falla, en cPanel prueba conectarte con FileZilla en FTPS puerto 21; si solo funciona SFTP, este action no sirve (necesitas SFTP/SSH).
 
 Sin los secrets FTP, los workflows existen pero el paso de deploy fallará hasta configurarlos.
 

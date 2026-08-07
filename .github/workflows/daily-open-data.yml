@@ -2,11 +2,9 @@ name: Daily open data
 
 on:
   schedule:
-    # ~07:00 hora Perú (UTC-5) → 12:00 UTC
     - cron: "0 12 * * *"
   workflow_dispatch:
 
-# Solo escritura de JSON de data/ + push del bot
 permissions:
   contents: write
 
@@ -17,7 +15,7 @@ concurrency:
 jobs:
   refresh:
     runs-on: ubuntu-latest
-    timeout-minutes: 20
+    timeout-minutes: 25
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -25,7 +23,7 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
-          node-version: "20"
+          node-version: "24"
 
       - name: Fetch open data → JSON (solo script permitido)
         env:
@@ -33,7 +31,6 @@ jobs:
           npm_config_ignore_scripts: "true"
         run: |
           set -euo pipefail
-          # Solo se permite este script conocido; evita ejecutar basura en scripts/
           test -f scripts/fetch-open-data.mjs
           test "$(find scripts -maxdepth 1 -type f ! -name 'fetch-open-data.mjs' | wc -l)" -eq 0 \
             || { echo "::error::Hay archivos inesperados en scripts/. Abortando."; ls -la scripts; exit 1; }
@@ -45,7 +42,6 @@ jobs:
           set -euo pipefail
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          # Solo JSON de open data; nunca otros paths
           git add -- data/normativa.json data/noticias.json data/calendario.json
           if git diff --staged --quiet; then
             echo "changed=false" >> "$GITHUB_OUTPUT"
@@ -56,15 +52,19 @@ jobs:
             echo "changed=true" >> "$GITHUB_OUTPUT"
           fi
 
-      - name: Deploy FTP (si hay cambios o manual)
+      - name: Deploy FTPS (si hay cambios o manual)
         if: steps.commit.outputs.changed == 'true' || github.event_name == 'workflow_dispatch'
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
           server: ${{ secrets.FTP_SERVER }}
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
-          server-dir: ${{ secrets.FTP_SERVER_DIR }}
-          protocol: ftp
+          server-dir: ${{ secrets.FTP_SERVER_DIR || './' }}
+          protocol: ftps
+          security: loose
+          port: 21
+          timeout: 190000
+          log-level: verbose
           dangerous-clean-slate: false
           exclude: |
             **/.git*

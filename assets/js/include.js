@@ -52,9 +52,23 @@
     });
   }
 
+  function loadAdSenseClient() {
+    var src =
+      "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7737636856013405";
+    if (document.querySelector('script[src*="adsbygoogle.js"]')) return;
+    var s = document.createElement("script");
+    s.async = true;
+    s.src = src;
+    s.crossOrigin = "anonymous";
+    document.head.appendChild(s);
+  }
+
+  // Carga temprana del cliente AdSense (verificación / anuncios)
+  loadAdSenseClient();
+
   function ensureAdRails() {
-    // Publicidad desactivada hasta aprobación de Google AdSense.
-    // Para reactivar: quitar este return y los comentarios <!-- ads ... --> en HTML.
+    // Slots manuales desactivados: usa Anuncios automáticos en AdSense cuando aprueben.
+    // No insertar placeholders vacíos (perjudica la revisión).
     return;
 
     if (

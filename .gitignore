@@ -1,0 +1,10 @@
+node_modules/
+.DS_Store
+Thumbs.db
+*.log
+.env
+.env.*
+.claude/
+scripts/_probe.mjs
+scripts/_smoke*.js
+mvp-firma-de-documento/

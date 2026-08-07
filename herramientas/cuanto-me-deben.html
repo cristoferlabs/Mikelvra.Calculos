@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="es-PE">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mi Situación Laboral Completa Perú 2026 – Sueldo, CTS, Gratificación | Mikelvra</title>
+  <meta name="description" content="Ingresa tu sueldo una sola vez y ve tu ingreso total anual, sueldo neto, CTS, gratificación, vacaciones, próximos pagos y costo para tu empleador. Actualizado a 2026." />
+  <link rel="canonical" href="https://mikelvra.com/herramientas/cuanto-me-deben.html" />
+  <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/assets/css/style.css" />
+  <script src="/assets/js/calculadoras.js"></script>
+  <script src="/assets/js/ui-helpers.js"></script>
+  <!-- Ver comentario de AdSense/Analytics en index.html -->
+</head>
+<body>
+  <div class="app-shell">
+    <div id="site-header"></div>
+
+    <div class="main-area">
+<main class="content">
+        <div class="breadcrumb"><a href="/index.html">Inicio</a> / Mi panorama</div>
+        <div class="page-header">
+          <span class="tool-pill">Herramienta completa para Perú 2026</span>
+          <h1>Mi panorama <span class="badge-nuevo">Nuevo</span></h1>
+          <p class="lead">
+            Ingresa tu sueldo una sola vez y ve todo de un vistazo: ingreso total anual, sueldo neto, CTS,
+            gratificación, vacaciones, próximos cobros y cuánto le cuestas a tu empleador.
+          </p>
+          <div class="page-header-actions no-print">
+            <button type="button" class="btn-secondary btn-sm" data-action="pdf" data-target="resultado">Descargar PDF</button>
+            <button type="button" class="btn-secondary btn-sm" data-action="compartir" data-target="resultado">Compartir</button>
+          </div>
+        </div>
+
+        <div class="preview-cards no-print" id="previewCards" aria-label="Resumen de beneficios">
+          <article class="preview-card preview-neto">
+            <div class="preview-icon" aria-hidden="true">Neto</div>
+            <h3>Sueldo Neto</h3>
+            <p class="preview-sub" id="previewNetoSub">Después de AFP/ONP e IR</p>
+            <div class="preview-valor" id="previewNeto">—</div>
+          </article>
+          <article class="preview-card preview-cts">
+            <div class="preview-icon" aria-hidden="true">CTS</div>
+            <h3>CTS</h3>
+            <p class="preview-sub">2 depósitos por año</p>
+            <div class="preview-valor" id="previewCTS">—</div>
+          </article>
+          <article class="preview-card preview-grat">
+            <div class="preview-icon" aria-hidden="true">Grat</div>
+            <h3>Gratificación</h3>
+            <p class="preview-sub">Julio y Diciembre</p>
+            <div class="preview-valor" id="previewGrat">—</div>
+          </article>
+          <article class="preview-card preview-vac">
+            <div class="preview-icon" aria-hidden="true">Vac</div>
+            <h3>Vacaciones</h3>
+            <p class="preview-sub">30 días remunerados</p>
+            <div class="preview-valor" id="previewVac">—</div>
+          </article>
+        </div>
+
+        <div class="calc-layout">
+          <div class="calc-card">
+            <div class="form-group">
+              <label for="sueldo">Sueldo básico mensual (S/)</label>
+              <input type="number" id="sueldo" min="0" step="0.01" placeholder="Ej. 2000" />
+              <div class="ejemplo-chips" id="ejemploChips">
+                <button type="button" class="chip" data-ejemplo-sueldo="1130">Mínimo S/ 1,130</button>
+                <button type="button" class="chip" data-ejemplo-sueldo="2000">S/ 2,000</button>
+                <button type="button" class="chip" data-ejemplo-sueldo="3500">S/ 3,500</button>
+              </div>
+            </div>
+
+            <p class="empty-hint" id="emptyHint">Ingresa tu sueldo para ver tu panorama completo.</p>
+
+            <div class="form-group">
+              <label for="fechaIngreso">Fecha de ingreso <span class="label-optional">(opcional)</span></label>
+              <input type="date" id="fechaIngreso" />
+              <p class="hint">Sin ella ves la proyección anual. Con ella también calculamos lo acumulado si renuncias hoy.</p>
+            </div>
+
+            <div class="form-group">
+              <label class="checkbox-row">
+                <input type="checkbox" id="tieneAsignacion" />
+                Recibo asignación familiar (S/ 113.00)
+              </label>
+            </div>
+
+            <div class="form-group">
+              <label for="regimenSalud">Régimen de salud</label>
+              <select id="regimenSalud">
+                <option value="0.09" selected>EsSalud (bonificación extraordinaria 9%)</option>
+                <option value="0.0675">EPS (bonificación extraordinaria 6.75%)</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="sistemaPension">Sistema de pensión</label>
+              <select id="sistemaPension">
+                <option value="onp" selected>ONP (13%)</option>
+                <option value="habitat">AFP Habitat (12.84%)</option>
+                <option value="integra">AFP Integra (12.92%)</option>
+                <option value="prima">AFP Prima (12.97%)</option>
+                <option value="profuturo">AFP Profuturo (13.06%)</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="ultimaGratificacion">Última gratificación completa recibida (S/) — opcional</label>
+              <input type="number" id="ultimaGratificacion" min="0" step="0.01" placeholder="Déjalo vacío para estimarlo" />
+              <p class="hint">Mejora la precisión de tu CTS.</p>
+            </div>
+
+            <div class="result-box result-box-situacion" id="resultado" aria-live="polite" aria-atomic="true">
+              <div class="vista-tabs no-print" role="tablist" aria-label="Vista del resultado">
+                <button type="button" class="vista-tab is-active" role="tab" id="tabAnual" aria-selected="true" aria-controls="panelAnual" data-vista="anual">Año completo</button>
+                <button type="button" class="vista-tab" role="tab" id="tabAcumulado" aria-selected="false" aria-controls="panelAcumulado" data-vista="acumulado" disabled>Si renuncio hoy</button>
+              </div>
+
+              <div class="vista-panel is-active" id="panelAnual" role="tabpanel" aria-labelledby="tabAnual">
+                <div class="resumen-hero">
+                  <span class="resumen-hero-label">Tu ingreso total anual estimado</span>
+                  <div class="result-total result-total-mega" id="resultadoTotalAnual">S/ 0.00</div>
+                  <p class="hint" id="resultadoHeroSub">Sueldos netos + CTS + gratificaciones + vacaciones</p>
+                </div>
+
+                <div class="resumen-grid">
+                  <div class="resumen-stat">
+                    <h4>Sueldo neto mensual</h4>
+                    <div class="resumen-stat-valor" id="rNeto">S/ 0.00</div>
+                    <p class="hint"><a id="linkDetalleNeto" href="/herramientas/sueldo-neto.html">Ver detalle →</a></p>
+                  </div>
+                  <div class="resumen-stat">
+                    <h4>CTS anual</h4>
+                    <div class="resumen-stat-valor" id="rCTSAnual">S/ 0.00</div>
+                    <p class="hint"><a id="linkDetalleCTS" href="/herramientas/cts.html">Ver detalle →</a></p>
+                  </div>
+                  <div class="resumen-stat">
+                    <h4>Gratificación anual</h4>
+                    <div class="resumen-stat-valor" id="rGratAnual">S/ 0.00</div>
+                    <p class="hint"><a id="linkDetalleGrat" href="/herramientas/gratificacion.html">Ver detalle →</a></p>
+                  </div>
+                  <div class="resumen-stat">
+                    <h4>Vacaciones</h4>
+                    <div class="resumen-stat-valor" id="rVacAnual">S/ 0.00</div>
+                    <p class="hint"><a id="linkDetalleVac" href="/herramientas/vacaciones.html">Ver detalle →</a></p>
+                  </div>
+                </div>
+
+                <div class="composicion-block">
+                  <h4 class="composicion-title">De dónde sale tu plata al año</h4>
+                  <div class="composicion-bar" aria-hidden="true">
+                    <span class="composicion-seg seg-neto" id="barNeto" style="width:0%"></span>
+                    <span class="composicion-seg seg-cts" id="barCTS" style="width:0%"></span>
+                    <span class="composicion-seg seg-grat" id="barGrat" style="width:0%"></span>
+                    <span class="composicion-seg seg-vac" id="barVac" style="width:0%"></span>
+                  </div>
+                  <ul class="composicion-legend">
+                    <li><span class="dot seg-neto"></span> Netos <strong id="legNeto">0%</strong></li>
+                    <li><span class="dot seg-cts"></span> CTS <strong id="legCTS">0%</strong></li>
+                    <li><span class="dot seg-grat"></span> Grat. <strong id="legGrat">0%</strong></li>
+                    <li><span class="dot seg-vac"></span> Vac. <strong id="legVac">0%</strong></li>
+                  </ul>
+                </div>
+
+                <div class="desglose-descuentos">
+                  <h4 class="composicion-title">Descuentos mensuales de tu boleta</h4>
+                  <dl class="desglose-dl">
+                    <div><dt>Aporte AFP/ONP</dt><dd id="rDescPension">S/ 0.00</dd></div>
+                    <div><dt>Retención renta 5ta</dt><dd id="rDescRenta">S/ 0.00</dd></div>
+                    <div><dt>Neto a recibir</dt><dd id="rDescNeto"><strong>S/ 0.00</strong></dd></div>
+                  </dl>
+                </div>
+
+                <div class="comparacion-pension">
+                  <h4 class="composicion-title">Neto mensual según sistema</h4>
+                  <div class="comparacion-grid" id="comparacionPension"></div>
+                </div>
+
+                <div class="costo-empleador">
+                  <h4 class="composicion-title">Costo anual para tu empleador</h4>
+                  <div class="costo-empleador-valor" id="rCostoEmpleador">S/ 0.00</div>
+                  <p class="hint">Planilla + EsSalud 9% + gratificaciones + CTS + vacaciones. Referencial.</p>
+                </div>
+              </div>
+
+              <div class="vista-panel" id="panelAcumulado" role="tabpanel" aria-labelledby="tabAcumulado" hidden>
+                <div class="resumen-hero">
+                  <span class="resumen-hero-label">Si renunciaras hoy, te corresponderían aproximadamente</span>
+                  <div class="result-total result-total-mega" id="resultadoTotalAcum">S/ 0.00</div>
+                </div>
+
+                <div class="resumen-grid">
+                  <div class="resumen-stat">
+                    <h4>CTS acumulada</h4>
+                    <div class="resumen-stat-valor" id="rCTS">S/ 0.00</div>
+                    <p class="hint">Se deposita el 15 de mayo o noviembre.</p>
+                  </div>
+                  <div class="resumen-stat">
+                    <h4>Gratificación acumulada</h4>
+                    <div class="resumen-stat-valor" id="rGrat">S/ 0.00</div>
+                    <p class="hint">Se paga en la 1ra quincena de julio o diciembre.</p>
+                  </div>
+                  <div class="resumen-stat">
+                    <h4>Vacaciones acumuladas</h4>
+                    <div class="resumen-stat-valor" id="rVac">S/ 0.00</div>
+                    <p class="hint" id="rVacNota">Aún no cumples el año (truncas).</p>
+                  </div>
+                  <div class="resumen-stat">
+                    <h4>Sueldo neto estimado</h4>
+                    <div class="resumen-stat-valor" id="rNetoAcum">S/ 0.00</div>
+                    <p class="hint"><a href="/herramientas/afp-vs-onp.html">Compara AFP vs ONP →</a></p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="pagos-timeline" id="pagosTimeline">
+                <h4 class="composicion-title">Próximos cobros</h4>
+                <ol class="timeline-list" id="listaPagos"></ol>
+              </div>
+
+              <div class="result-actions no-print">
+                <button type="button" class="btn-secondary btn-sm" data-action="pdf">Descargar PDF</button>
+                <button type="button" class="btn-secondary btn-sm" data-action="compartir">Compartir</button>
+              </div>
+            </div>
+
+            <div class="disclaimer">
+              Resumen referencial basado en la normativa laboral peruana 2026. No es una liquidación oficial ni
+              considera conceptos variables (horas extras, utilidades, descuentos voluntarios). Verifica tu caso
+              con RR. HH. o un especialista laboral.
+            </div>
+          </div>
+
+          <aside class="side-panel">
+            <!-- ads (activar tras AdSense): <div class="ad-slot sidebar-ad" aria-hidden="true">Espacio reservado para anuncio</div> -->
+            <details class="info-accordion" open>
+              <summary>¿Qué calcula este dashboard?</summary>
+              <div class="info-accordion-body">
+                <p><strong>Sueldo neto:</strong> tu líquido tras AFP/ONP e impuesto a la renta de 5ta.</p>
+                <p><strong>CTS:</strong> dos depósitos al año (mayo y noviembre), con 1/6 de gratificación.</p>
+                <p><strong>Gratificación:</strong> julio y diciembre más la bonificación extraordinaria (9% o 6.75%).</p>
+                <p><strong>Vacaciones:</strong> 30 días remunerados al cumplir el año de labores.</p>
+              </div>
+            </details>
+            <details class="info-accordion">
+              <summary>¿Esto es mi liquidación?</summary>
+              <div class="info-accordion-body">
+                <p>No. La pestaña “Si renuncio hoy” es un acumulado orientativo. Si ya sabes la fecha de cese,
+                usa la <a href="/herramientas/liquidacion.html">calculadora de Liquidación</a>.</p>
+              </div>
+            </details>
+            <div class="info-card">
+              <h4>Base legal</h4>
+              <p>Ley N.° 27735 (gratificación), TUO del D. Leg. 650 / D.S. N.° 001-97-TR (CTS),
+              D. Leg. N.° 713 (vacaciones) y normativa de AFP/ONP e impuesto a la renta.</p>
+            </div>
+          </aside>
+        </div>
+
+        <section class="pilares-section no-print">
+          <h2>Un solo sueldo. Todos tus beneficios.</h2>
+          <p class="lead">Así se arma tu compensación total en un año completo de planilla.</p>
+          <div class="pilares-grid">
+            <article class="pilar-card">
+              <h3>Sueldo neto mensual</h3>
+              <p>Tu sueldo real después de descontar AFP (aporte + comisión + seguro) u ONP (13%), más la retención de renta de 5ta si aplica.</p>
+            </article>
+            <article class="pilar-card">
+              <h3>CTS semestral</h3>
+              <p>La Compensación por Tiempo de Servicios que acumulas cada semestre. Incluye el 1/6 de gratificación y la asignación familiar.</p>
+            </article>
+            <article class="pilar-card">
+              <h3>Gratificación con bono</h3>
+              <p>Julio y diciembre, libres de descuentos previsionales, más la bonificación extraordinaria del 9% (o 6.75% con EPS).</p>
+            </article>
+            <article class="pilar-card">
+              <h3>Vacaciones remuneradas</h3>
+              <p>30 días de descanso al año con remuneración completa (sueldo + asignación familiar si corresponde).</p>
+            </article>
+          </div>
+        </section>
+
+        <section class="faq-section no-print">
+          <h2>Preguntas frecuentes</h2>
+          <details class="faq-item">
+            <summary>¿Cuánto gano en total con todos mis beneficios laborales?</summary>
+            <p>Suma sueldo neto × 12, CTS semestral × 2, gratificación semestral × 2 (con bonificación) y una remuneración de vacaciones. Esta herramienta lo calcula automáticamente con tu sueldo.</p>
+          </details>
+          <details class="faq-item">
+            <summary>¿Qué descuentos tiene mi sueldo en Perú 2026?</summary>
+            <p>Los obligatorios son el aporte a AFP u ONP y, si tu ingreso anual supera 7 UIT (S/ 38,500), la retención de renta de 5ta categoría. EsSalud (9%) lo paga tu empleador, no se descuenta de tu boleta.</p>
+          </details>
+          <details class="faq-item">
+            <summary>¿Cuánto es la CTS más la gratificación al año?</summary>
+            <p>Depende de tu sueldo. Con S/ 2,000 brutos, la CTS anual ronda S/ 2,300 y la gratificación anual (con 9%) cerca de S/ 4,360. Usa el dashboard para tu caso exacto.</p>
+          </details>
+          <details class="faq-item">
+            <summary>¿AFP o ONP, cuál me conviene más?</summary>
+            <p>En descuento mensual las AFP suelen ser ligeramente más baratas que el 13% de ONP. La decisión de fondo (fondo individual vs. pensión solidaria) es distinta: revisa nuestro <a href="/herramientas/afp-vs-onp.html">comparador AFP vs ONP</a>.</p>
+          </details>
+          <details class="faq-item">
+            <summary>¿Los beneficios sociales se pagan por encima del sueldo neto?</summary>
+            <p>Sí. CTS, gratificación y vacaciones son adicionales a tu sueldo mensual. La CTS va a una cuenta especial; las gratificaciones a tu cuenta de sueldo; las vacaciones se pagan al gozarlas o al cesar.</p>
+          </details>
+          <details class="faq-item">
+            <summary>¿Cuánto es el sueldo mínimo neto en Perú 2026?</summary>
+            <p>El RMV es S/ 1,130. Con ONP (13%) el neto es ≈ S/ 983. Con AFP Habitat ≈ S/ 985. No aplica renta de 5ta con el sueldo mínimo.</p>
+          </details>
+        </section>
+
+        <section class="more-tools">
+          <h2 class="more-tools-title">Calculadoras individuales</h2>
+          <div class="more-tools-grid">
+            <a class="more-tools-link" href="/herramientas/cts.html">
+              <span class="icon-badge">💰</span>
+              <span><strong>CTS</strong><small>Mayo y noviembre al detalle</small></span>
+            </a>
+            <a class="more-tools-link" href="/herramientas/gratificacion.html">
+              <span class="icon-badge">🎁</span>
+              <span><strong>Gratificación</strong><small>Julio y diciembre + bono</small></span>
+            </a>
+            <a class="more-tools-link" href="/herramientas/vacaciones.html">
+              <span class="icon-badge">✈️</span>
+              <span><strong>Vacaciones</strong><small>Completas o truncas</small></span>
+            </a>
+            <a class="more-tools-link" href="/herramientas/liquidacion.html">
+              <span class="icon-badge">📄</span>
+              <span><strong>Liquidación</strong><small>Al momento del cese</small></span>
+            </a>
+            <a class="more-tools-link" href="/herramientas/sueldo-neto.html">
+              <span class="icon-badge">💵</span>
+              <span><strong>Sueldo neto</strong><small>Desglose de descuentos</small></span>
+            </a>
+            <a class="more-tools-link" href="/herramientas/afp-vs-onp.html">
+              <span class="icon-badge">📊</span>
+              <span><strong>AFP vs ONP</strong><small>Elige el menor descuento</small></span>
+            </a>
+          </div>
+        </section>
+      </main>
+
+      <div id="site-footer"></div>
+    </div>
+  </div>
+
+  <script src="/assets/js/navbar.js"></script>
+  <script src="/assets/js/include.js"></script>
+  <script>
+    var vistaActual = "anual";
+
+    function tasaPensionSeleccionada() {
+      var id = document.getElementById("sistemaPension").value;
+      var sistema = Calc.SISTEMAS_PENSION_2026.filter(function (s) { return s.id === id; })[0];
+      return sistema ? sistema.tasa : 0.13;
+    }
+
+    function pct(n) {
+      return (isFinite(n) ? n : 0).toFixed(0) + "%";
+    }
+
+    function setVista(vista) {
+      vistaActual = vista;
+      var tabAnual = document.getElementById("tabAnual");
+      var tabAcum = document.getElementById("tabAcumulado");
+      var panelAnual = document.getElementById("panelAnual");
+      var panelAcum = document.getElementById("panelAcumulado");
+
+      var esAnual = vista === "anual";
+      tabAnual.classList.toggle("is-active", esAnual);
+      tabAcum.classList.toggle("is-active", !esAnual);
+      tabAnual.setAttribute("aria-selected", esAnual ? "true" : "false");
+      tabAcum.setAttribute("aria-selected", esAnual ? "false" : "true");
+      panelAnual.classList.toggle("is-active", esAnual);
+      panelAcum.classList.toggle("is-active", !esAnual);
+      panelAnual.hidden = !esAnual;
+      panelAcum.hidden = esAnual;
+    }
+
+    function renderComparacion(filas, seleccionadoId) {
+      var html = filas.map(function (f) {
+        var activo = f.id === seleccionadoId ? " is-selected" : "";
+        return '<div class="comparacion-item' + activo + '">'
+          + "<span>" + f.nombre + "</span>"
+          + "<strong>" + UI.formatSoles(f.neto) + "</strong>"
+          + "</div>";
+      }).join("");
+      document.getElementById("comparacionPension").innerHTML = html;
+    }
+
+    function renderPagos(lista) {
+      var ol = document.getElementById("listaPagos");
+      if (!lista.length) {
+        ol.innerHTML = "<li class=\"timeline-empty\">Ingresa tu sueldo para ver el calendario.</li>";
+        return;
+      }
+      ol.innerHTML = lista.map(function (e) {
+        return "<li class=\"timeline-item timeline-" + e.tipo + "\">"
+          + "<span class=\"timeline-date\">" + UI.formatFecha(e.fecha) + "</span>"
+          + "<span class=\"timeline-label\">" + e.label + "</span>"
+          + "</li>";
+      }).join("");
+    }
+
+    function actualizarDetalleLinks(sueldo, tieneAsignacion) {
+      var af = tieneAsignacion ? "af=1" : "";
+      document.getElementById("linkDetalleNeto").href = UI.linkConSueldo("/herramientas/sueldo-neto.html", sueldo, af);
+      document.getElementById("linkDetalleCTS").href = UI.linkConSueldo("/herramientas/cts.html", sueldo, af);
+      document.getElementById("linkDetalleGrat").href = UI.linkConSueldo("/herramientas/gratificacion.html", sueldo, af);
+      document.getElementById("linkDetalleVac").href = UI.linkConSueldo("/herramientas/vacaciones.html", sueldo, af);
+    }
+
+    function actualizarPreview(anual) {
+      if (!anual) {
+        document.getElementById("previewNeto").textContent = "—";
+        document.getElementById("previewCTS").textContent = "—";
+        document.getElementById("previewGrat").textContent = "—";
+        document.getElementById("previewVac").textContent = "—";
+        document.getElementById("previewCards").classList.remove("has-values");
+        return;
+      }
+      document.getElementById("previewNeto").textContent = UI.formatSoles(anual.neto.neto);
+      document.getElementById("previewCTS").textContent = UI.formatSoles(anual.ctsAnual);
+      document.getElementById("previewGrat").textContent = UI.formatSoles(anual.gratificacionAnual);
+      document.getElementById("previewVac").textContent = UI.formatSoles(anual.vacaciones.total);
+      document.getElementById("previewCards").classList.add("has-values");
+    }
+
+    function recalcular() {
+      var __el = document.getElementById("sueldo");
+      var emptyHint = document.getElementById("emptyHint");
+      var tabAcum = document.getElementById("tabAcumulado");
+
+      var __ok = UI.validateField(__el, { required: true, min: 0.01, type: "number", message: "Ingresa un sueldo válido mayor a 0." });
+      if (!__ok) {
+        UI.setResultVisible("resultado", false);
+        if (tabAcum) tabAcum.disabled = true;
+        if (emptyHint) emptyHint.hidden = false;
+        actualizarPreview(null);
+        return;
+      }
+
+      var sueldo = parseFloat(document.getElementById("sueldo").value) || 0;
+      var fechaIngresoStr = document.getElementById("fechaIngreso").value;
+      emptyHint.hidden = true;
+      UI.saveSueldo(sueldo);
+
+      var tieneAsignacion = document.getElementById("tieneAsignacion").checked;
+      var tasaBono = parseFloat(document.getElementById("regimenSalud").value);
+      var tasaPension = tasaPensionSeleccionada();
+      var ultimaGratInput = document.getElementById("ultimaGratificacion").value;
+      var ultimaGrat = ultimaGratInput === "" ? 0 : parseFloat(ultimaGratInput) || 0;
+      var fechaIngreso = fechaIngresoStr ? Calc.parseFechaISO(fechaIngresoStr) : null;
+      var sistemaId = document.getElementById("sistemaPension").value;
+
+      var anual = Calc.calcularSituacionAnual({
+        sueldo: sueldo,
+        tieneAsignacion: tieneAsignacion,
+        tasaBono: tasaBono,
+        tasaPension: tasaPension,
+        ultimaGratificacionManual: ultimaGrat,
+      });
+
+      actualizarPreview(anual);
+      actualizarDetalleLinks(sueldo, tieneAsignacion);
+
+      document.getElementById("resultadoTotalAnual").textContent = UI.formatSoles(anual.ingresoTotalAnual);
+      document.getElementById("rNeto").textContent = UI.formatSoles(anual.neto.neto);
+      document.getElementById("rCTSAnual").textContent = UI.formatSoles(anual.ctsAnual);
+      document.getElementById("rGratAnual").textContent = UI.formatSoles(anual.gratificacionAnual);
+      document.getElementById("rVacAnual").textContent = UI.formatSoles(anual.vacaciones.total);
+      document.getElementById("rDescPension").textContent = UI.formatSoles(anual.neto.descuentoPension);
+      document.getElementById("rDescRenta").textContent = UI.formatSoles(anual.neto.retencionRenta);
+      document.getElementById("rDescNeto").innerHTML = "<strong>" + UI.formatSoles(anual.neto.neto) + "</strong>";
+      document.getElementById("rCostoEmpleador").textContent = UI.formatSoles(anual.costoEmpleadorAnual);
+
+      var d = anual.desglosePorcentaje;
+      document.getElementById("barNeto").style.width = d.netos + "%";
+      document.getElementById("barCTS").style.width = d.cts + "%";
+      document.getElementById("barGrat").style.width = d.gratificacion + "%";
+      document.getElementById("barVac").style.width = d.vacaciones + "%";
+      document.getElementById("legNeto").textContent = pct(d.netos);
+      document.getElementById("legCTS").textContent = pct(d.cts);
+      document.getElementById("legGrat").textContent = pct(d.gratificacion);
+      document.getElementById("legVac").textContent = pct(d.vacaciones);
+
+      renderComparacion(anual.comparacionPensiones.filas, sistemaId);
+      renderPagos(Calc.proximosPagos(new Date(), fechaIngreso));
+
+      if (fechaIngreso) {
+        tabAcum.disabled = false;
+        var acum = Calc.calcularResumenActivo({
+          sueldo: sueldo,
+          tieneAsignacion: tieneAsignacion,
+          tasaBono: tasaBono,
+          tasaPension: tasaPension,
+          fechaIngreso: fechaIngreso,
+          ultimaGratificacionManual: ultimaGrat,
+        });
+        if (acum) {
+          document.getElementById("resultadoTotalAcum").textContent = UI.formatSoles(acum.totalSiRenunciaraHoy);
+          document.getElementById("rCTS").textContent = UI.formatSoles(acum.cts.total);
+          document.getElementById("rGrat").textContent = UI.formatSoles(acum.gratificacion.total);
+          document.getElementById("rVac").textContent = UI.formatSoles(acum.vacaciones.total);
+          document.getElementById("rVacNota").textContent = acum.vacaciones.esAnioCompleto
+            ? "Ya cumpliste el año completo."
+            : "Aún no cumples el año (truncas).";
+          document.getElementById("rNetoAcum").textContent = UI.formatSoles(acum.neto.neto);
+        }
+      } else {
+        tabAcum.disabled = true;
+        if (vistaActual === "acumulado") setVista("anual");
+      }
+
+      UI.setResultVisible("resultado", true);
+    }
+
+    document.getElementById("tabAnual").addEventListener("click", function () { setVista("anual"); });
+    document.getElementById("tabAcumulado").addEventListener("click", function () {
+      if (!this.disabled) setVista("acumulado");
+    });
+
+    UI.prefillsueldo("sueldo");
+    UI.wireExampleChips(document.getElementById("ejemploChips"), "sueldo", recalcular);
+    UI.wireLiveInputs(document.querySelector(".calc-card"), recalcular);
+    UI.wireResultExport("resultado");
+    UI.syncExportButtons("resultado");
+    setVista("anual");
+    recalcular();
+  </script>
+</body>
+</html>

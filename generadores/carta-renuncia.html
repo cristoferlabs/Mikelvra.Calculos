@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es-PE">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Carta de renuncia con firma | Mikelvra</title>
+  <meta name="description" content="Genera tu carta de renuncia en Perú y fírmala desde el celular. Vista previa simple, lista para PDF." />
+  <link rel="canonical" href="https://mikelvra.com/generadores/carta-renuncia.html" />
+  <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/assets/css/style.css" />
+  <script src="/assets/js/ui-helpers.js"></script>
+  <script src="/assets/js/documentos.js"></script>
+  <script src="/assets/js/firma.js"></script>
+</head>
+<body class="page-generator">
+  <div class="app-shell">
+    <div id="site-header"></div>
+    <div class="main-area">
+      <main class="content">
+        <div class="breadcrumb no-print"><a href="/index.html">Inicio</a> / Carta de renuncia</div>
+        <div class="page-header no-print">
+          <h1>Carta de renuncia</h1>
+          <p class="lead">Completa a la izquierda. La vista previa se actualiza al instante. Firma sin marco.</p>
+        </div>
+
+        <div class="gen-layout">
+          <section class="gen-form no-print" id="formPanel">
+            <h2 class="gen-panel-title"><span class="gen-ico" aria-hidden="true">✎</span> Datos de la carta</h2>
+
+            <p class="gen-section-label">Trabajador</p>
+            <div class="form-group"><label for="nombre">Nombres y apellidos</label><input type="text" id="nombre" placeholder="Ej. Ana Pérez" autocomplete="name" /></div>
+            <div class="form-group"><label for="dni">DNI</label><input type="text" id="dni" inputmode="numeric" placeholder="Ej. 12345678" /></div>
+            <div class="form-group"><label for="direccion">Domicilio (opcional)</label><input type="text" id="direccion" /></div>
+            <div class="form-group"><label for="cargo">Cargo</label><input type="text" id="cargo" /></div>
+
+            <p class="gen-section-label">Empresa</p>
+            <div class="form-group"><label for="empresa">Empresa</label><input type="text" id="empresa" /></div>
+            <div class="form-group"><label for="destinatario">Dirigido a</label><input type="text" id="destinatario" value="Jefe(a) de Recursos Humanos" /></div>
+            <div class="form-group"><label for="ciudad">Ciudad</label><input type="text" id="ciudad" value="Lima" /></div>
+            <div class="form-group"><label for="fechaCarta">Fecha de la carta</label><input type="date" id="fechaCarta" /></div>
+            <div class="form-group"><label for="fechaCese">Último día laboral</label><input type="date" id="fechaCese" /></div>
+            <div class="form-group">
+              <label for="tipo">Tipo de renuncia</label>
+              <select id="tipo">
+                <option value="simple" selected>Simple (preaviso 30 días)</option>
+                <option value="exoneracion">Con exoneración de preaviso</option>
+                <option value="irrevocable">Irrevocable</option>
+              </select>
+            </div>
+
+            <p class="gen-section-label">Firma</p>
+            <div class="sig-panel">
+              <p>Escribe con el dedo o el mouse. Se pega en la carta sin marco.</p>
+              <div class="sig-canvas-wrap"><canvas id="sigCanvas" width="640" height="200" aria-label="Área para firmar"></canvas></div>
+              <div class="sig-actions">
+                <button type="button" class="btn-secondary btn-sm" id="btnClearFirma">Borrar firma</button>
+              </div>
+            </div>
+
+            <div class="gen-actions">
+              <button type="button" class="btn" data-action="pdf" data-target="resultado">Descargar PDF</button>
+            </div>
+            <div class="disclaimer">Modelo referencial.</div>
+          </section>
+
+          <section class="gen-preview-card">
+            <p class="vista-previa-label no-print">📄 Vista previa</p>
+            <div class="result-box visible" id="resultado">
+              <div class="doc-preview" id="preview"></div>
+            </div>
+          </section>
+        </div>
+      </main>
+      <div id="site-footer"></div>
+    </div>
+  </div>
+  <script src="/assets/js/navbar.js"></script>
+  <script src="/assets/js/include.js"></script>
+  <script>
+    document.getElementById("fechaCarta").value = new Date().toISOString().slice(0, 10);
+    var firmaUrl = "";
+    var pad = Firma.createPad(document.getElementById("sigCanvas"));
+    pad.onChange(function () {
+      firmaUrl = pad.isEmpty() ? "" : pad.getDataURL();
+      build();
+    });
+    document.getElementById("btnClearFirma").addEventListener("click", function () {
+      pad.clear();
+      firmaUrl = "";
+      build();
+    });
+    function build() {
+      Docs.renderPreview(document.getElementById("preview"), Docs.cartaRenuncia({
+        nombre: document.getElementById("nombre").value || "[Tu nombre]",
+        dni: document.getElementById("dni").value || "________",
+        direccion: document.getElementById("direccion").value,
+        cargo: document.getElementById("cargo").value || "[Cargo]",
+        empresa: document.getElementById("empresa").value || "[Empresa]",
+        destinatario: document.getElementById("destinatario").value,
+        ciudad: document.getElementById("ciudad").value,
+        fechaCarta: document.getElementById("fechaCarta").value,
+        fechaCese: document.getElementById("fechaCese").value,
+        tipo: document.getElementById("tipo").value,
+        firmaDataUrl: firmaUrl,
+      }));
+    }
+    UI.wireLiveInputs(document.getElementById("formPanel"), build);
+    UI.wireResultExport("resultado");
+    build();
+  </script>
+</body>
+</html>

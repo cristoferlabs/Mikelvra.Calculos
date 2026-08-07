@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es-PE">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Calculadora de Utilidades Perú 2026 | Mikelvra</title>
+  <meta name="description" content="Estima tu participación en utilidades según el D.Leg. 892: 50% por días y 50% por remuneración." />
+  <link rel="canonical" href="https://mikelvra.com/herramientas/utilidades.html" />
+  <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/assets/css/style.css" />
+  <script src="/assets/js/calculadoras.js"></script>
+  <script src="/assets/js/ui-helpers.js"></script>
+</head>
+<body>
+  <div class="app-shell">
+    <div id="site-header"></div>
+    <div class="main-area">
+      <main class="content">
+        <div class="breadcrumb"><a href="/index.html">Inicio</a> / Utilidades</div>
+        <div class="page-header">
+          <h1>Calculadora de Utilidades 2026</h1>
+          <p class="lead">Estimación orientativa: la mitad se reparte por días trabajados y la otra mitad por remuneraciones.</p>
+        </div>
+        <div class="calc-layout">
+          <div class="calc-card">
+            <div class="form-group">
+              <label for="utilidad">Utilidad distribuible de la empresa (S/)</label>
+              <input type="number" id="utilidad" min="0" step="0.01" placeholder="Ej. 500000" />
+              <p class="hint">Monto que la empresa destina a trabajadores (según % del sector).</p>
+            </div>
+            <div class="form-group">
+              <label for="diasTrab">Tus días laborados en el ejercicio</label>
+              <input type="number" id="diasTrab" min="0" step="1" placeholder="Ej. 300" />
+            </div>
+            <div class="form-group">
+              <label for="diasEmp">Suma de días de todos los trabajadores</label>
+              <input type="number" id="diasEmp" min="1" step="1" placeholder="Ej. 15000" />
+            </div>
+            <div class="form-group">
+              <label for="remTrab">Tu remuneración computable anual (S/)</label>
+              <input type="number" id="remTrab" min="0" step="0.01" placeholder="Ej. 28000" />
+            </div>
+            <div class="form-group">
+              <label for="remEmp">Suma de remuneraciones de la planilla (S/)</label>
+              <input type="number" id="remEmp" min="1" step="0.01" placeholder="Ej. 2000000" />
+            </div>
+            <div class="result-box" id="resultado" aria-live="polite">
+              <strong>Tu utilidad estimada</strong>
+              <div class="result-total" id="resultadoTotal">S/ 0.00</div>
+              <table class="result-breakdown">
+                <tr><td>Por días (50%)</td><td id="rDias">S/ 0.00</td></tr>
+                <tr><td>Por remuneración (50%)</td><td id="rRem">S/ 0.00</td></tr>
+              </table>
+            </div>
+            <div class="disclaimer">Estimación educativa. El cálculo oficial lo hace el empleador con datos de toda la planilla.</div>
+          </div>
+          <aside class="side-panel">
+            <!-- ads (activar tras AdSense): <div class="ad-slot sidebar-ad" aria-hidden="true">Espacio reservado para anuncio</div> -->
+            <details class="info-accordion" open>
+              <summary>Porcentajes por sector</summary>
+              <div class="info-accordion-body">
+                <p>Ejemplos: empresas industriales 10%, mineras 8%, comercio 8%, otras actividades 5% (D.Leg. 892).</p>
+              </div>
+            </details>
+          </aside>
+        </div>
+        <section class="more-tools">
+          <h2 class="more-tools-title">Más de Mikelvra</h2>
+          <div class="more-tools-grid">
+            <a class="more-tools-link" href="/herramientas/cuanto-me-deben.html"><span class="icon-badge">⚡</span><span><strong>Mi situación</strong><small>Beneficios anuales</small></span></a>
+            <a class="more-tools-link" href="/herramientas/liquidacion.html"><span class="icon-badge">📄</span><span><strong>Liquidación</strong><small>Al cese</small></span></a>
+          </div>
+        </section>
+      </main>
+      <div id="site-footer"></div>
+    </div>
+  </div>
+  <script src="/assets/js/navbar.js"></script>
+  <script src="/assets/js/include.js"></script>
+  <script>
+    function recalcular() {
+      // Validación de campos
+      var __el = document.getElementById("utilidad");
+      var __ok = UI.validateField(__el, { required: true, min: 0.01, type: "number", message: "Ingresa la utilidad distribuible (mayor a 0)." });
+      if (!__ok) { UI.setResultVisible("resultado", false); return; }
+
+      var utilidad = parseFloat(document.getElementById("utilidad").value) || 0;
+      var r = Calc.calcularUtilidades({
+        utilidadDistribuible: utilidad,
+        diasTrabajador: parseFloat(document.getElementById("diasTrab").value) || 0,
+        diasTotalesEmpresa: parseFloat(document.getElementById("diasEmp").value) || 1,
+        remuneracionAnual: parseFloat(document.getElementById("remTrab").value) || 0,
+        remuneracionTotalEmpresa: parseFloat(document.getElementById("remEmp").value) || 1,
+      });
+      document.getElementById("resultadoTotal").textContent = UI.formatSoles(r.total);
+      document.getElementById("rDias").textContent = UI.formatSoles(r.porDias);
+      document.getElementById("rRem").textContent = UI.formatSoles(r.porRemuneracion);
+      UI.setResultVisible("resultado", utilidad > 0);
+    }
+    UI.wireLiveInputs(document.querySelector(".calc-card"), recalcular);
+    UI.wireResultExport("resultado");
+    UI.syncExportButtons("resultado");
+    recalcular();
+  </script>
+</body>
+</html>

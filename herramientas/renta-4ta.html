@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es-PE">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Renta 4ta Categoría Perú 2026 | Mikelvra</title>
+  <meta name="description" content="Calcula el impuesto a la renta de 4ta categoría: deducción 20%, 7 UIT y escala progresiva. Perú 2026." />
+  <link rel="canonical" href="https://mikelvra.com/herramientas/renta-4ta.html" />
+  <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/assets/css/style.css" />
+  <script src="/assets/js/calculadoras.js"></script>
+  <script src="/assets/js/ui-helpers.js"></script>
+</head>
+<body>
+  <div class="app-shell">
+    <div id="site-header"></div>
+    <div class="main-area">
+      <main class="content">
+        <div class="breadcrumb"><a href="/index.html">Inicio</a> / Renta 4ta</div>
+        <div class="page-header">
+          <h1>Renta de 4ta Categoría 2026</h1>
+          <p class="lead">Estima tu impuesto anual como independiente: 20% de deducción + 7 UIT exentas + escala progresiva.</p>
+        </div>
+        <div class="calc-layout">
+          <div class="calc-card">
+            <div class="form-group">
+              <label for="ingreso">Ingreso bruto anual por honorarios (S/)</label>
+              <input type="number" id="ingreso" min="0" step="0.01" placeholder="Ej. 60000" />
+            </div>
+            <div class="result-box" id="resultado" aria-live="polite">
+              <strong>Impuesto anual estimado</strong>
+              <div class="result-total" id="resultadoTotal">S/ 0.00</div>
+              <table class="result-breakdown">
+                <tr><td>Deducción 20%</td><td id="r20">S/ 0.00</td></tr>
+                <tr><td>Deducción 7 UIT</td><td id="r7">S/ 0.00</td></tr>
+                <tr><td>Renta neta imponible</td><td id="rNeta">S/ 0.00</td></tr>
+                <tr><td>Equivalente mensual</td><td id="rMensual">S/ 0.00</td></tr>
+                <tr><td>¿Supera umbral suspensión (7 UIT)?</td><td id="rUmbral">—</td></tr>
+              </table>
+            </div>
+            <div class="disclaimer">Referencial. No considera otras rentas ni créditos. Consulta a un contador o SUNAT.</div>
+          </div>
+          <aside class="side-panel">
+            <!-- ads (activar tras AdSense): <div class="ad-slot sidebar-ad" aria-hidden="true">Espacio reservado para anuncio</div> -->
+            <details class="info-accordion" open>
+              <summary>Umbral de suspensión</summary>
+              <div class="info-accordion-body">
+                <p>Si tu proyección anual de 4ta no supera 7 UIT (S/ 38,500 en 2026), puedes pedir que no te retengan el 8%.</p>
+              </div>
+            </details>
+          </aside>
+        </div>
+        <section class="more-tools">
+          <h2 class="more-tools-title">Más de Mikelvra</h2>
+          <div class="more-tools-grid">
+            <a class="more-tools-link" href="/herramientas/recibo-honorarios.html"><span class="icon-badge">📝</span><span><strong>Honorarios</strong><small>Retención 8%</small></span></a>
+            <a class="more-tools-link" href="/herramientas/impuesto-renta.html"><span class="icon-badge">🧾</span><span><strong>Renta 5ta</strong><small>Planilla</small></span></a>
+          </div>
+        </section>
+      </main>
+      <div id="site-footer"></div>
+    </div>
+  </div>
+  <script src="/assets/js/navbar.js"></script>
+  <script src="/assets/js/include.js"></script>
+  <script>
+    function recalcular() {
+      // Validación de campos
+      var __el = document.getElementById("ingreso");
+      var __ok = UI.validateField(__el, { required: true, min: 0.01, type: "number", message: "Ingresa un ingreso anual válido mayor a 0." });
+      if (!__ok) { UI.setResultVisible("resultado", false); return; }
+
+      var ingreso = parseFloat(document.getElementById("ingreso").value) || 0;
+      var r = Calc.calcularRenta4ta({ ingresoAnual: ingreso });
+      document.getElementById("resultadoTotal").textContent = UI.formatSoles(r.impuesto);
+      document.getElementById("r20").textContent = UI.formatSoles(r.deduccion20);
+      document.getElementById("r7").textContent = UI.formatSoles(r.deduccion7UIT);
+      document.getElementById("rNeta").textContent = UI.formatSoles(r.rentaNeta);
+      document.getElementById("rMensual").textContent = UI.formatSoles(r.mensual);
+      document.getElementById("rUmbral").textContent = r.superaUmbral ? "Sí (posible retención)" : "No (puedes pedir suspensión)";
+      UI.setResultVisible("resultado", ingreso > 0);
+    }
+    UI.wireLiveInputs(document.querySelector(".calc-card"), recalcular);
+    UI.wireResultExport("resultado");
+    UI.syncExportButtons("resultado");
+    recalcular();
+  </script>
+</body>
+</html>

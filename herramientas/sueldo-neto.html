@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="es-PE">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Calculadora de Sueldo Neto Perú 2026 (Bruto ↔ Neto) | Mikelvra</title>
+  <meta name="description" content="Convierte tu sueldo bruto a neto o tu neto a bruto en Perú 2026, considerando AFP/ONP e impuesto a la renta de 5ta categoría. Gratis e instantáneo." />
+  <link rel="canonical" href="https://mikelvra.com/herramientas/sueldo-neto.html" />
+  <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/assets/css/style.css" />
+  <script src="/assets/js/calculadoras.js"></script>
+  <script src="/assets/js/ui-helpers.js"></script>
+  <!-- Ver comentario de AdSense/Analytics en index.html -->
+</head>
+<body>
+  <div class="app-shell">
+    <div id="site-header"></div>
+
+    <div class="main-area">
+<main class="content">
+        <div class="breadcrumb"><a href="/index.html">Inicio</a> / Sueldo Neto</div>
+        <div class="page-header">
+          <h1>Calculadora de Sueldo Neto 2026</h1>
+          <p class="lead">
+            Convierte tu sueldo bruto a neto, o tu neto a bruto, considerando el descuento de AFP/ONP
+            y la retención estimada de impuesto a la renta. Resultado instantáneo mientras escribes.
+          </p>
+          <div class="page-header-actions no-print">
+            <button type="button" class="btn-secondary btn-sm" data-action="pdf" data-target="resultado">Descargar PDF</button>
+            <button type="button" class="btn-secondary btn-sm" data-action="compartir" data-target="resultado">Compartir</button>
+          </div>
+        </div>
+
+        <div class="calc-layout">
+          <div class="calc-card">
+            <div class="form-group">
+              <label for="modo">¿Qué monto tienes?</label>
+              <select id="modo">
+                <option value="bruto" selected>Tengo mi sueldo bruto, quiero el neto</option>
+                <option value="neto">Tengo mi sueldo neto, quiero el bruto</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="monto" id="labelMonto">Sueldo bruto mensual (S/)</label>
+              <input type="number" id="monto" min="0" step="0.01" placeholder="Ej. 3000" />
+            </div>
+
+            <div class="form-group">
+              <label for="sistemaPension">Sistema de pensión</label>
+              <select id="sistemaPension">
+                <option value="onp" selected>ONP (13%)</option>
+                <option value="habitat">AFP Habitat (12.84%)</option>
+                <option value="integra">AFP Integra (12.92%)</option>
+                <option value="prima">AFP Prima (12.97%)</option>
+                <option value="profuturo">AFP Profuturo (13.06%)</option>
+              </select>
+            </div>
+
+            <div class="result-box" id="resultado" aria-live="polite" aria-atomic="true">
+              <strong id="labelResultado">Sueldo neto estimado</strong>
+              <div class="result-total" id="resultadoTotal">S/ 0.00</div>
+              <table class="result-breakdown">
+                <tr><td>Sueldo bruto</td><td id="rBruto">S/ 0.00</td></tr>
+                <tr><td>Descuento pensión</td><td id="rPension">S/ 0.00</td></tr>
+                <tr><td>Retención renta estimada</td><td id="rRenta">S/ 0.00</td></tr>
+                <tr><td>Sueldo neto</td><td id="rNeto">S/ 0.00</td></tr>
+              </table>
+              <div class="result-actions no-print">
+                <button type="button" class="btn-secondary btn-sm" data-action="pdf">Descargar PDF</button>
+                <button type="button" class="btn-secondary btn-sm" data-action="compartir">Compartir</button>
+              </div>
+            </div>
+
+            <div class="disclaimer">
+              Cálculo referencial: descuenta el aporte a tu sistema de pensión elegido y una estimación de la
+              retención mensual de impuesto a la renta de 5ta categoría. La conversión neto→bruto se resuelve
+              por aproximación numérica (el impuesto es progresivo, no hay fórmula directa). No incluye otros
+              descuentos como tardanzas, préstamos o EPS adicional. Verifica tu boleta real con RR. HH.
+            </div>
+          </div>
+
+          <aside class="side-panel">
+            <!-- ads (activar tras AdSense): <div class="ad-slot sidebar-ad" aria-hidden="true">Espacio reservado para anuncio</div> -->
+            <details class="info-accordion" open>
+              <summary>¿Por qué mi neto es menor que mi bruto?</summary>
+              <div class="info-accordion-body">
+                <p>Del bruto se descuenta tu aporte previsional (AFP u ONP) y, si superas el mínimo no
+                imponible, la retención mensual de impuesto a la renta de 5ta categoría.</p>
+              </div>
+            </details>
+            <details class="info-accordion">
+              <summary>¿EsSalud se descuenta de mi sueldo?</summary>
+              <div class="info-accordion-body">
+                <p>No. El aporte a EsSalud (9%) lo paga tu empleador, no se descuenta de tu boleta.</p>
+              </div>
+            </details>
+            <div class="info-card">
+              <h4>Base legal</h4>
+              <p>Composición de: Ley N.° 25897 / Decreto Ley N.° 19990 (AFP/ONP) y TUO de la Ley del Impuesto
+              a la Renta, D.S. N.° 179-2004-EF, artículo 34.</p>
+            </div>
+          </aside>
+        </div>
+
+        <section class="more-tools">
+          <h2 class="more-tools-title">Más de Mikelvra</h2>
+          <div class="more-tools-grid">
+            <a class="more-tools-link" href="/herramientas/afp-vs-onp.html">
+              <span class="icon-badge">📊</span>
+              <span><strong>AFP vs ONP</strong><small>Compara el descuento mensual</small></span>
+            </a>
+            <a class="more-tools-link" href="/herramientas/impuesto-renta.html">
+              <span class="icon-badge">🧾</span>
+              <span><strong>Impuesto a la Renta</strong><small>5ta categoría, tramos UIT 2026</small></span>
+            </a>
+            <a class="more-tools-link" href="/herramientas/cuanto-me-deben.html">
+              <span class="icon-badge">⚡</span>
+              <span><strong>Mi situación laboral</strong><small>Ingreso anual + acumulado</small></span>
+            </a>
+          </div>
+        </section>
+      </main>
+
+      <div id="site-footer"></div>
+    </div>
+  </div>
+
+  <script src="/assets/js/navbar.js"></script>
+  <script src="/assets/js/include.js"></script>
+  <script>
+    function tasaPensionSeleccionada() {
+      var id = document.getElementById("sistemaPension").value;
+      var sistema = Calc.SISTEMAS_PENSION_2026.filter(function (s) { return s.id === id; })[0];
+      return sistema ? sistema.tasa : 0.13;
+    }
+
+    function actualizarEtiquetas() {
+      var modoNeto = document.getElementById("modo").value === "neto";
+      document.getElementById("labelMonto").textContent = modoNeto
+        ? "Sueldo neto mensual (S/)"
+        : "Sueldo bruto mensual (S/)";
+      document.getElementById("labelResultado").textContent = modoNeto
+        ? "Sueldo bruto estimado"
+        : "Sueldo neto estimado";
+    }
+
+    function recalcular() {
+      // Validación de campos
+      var __el = document.getElementById("monto");
+      var __ok = UI.validateField(__el, { required: true, min: 0.01, type: "number", message: "Ingresa un monto válido mayor a 0." });
+      if (!__ok) { UI.setResultVisible("resultado", false); return; }
+
+      actualizarEtiquetas();
+      var monto = parseFloat(document.getElementById("monto").value) || 0;
+      var modoNeto = document.getElementById("modo").value === "neto";
+      var tasa = tasaPensionSeleccionada();
+
+      var r = modoNeto
+        ? Calc.sueldoBrutoDesdeNeto({ netoDeseado: monto, tasaPension: tasa })
+        : Calc.calcularSueldoNeto({ sueldoBruto: monto, tasaPension: tasa });
+
+      document.getElementById("rBruto").textContent = UI.formatSoles(r.sueldoBruto);
+      document.getElementById("rPension").textContent = UI.formatSoles(r.descuentoPension);
+      document.getElementById("rRenta").textContent = UI.formatSoles(r.retencionRenta);
+      document.getElementById("rNeto").textContent = UI.formatSoles(r.neto);
+      document.getElementById("resultadoTotal").textContent = UI.formatSoles(modoNeto ? r.sueldoBruto : r.neto);
+
+      UI.setResultVisible("resultado", monto > 0);
+    }
+
+    UI.prefillsueldo("monto");
+    UI.wireLiveInputs(document.querySelector(".calc-card"), recalcular);
+    UI.wireResultExport("resultado");
+    UI.syncExportButtons("resultado");
+    recalcular();
+  </script>
+</body>
+</html>

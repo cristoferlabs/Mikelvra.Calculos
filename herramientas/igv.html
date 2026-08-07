@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es-PE">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Calculadora IGV Perú 2026 | Mikelvra</title>
+  <meta name="description" content="Calcula el IGV del 18% (16% + 2% IPM). Agrega o quita impuesto a cualquier monto. Actualizado 2026." />
+  <link rel="canonical" href="https://mikelvra.com/herramientas/igv.html" />
+  <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/assets/css/style.css" />
+  <script src="/assets/js/calculadoras.js"></script>
+  <script src="/assets/js/ui-helpers.js"></script>
+</head>
+<body>
+  <div class="app-shell">
+    <div id="site-header"></div>
+    <div class="main-area">
+      <main class="content">
+        <div class="breadcrumb"><a href="/index.html">Inicio</a> / IGV</div>
+        <div class="page-header">
+          <h1>Calculadora IGV 2026</h1>
+          <p class="lead">Tasa vigente 18% (16% IGV + 2% IPM). Útil para facturas, cotizaciones y boletas.</p>
+        </div>
+        <div class="calc-layout">
+          <div class="calc-card">
+            <div class="form-group">
+              <label for="modo">Operación</label>
+              <select id="modo">
+                <option value="agregar" selected>Agregar IGV al monto</option>
+                <option value="quitar">Quitar IGV del monto (precio con IGV)</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="monto">Monto (S/)</label>
+              <input type="number" id="monto" min="0" step="0.01" placeholder="Ej. 1000" />
+            </div>
+            <div class="result-box" id="resultado" aria-live="polite">
+              <strong>Total</strong>
+              <div class="result-total" id="resultadoTotal">S/ 0.00</div>
+              <table class="result-breakdown">
+                <tr><td>Base imponible</td><td id="rBase">S/ 0.00</td></tr>
+                <tr><td>IGV (18%)</td><td id="rIgv">S/ 0.00</td></tr>
+                <tr><td>Total con IGV</td><td id="rTotal">S/ 0.00</td></tr>
+              </table>
+            </div>
+            <div class="disclaimer">Referencial. Algunos bienes/servicios tienen tasas especiales o están exonerados.</div>
+          </div>
+          <aside class="side-panel">
+            <!-- ads (activar tras AdSense): <div class="ad-slot sidebar-ad" aria-hidden="true">Espacio reservado para anuncio</div> -->
+            <details class="info-accordion" open>
+              <summary>¿Qué incluye el 18%?</summary>
+              <div class="info-accordion-body">
+                <p>16% es IGV y 2% es Impuesto de Promoción Municipal (IPM). En la práctica se aplican juntos como 18%.</p>
+              </div>
+            </details>
+          </aside>
+        </div>
+        <section class="more-tools">
+          <h2 class="more-tools-title">Más de Mikelvra</h2>
+          <div class="more-tools-grid">
+            <a class="more-tools-link" href="/generadores/cotizacion-igv.html"><span class="icon-badge">📑</span><span><strong>Cotización</strong><small>Con IGV en PDF</small></span></a>
+            <a class="more-tools-link" href="/herramientas/uit.html"><span class="icon-badge">🔢</span><span><strong>UIT</strong><small>Conversor 2026</small></span></a>
+          </div>
+        </section>
+      </main>
+      <div id="site-footer"></div>
+    </div>
+  </div>
+  <script src="/assets/js/navbar.js"></script>
+  <script src="/assets/js/include.js"></script>
+  <script>
+    function recalcular() {
+      // Validación de campos
+      var __el = document.getElementById("monto");
+      var __ok = UI.validateField(__el, { required: true, min: 0.01, type: "number", message: "Ingresa un monto válido mayor a 0." });
+      if (!__ok) { UI.setResultVisible("resultado", false); return; }
+
+      var monto = parseFloat(document.getElementById("monto").value) || 0;
+      var r = Calc.calcularIGV({ monto: monto, modo: document.getElementById("modo").value });
+      document.getElementById("resultadoTotal").textContent = UI.formatSoles(r.modo === "agregar" ? r.total : r.base);
+      document.getElementById("rBase").textContent = UI.formatSoles(r.base);
+      document.getElementById("rIgv").textContent = UI.formatSoles(r.igv);
+      document.getElementById("rTotal").textContent = UI.formatSoles(r.total);
+      UI.setResultVisible("resultado", monto > 0);
+    }
+    UI.wireLiveInputs(document.querySelector(".calc-card"), recalcular);
+    UI.wireResultExport("resultado");
+    UI.syncExportButtons("resultado");
+    recalcular();
+  </script>
+</body>
+</html>

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es-PE">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Boleta de pago con firma | Mikelvra</title>
+  <meta name="description" content="Boleta de pago referencial simple en blanco y negro. Firma y descarga PDF." />
+  <link rel="canonical" href="https://mikelvra.com/generadores/boleta-pago.html" />
+  <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/assets/css/style.css" />
+  <script src="/assets/js/calculadoras.js"></script>
+  <script src="/assets/js/ui-helpers.js"></script>
+  <script src="/assets/js/documentos.js"></script>
+  <script src="/assets/js/firma.js"></script>
+</head>
+<body class="page-generator">
+  <div class="app-shell">
+    <div id="site-header"></div>
+    <div class="main-area">
+      <main class="content">
+        <div class="breadcrumb no-print"><a href="/index.html">Inicio</a> / Boleta de pago</div>
+        <div class="page-header no-print">
+          <h1>Boleta de pago</h1>
+          <p class="lead">Datos a la izquierda, vista previa a la derecha. Firma sin marco.</p>
+        </div>
+
+        <div class="gen-layout">
+          <section class="gen-form no-print" id="formPanel">
+            <h2 class="gen-panel-title"><span class="gen-ico" aria-hidden="true">S/</span> Datos de la boleta</h2>
+
+            <p class="gen-section-label">Empresa</p>
+            <div class="form-group"><label for="empresa">Razón social</label><input type="text" id="empresa" placeholder="Ej. ACME PERÚ S.A.C." /></div>
+            <div class="form-group"><label for="periodo">Periodo</label><input type="text" id="periodo" placeholder="Ej. Agosto 2026" /></div>
+
+            <p class="gen-section-label">Trabajador</p>
+            <div class="form-group"><label for="nombre">Nombre completo</label><input type="text" id="nombre" autocomplete="name" /></div>
+            <div class="form-group"><label for="dni">DNI</label><input type="text" id="dni" inputmode="numeric" /></div>
+            <div class="form-group"><label for="cargo">Cargo</label><input type="text" id="cargo" /></div>
+            <div class="form-group"><label for="sueldo">Sueldo básico (S/)</label><input type="number" id="sueldo" min="0" step="0.01" /></div>
+            <div class="form-group"><label class="checkbox-row"><input type="checkbox" id="tieneAsignacion" /> Asignación familiar</label></div>
+            <div class="form-group">
+              <label for="sistemaPension">Sistema de pensión</label>
+              <select id="sistemaPension" data-open-pension>
+                <option value="onp" selected>ONP (13%)</option>
+                <option value="habitat">AFP Habitat</option>
+                <option value="integra">AFP Integra</option>
+                <option value="prima">AFP Prima</option>
+                <option value="profuturo">AFP Profuturo</option>
+              </select>
+            </div>
+
+            <p class="gen-section-label">Firma</p>
+            <div class="sig-panel">
+              <p>Firma “recibí conforme” (sin marco en el PDF).</p>
+              <div class="sig-canvas-wrap"><canvas id="sigCanvas" width="640" height="200" aria-label="Área para firmar"></canvas></div>
+              <div class="sig-actions"><button type="button" class="btn-secondary btn-sm" id="btnClearFirma">Borrar firma</button></div>
+            </div>
+
+            <div class="gen-actions">
+              <button type="button" class="btn" data-action="pdf" data-target="resultado">Descargar PDF</button>
+            </div>
+            <div class="disclaimer">No es boleta electrónica oficial.</div>
+          </section>
+
+          <section class="gen-preview-card">
+            <p class="vista-previa-label no-print">📄 Vista previa</p>
+            <div class="result-box visible" id="resultado">
+              <div class="doc-preview" id="preview"></div>
+            </div>
+          </section>
+        </div>
+      </main>
+      <div id="site-footer"></div>
+    </div>
+  </div>
+  <script src="/assets/js/navbar.js"></script>
+  <script src="/assets/js/include.js"></script>
+  <script>
+    var firmaUrl = "";
+    var pad = Firma.createPad(document.getElementById("sigCanvas"));
+    pad.onChange(function () { firmaUrl = pad.isEmpty() ? "" : pad.getDataURL(); build(); });
+    document.getElementById("btnClearFirma").addEventListener("click", function () { pad.clear(); firmaUrl = ""; build(); });
+    function pension() {
+      var id = document.getElementById("sistemaPension").value;
+      return Calc.SISTEMAS_PENSION_2026.filter(function (x) { return x.id === id; })[0] || { nombre: "ONP", tasa: 0.13 };
+    }
+    function build() {
+      var sueldo = parseFloat(document.getElementById("sueldo").value) || 0;
+      var af = document.getElementById("tieneAsignacion").checked;
+      var bruto = sueldo + (af ? Calc.ASIGNACION_FAMILIAR_2026 : 0);
+      var p = pension();
+      var neto = Calc.calcularSueldoNeto({ sueldoBruto: bruto, tasaPension: p.tasa });
+      Docs.renderPreview(document.getElementById("preview"), Docs.boletaPago({
+        nombre: document.getElementById("nombre").value || "[Trabajador]",
+        dni: document.getElementById("dni").value || "—",
+        cargo: document.getElementById("cargo").value || "—",
+        empresa: document.getElementById("empresa").value || "Razón social",
+        periodo: document.getElementById("periodo").value,
+        sueldo: sueldo,
+        tieneAsignacion: af,
+        sistemaNombre: p.nombre,
+        tasaPct: p.tasa * 100,
+        firmaDataUrl: firmaUrl,
+      }, neto));
+    }
+    UI.prefillsueldo("sueldo");
+    UI.wireLiveInputs(document.getElementById("formPanel"), build);
+    UI.wireResultExport("resultado");
+    document.addEventListener("mikelvra:data", build);
+    build();
+  </script>
+</body>
+</html>

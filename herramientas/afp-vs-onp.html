@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="es-PE">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Comparador AFP vs ONP Perú 2026 | Mikelvra</title>
+  <meta name="description" content="Compara el descuento mensual estimado entre las 4 AFP (Integra, Prima, Profuturo, Habitat) y la ONP en Perú 2026 según tu sueldo." />
+  <link rel="canonical" href="https://mikelvra.com/herramientas/afp-vs-onp.html" />
+  <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/assets/css/style.css" />
+  <script src="/assets/js/calculadoras.js"></script>
+  <script src="/assets/js/ui-helpers.js"></script>
+  <!-- Ver comentario de AdSense/Analytics en index.html -->
+</head>
+<body>
+  <div class="app-shell">
+    <div id="site-header"></div>
+
+    <div class="main-area">
+<main class="content">
+        <div class="breadcrumb"><a href="/index.html">Inicio</a> / AFP vs ONP</div>
+        <div class="page-header">
+          <h1>Comparador AFP vs ONP 2026</h1>
+          <p class="lead">
+            Ingresa tu sueldo bruto mensual y compara el descuento previsional estimado entre la
+            ONP y las 4 AFP disponibles en Perú. La tabla se actualiza al instante mientras escribes.
+          </p>
+          <div class="page-header-actions no-print">
+            <button type="button" class="btn-secondary btn-sm" data-action="pdf" data-target="resultado">Descargar PDF</button>
+            <button type="button" class="btn-secondary btn-sm" data-action="compartir" data-target="resultado">Compartir</button>
+          </div>
+        </div>
+
+        <div class="calc-layout">
+          <div class="calc-card">
+            <div class="form-group">
+              <label for="sueldo">Sueldo bruto mensual (S/)</label>
+              <input type="number" id="sueldo" min="0" step="0.01" placeholder="Ej. 2500" />
+            </div>
+
+            <div class="result-box" id="resultado" aria-live="polite" aria-atomic="true">
+              <strong>Descuento mensual estimado</strong>
+              <div class="table-scroll">
+                <table class="data-table" id="tablaComparacion">
+                  <thead>
+                    <tr><th>Sistema</th><th>Tasa aprox.</th><th>Descuento mensual</th><th>Neto estimado</th></tr>
+                  </thead>
+                  <tbody id="tablaBody"></tbody>
+                </table>
+              </div>
+              <p class="hint" id="mejorOpcion"></p>
+              <div class="result-actions no-print">
+                <button type="button" class="btn-secondary btn-sm" data-action="pdf">Descargar PDF</button>
+                <button type="button" class="btn-secondary btn-sm" data-action="compartir">Compartir</button>
+              </div>
+            </div>
+
+            <div class="disclaimer">
+              Cifras referenciales basadas en tasas publicadas de comisión + prima de seguro (SBS) vigentes al
+              momento de esta publicación. Desde la reforma de comisión mixta, las AFP también cobran un
+              componente adicional sobre el saldo acumulado (no sobre tu sueldo mensual), que no se refleja en
+              esta tabla. Verifica las tasas actualizadas en <a href="https://www.sbs.gob.pe" target="_blank" rel="noopener">sbs.gob.pe</a>
+              antes de tomar una decisión definitiva.
+            </div>
+          </div>
+
+          <aside class="side-panel">
+            <!-- ads (activar tras AdSense): <div class="ad-slot sidebar-ad" aria-hidden="true">Espacio reservado para anuncio</div> -->
+            <details class="info-accordion" open>
+              <summary>ONP vs AFP: la diferencia de fondo</summary>
+              <div class="info-accordion-body">
+                <p>La ONP es un sistema de reparto con una tasa fija de 13%: tu pensión futura depende de años
+                aportados, no de un fondo individual. Las AFP son de capitalización individual: tu aporte va a
+                una cuenta propia que genera rentabilidad (o pérdidas) según el mercado.</p>
+              </div>
+            </details>
+            <details class="info-accordion">
+              <summary>¿Se puede cambiar de sistema?</summary>
+              <div class="info-accordion-body">
+                <p>Sí, bajo ciertas condiciones y ventanas de tiempo establecidas por la SBS. Antes de cambiarte,
+                conviene asesorarte con un especialista, ya que la decisión es en la práctica difícil de revertir.</p>
+              </div>
+            </details>
+            <div class="info-card">
+              <h4>Base legal</h4>
+              <p>AFP: Ley N.° 25897 (Ley del Sistema Privado de Pensiones), TUO aprobado por D.S. N.° 054-97-EF,
+              bajo supervisión de la SBS. ONP: Decreto Ley N.° 19990.</p>
+            </div>
+          </aside>
+        </div>
+
+        <section class="more-tools">
+          <h2 class="more-tools-title">Más de Mikelvra</h2>
+          <div class="more-tools-grid">
+            <a class="more-tools-link" href="/herramientas/impuesto-renta.html">
+              <span class="icon-badge">🧾</span>
+              <span><strong>Impuesto a la Renta</strong><small>5ta categoría, tramos UIT 2026</small></span>
+            </a>
+            <a class="more-tools-link" href="/herramientas/sueldo-neto.html">
+              <span class="icon-badge">🧮</span>
+              <span><strong>Sueldo Neto</strong><small>De bruto a neto y viceversa</small></span>
+            </a>
+            <a class="more-tools-link" href="/herramientas/cuanto-me-deben.html">
+              <span class="icon-badge">⚡</span>
+              <span><strong>Mi situación laboral</strong><small>Ingreso anual + acumulado</small></span>
+            </a>
+          </div>
+        </section>
+      </main>
+
+      <div id="site-footer"></div>
+    </div>
+  </div>
+
+  <script src="/assets/js/navbar.js"></script>
+  <script src="/assets/js/include.js"></script>
+  <script>
+    function recalcular() {
+      // Validación de campos
+      var __el = document.getElementById("sueldo");
+      var __ok = UI.validateField(__el, { required: true, min: 0.01, type: "number", message: "Ingresa un sueldo válido mayor a 0." });
+      if (!__ok) { UI.setResultVisible("resultado", false); return; }
+
+      var sueldo = parseFloat(document.getElementById("sueldo").value) || 0;
+      var tbody = document.getElementById("tablaBody");
+      tbody.innerHTML = "";
+
+      var r = Calc.compararPensiones(sueldo);
+
+      r.filas.forEach(function (f) {
+        var tr = document.createElement("tr");
+        if (f.nombre === r.mejor.nombre) tr.style.background = "#eaf7f0";
+        tr.innerHTML =
+          "<td>" + f.nombre + "</td>" +
+          "<td>" + (f.tasa * 100).toFixed(2) + "%</td>" +
+          "<td>" + UI.formatSoles(f.descuento) + "</td>" +
+          "<td>" + UI.formatSoles(f.neto) + "</td>";
+        tbody.appendChild(tr);
+      });
+
+      document.getElementById("mejorOpcion").textContent =
+        "Con estas tasas, " + r.mejor.nombre + " te dejaría el mayor neto mensual (" + UI.formatSoles(r.mejor.neto) + "). " +
+        "Recuerda que esto no considera rentabilidad de largo plazo del fondo ni el componente sobre saldo acumulado.";
+
+      UI.setResultVisible("resultado", sueldo > 0);
+    }
+
+    UI.wireLiveInputs(document.querySelector(".calc-card"), recalcular);
+    UI.wireResultExport("resultado");
+    UI.syncExportButtons("resultado");
+    recalcular();
+  </script>
+</body>
+</html>

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es-PE">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Calculadora de Horas Extras Perú 2026 | Mikelvra</title>
+  <meta name="description" content="Calcula horas extras en Perú: 25% las primeras 2 horas y 35% desde la tercera. Actualizado 2026." />
+  <link rel="canonical" href="https://mikelvra.com/herramientas/horas-extras.html" />
+  <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/assets/css/style.css" />
+  <script src="/assets/js/calculadoras.js"></script>
+  <script src="/assets/js/ui-helpers.js"></script>
+</head>
+<body>
+  <div class="app-shell">
+    <div id="site-header"></div>
+    <div class="main-area">
+      <main class="content">
+        <div class="breadcrumb"><a href="/index.html">Inicio</a> / Horas extras</div>
+        <div class="page-header">
+          <h1>Calculadora de Horas Extras 2026</h1>
+          <p class="lead">Según el D.S. 007-2002-TR: 25% adicional las primeras 2 horas extras del día y 35% a partir de la tercera.</p>
+          <div class="page-header-actions no-print">
+            <button type="button" class="btn-secondary btn-sm" data-action="pdf" data-target="resultado">Descargar PDF</button>
+            <button type="button" class="btn-secondary btn-sm" data-action="compartir" data-target="resultado">Compartir</button>
+          </div>
+        </div>
+        <div class="calc-layout">
+          <div class="calc-card">
+            <div class="form-group">
+              <label for="sueldo">Sueldo básico mensual (S/)</label>
+              <input type="number" id="sueldo" min="0" step="0.01" placeholder="Ej. 1500" />
+            </div>
+            <div class="form-group">
+              <label for="horas25">Horas al 25% (primeras 2 del día)</label>
+              <input type="number" id="horas25" min="0" step="0.5" placeholder="Ej. 2" />
+            </div>
+            <div class="form-group">
+              <label for="horas35">Horas al 35% (desde la 3.ª)</label>
+              <input type="number" id="horas35" min="0" step="0.5" placeholder="Ej. 1" />
+            </div>
+            <div class="result-box" id="resultado" aria-live="polite">
+              <strong>Total horas extras</strong>
+              <div class="result-total" id="resultadoTotal">S/ 0.00</div>
+              <table class="result-breakdown">
+                <tr><td>Valor hora ordinaria</td><td id="rValorHora">S/ 0.00</td></tr>
+                <tr><td>Monto al 25%</td><td id="r25">S/ 0.00</td></tr>
+                <tr><td>Monto al 35%</td><td id="r35">S/ 0.00</td></tr>
+              </table>
+            </div>
+            <div class="disclaimer">Cálculo referencial con jornada de 8 h/día y 30 días. Verifica con RR. HH. o SUNAFIL.</div>
+          </div>
+          <aside class="side-panel">
+            <!-- ads (activar tras AdSense): <div class="ad-slot sidebar-ad" aria-hidden="true">Espacio reservado para anuncio</div> -->
+            <details class="info-accordion" open>
+              <summary>¿Cómo se calcula?</summary>
+              <div class="info-accordion-body">
+                <p>Valor hora = sueldo ÷ 30 ÷ 8. Luego se multiplica por 1.25 o 1.35 según el tramo.</p>
+              </div>
+            </details>
+          </aside>
+        </div>
+        <section class="more-tools">
+          <h2 class="more-tools-title">Más de Mikelvra</h2>
+          <div class="more-tools-grid">
+            <a class="more-tools-link" href="/herramientas/cuanto-me-deben.html"><span class="icon-badge">⚡</span><span><strong>Mi situación</strong><small>Panorama completo</small></span></a>
+            <a class="more-tools-link" href="/herramientas/sueldo-neto.html"><span class="icon-badge">💵</span><span><strong>Sueldo neto</strong><small>Bruto a neto</small></span></a>
+          </div>
+        </section>
+      </main>
+      <div id="site-footer"></div>
+    </div>
+  </div>
+  <script src="/assets/js/navbar.js"></script>
+  <script src="/assets/js/include.js"></script>
+  <script>
+    function recalcular() {
+      // Validación de campos
+      var __el = document.getElementById("sueldo");
+      var __ok = UI.validateField(__el, { required: true, min: 0.01, type: "number", message: "Ingresa un sueldo válido mayor a 0." });
+      if (!__ok) { UI.setResultVisible("resultado", false); return; }
+
+      var sueldo = parseFloat(document.getElementById("sueldo").value) || 0;
+      var r = Calc.calcularHorasExtras({
+        sueldo: sueldo,
+        horas25: parseFloat(document.getElementById("horas25").value) || 0,
+        horas35: parseFloat(document.getElementById("horas35").value) || 0,
+      });
+      document.getElementById("resultadoTotal").textContent = UI.formatSoles(r.total);
+      document.getElementById("rValorHora").textContent = UI.formatSoles(r.valorHora);
+      document.getElementById("r25").textContent = UI.formatSoles(r.monto25);
+      document.getElementById("r35").textContent = UI.formatSoles(r.monto35);
+      UI.setResultVisible("resultado", sueldo > 0);
+      if (sueldo > 0) UI.saveSueldo(sueldo);
+    }
+    UI.prefillsueldo("sueldo");
+    UI.wireLiveInputs(document.querySelector(".calc-card"), recalcular);
+    UI.wireResultExport("resultado");
+    UI.syncExportButtons("resultado");
+    recalcular();
+  </script>
+</body>
+</html>

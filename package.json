@@ -1,0 +1,13 @@
+{
+  "name": "mikelvra-site",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Sitio estatico de Mikelvra (HTML/CSS/JS puro). Este package.json solo existe para poder servir el sitio localmente con Node si no tienes Python instalado.",
+  "scripts": {
+    "start": "serve -l 8080 .",
+    "fetch-data": "node scripts/fetch-open-data.mjs"
+  },
+  "devDependencies": {
+    "serve": "^14.2.1"
+  }
+}

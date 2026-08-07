@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="es-PE">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Calculadora de CTS Perú 2026 (Mayo/Noviembre) | Mikelvra</title>
+  <meta name="description" content="Calcula tu depósito de CTS en Perú 2026, incluyendo el sexto de gratificación. Herramienta gratuita y actualizada según la fórmula del MTPE." />
+  <link rel="canonical" href="https://mikelvra.com/herramientas/cts.html" />
+  <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/assets/css/style.css" />
+  <script src="/assets/js/calculadoras.js"></script>
+  <script src="/assets/js/ui-helpers.js"></script>
+  <!-- Ver comentario de AdSense/Analytics en index.html -->
+</head>
+<body>
+  <div class="app-shell">
+    <div id="site-header"></div>
+
+    <div class="main-area">
+<main class="content">
+        <div class="breadcrumb"><a href="/index.html">Inicio</a> / CTS</div>
+        <div class="page-header">
+          <h1>Calculadora de CTS 2026</h1>
+          <p class="lead">
+            Estima tu Compensación por Tiempo de Servicios de mayo o noviembre, incluyendo el
+            sexto de tu última gratificación. El resultado se actualiza al instante mientras escribes.
+          </p>
+          <div class="page-header-actions no-print">
+            <button type="button" class="btn-secondary btn-sm" data-action="pdf" data-target="resultado">Descargar PDF</button>
+            <button type="button" class="btn-secondary btn-sm" data-action="compartir" data-target="resultado">Compartir</button>
+          </div>
+        </div>
+
+        <div class="calc-layout">
+          <div class="calc-card">
+            <div class="form-group">
+              <label for="sueldo">Sueldo básico mensual (S/)</label>
+              <input type="number" id="sueldo" min="0" step="0.01" placeholder="Ej. 1500" />
+            </div>
+
+            <div class="form-group">
+              <label class="checkbox-row">
+                <input type="checkbox" id="tieneAsignacion" />
+                Recibo asignación familiar (S/ 113.00)
+              </label>
+            </div>
+
+            <div class="form-group">
+              <label for="gratificacion">Última gratificación recibida (S/)</label>
+              <input type="number" id="gratificacion" min="0" step="0.01" placeholder="Ej. 1500" />
+              <p class="hint">Se usa para calcular el "sexto de gratificación" (gratificación ÷ 6) que se suma a tu base de cálculo. Si no la conoces, puedes dejarlo en 0.</p>
+            </div>
+
+            <div class="form-group">
+              <label for="mesesCompletos">Meses completos trabajados en el semestre</label>
+              <select id="mesesCompletos">
+                <option value="6" selected>6 (semestre completo)</option>
+                <option value="5">5</option>
+                <option value="4">4</option>
+                <option value="3">3</option>
+                <option value="2">2</option>
+                <option value="1">1</option>
+                <option value="0">0</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="diasAdicionales">Días adicionales (0-29)</label>
+              <input type="number" id="diasAdicionales" min="0" max="29" step="1" value="0" />
+            </div>
+
+            <div class="result-box" id="resultado" aria-live="polite" aria-atomic="true">
+              <strong>CTS estimada del período</strong>
+              <div class="result-total" id="resultadoTotal">S/ 0.00</div>
+              <table class="result-breakdown">
+                <tr><td>Remuneración computable</td><td id="rRemuneracion">S/ 0.00</td></tr>
+                <tr><td>Sexto de gratificación</td><td id="rSexto">S/ 0.00</td></tr>
+                <tr><td>Base de cálculo mensual</td><td id="rBase">S/ 0.00</td></tr>
+                <tr><td>Por meses completos</td><td id="rMeses">S/ 0.00</td></tr>
+                <tr><td>Por días adicionales</td><td id="rDias">S/ 0.00</td></tr>
+              </table>
+              <div class="result-actions no-print">
+                <button type="button" class="btn-secondary btn-sm" data-action="pdf">Descargar PDF</button>
+                <button type="button" class="btn-secondary btn-sm" data-action="compartir">Compartir</button>
+              </div>
+            </div>
+
+            <div class="disclaimer">
+              Cálculo referencial según la fórmula del MTPE: (remuneración computable + 1/6 de gratificación) ÷ 12
+              × meses, más la parte proporcional por días. No considera horas extra variables, ausencias
+              injustificadas ni otros conceptos especiales. Verifica tu caso con RR. HH. o un especialista laboral.
+            </div>
+          </div>
+
+          <aside class="side-panel">
+            <!-- ads (activar tras AdSense): <div class="ad-slot sidebar-ad" aria-hidden="true">Espacio reservado para anuncio</div> -->
+            <details class="info-accordion" open>
+              <summary>¿Cuándo se deposita?</summary>
+              <div class="info-accordion-body">
+                <p>La CTS se deposita en dos oportunidades: la primera quincena de mayo (por el semestre
+                noviembre-abril) y la primera quincena de noviembre (por el semestre mayo-octubre).</p>
+              </div>
+            </details>
+            <details class="info-accordion">
+              <summary>¿Dónde se deposita?</summary>
+              <div class="info-accordion-body">
+                <p>En la entidad financiera que elijas (banco, caja o cooperativa autorizada), a tu nombre y
+                de libre disponibilidad según la normativa vigente.</p>
+              </div>
+            </details>
+            <div class="info-card">
+              <h4>Base legal</h4>
+              <p>TUO del Decreto Legislativo N.° 650, aprobado por D.S. N.° 001-97-TR, y su reglamento,
+              D.S. N.° 004-97-TR.</p>
+            </div>
+          </aside>
+        </div>
+
+        <section class="more-tools">
+          <h2 class="more-tools-title">Más de Mikelvra</h2>
+          <div class="more-tools-grid">
+            <a class="more-tools-link" href="/herramientas/gratificacion.html">
+              <span class="icon-badge">🎁</span>
+              <span><strong>Gratificación</strong><small>Julio y diciembre</small></span>
+            </a>
+            <a class="more-tools-link" href="/herramientas/vacaciones.html">
+              <span class="icon-badge">🏖️</span>
+              <span><strong>Vacaciones</strong><small>Remuneración completa o trunca</small></span>
+            </a>
+            <a class="more-tools-link" href="/herramientas/liquidacion.html">
+              <span class="icon-badge">📄</span>
+              <span><strong>Liquidación</strong><small>Al momento del cese</small></span>
+            </a>
+          </div>
+        </section>
+      </main>
+
+      <div id="site-footer"></div>
+    </div>
+  </div>
+
+  <script src="/assets/js/navbar.js"></script>
+  <script src="/assets/js/include.js"></script>
+  <script>
+    function recalcular() {
+      // Validación de campos
+      var __el = document.getElementById("sueldo");
+      var __ok = UI.validateField(__el, { required: true, min: 0.01, type: "number", message: "Ingresa un sueldo válido mayor a 0." });
+      if (!__ok) { UI.setResultVisible("resultado", false); return; }
+
+      var sueldo = parseFloat(document.getElementById("sueldo").value) || 0;
+      var r = Calc.calcularCTS({
+        sueldo: sueldo,
+        tieneAsignacion: document.getElementById("tieneAsignacion").checked,
+        ultimaGratificacion: parseFloat(document.getElementById("gratificacion").value) || 0,
+        mesesCompletos: parseInt(document.getElementById("mesesCompletos").value, 10),
+        diasAdicionales: parseFloat(document.getElementById("diasAdicionales").value) || 0,
+      });
+
+      document.getElementById("rRemuneracion").textContent = UI.formatSoles(r.remuneracionComputable);
+      document.getElementById("rSexto").textContent = UI.formatSoles(r.sexto);
+      document.getElementById("rBase").textContent = UI.formatSoles(r.base);
+      document.getElementById("rMeses").textContent = UI.formatSoles(r.porMeses);
+      document.getElementById("rDias").textContent = UI.formatSoles(r.porDias);
+      document.getElementById("resultadoTotal").textContent = UI.formatSoles(r.total);
+
+      UI.setResultVisible("resultado", sueldo > 0);
+    }
+
+    UI.prefillsueldo("sueldo");
+    UI.wireLiveInputs(document.querySelector(".calc-card"), recalcular);
+    UI.wireResultExport("resultado");
+    UI.syncExportButtons("resultado");
+    recalcular();
+  </script>
+</body>
+</html>

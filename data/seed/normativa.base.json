@@ -1,0 +1,32 @@
+{
+  "year": 2026,
+  "uit": 5500,
+  "rmv": 1130,
+  "asignacionFamiliar": 113,
+  "igv": 0.18,
+  "onp": 0.13,
+  "essalud": 0.09,
+  "retencion4ta": 0.08,
+  "deduccion4taPct": 0.2,
+  "deduccionRentaUit": 7,
+  "horasExtras": { "pct25": 1.25, "pct35": 1.35 },
+  "tramosRenta": [
+    { "hastaUit": 5, "tasa": 0.08 },
+    { "hastaUit": 20, "tasa": 0.14 },
+    { "hastaUit": 35, "tasa": 0.17 },
+    { "hastaUit": 45, "tasa": 0.2 },
+    { "hastaUit": null, "tasa": 0.3 }
+  ],
+  "sistemasPension": [
+    { "id": "onp", "nombre": "ONP", "tasa": 0.13 },
+    { "id": "habitat", "nombre": "AFP Habitat", "tasa": 0.1284 },
+    { "id": "integra", "nombre": "AFP Integra", "tasa": 0.1292 },
+    { "id": "prima", "nombre": "AFP Prima", "tasa": 0.1297 },
+    { "id": "profuturo", "nombre": "AFP Profuturo", "tasa": 0.1306 }
+  ],
+  "sources": [
+    { "id": "mef-uit", "label": "MEF — UIT 2026 (D.S. 301-2025-EF)", "url": "https://www.gob.pe/institucion/mef" },
+    { "id": "sbs-afp", "label": "SBS — comisiones AFP (vía open data)", "url": "https://www.sbs.gob.pe/" },
+    { "id": "mtpe", "label": "MTPE — normativa laboral", "url": "https://www.gob.pe/mtpe" }
+  ]
+}

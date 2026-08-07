@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es-PE">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Conversor UIT 2026 Perú | Mikelvra</title>
+  <meta name="description" content="Convierte UIT a soles y soles a UIT. UIT 2026 = S/ 5,500. Gratis y actualizado." />
+  <link rel="canonical" href="https://mikelvra.com/herramientas/uit.html" />
+  <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/assets/css/style.css" />
+  <script src="/assets/js/calculadoras.js"></script>
+  <script src="/assets/js/ui-helpers.js"></script>
+</head>
+<body>
+  <div class="app-shell">
+    <div id="site-header"></div>
+    <div class="main-area">
+      <main class="content">
+        <div class="breadcrumb"><a href="/index.html">Inicio</a> / Conversor UIT</div>
+        <div class="page-header">
+          <h1>Conversor UIT <span data-year>2026</span></h1>
+          <p class="lead">La Unidad Impositiva Tributaria vigente es <strong data-uit-value>S/ 5,500</strong>. Útil para multas, deducciones y topes legales.</p>
+        </div>
+        <div class="calc-layout">
+          <div class="calc-card">
+            <div class="form-group">
+              <label for="modo">Conversión</label>
+              <select id="modo">
+                <option value="uit-a-soles" selected>UIT → Soles</option>
+                <option value="soles-a-uit">Soles → UIT</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="valor" id="labelValor">Cantidad de UIT</label>
+              <input type="number" id="valor" min="0" step="0.01" placeholder="Ej. 7" />
+            </div>
+            <div class="result-box" id="resultado" aria-live="polite">
+              <strong id="labelResultado">Equivalente en soles</strong>
+              <div class="result-total" id="resultadoTotal">S/ 0.00</div>
+              <p class="hint">UIT vigente = <span data-uit-value>S/ 5,500</span></p>
+            </div>
+            <div class="disclaimer">Valor oficial referencial. Confirma siempre en SUNAT / MEF.</div>
+          </div>
+          <aside class="side-panel">
+            <!-- ads (activar tras AdSense): <div class="ad-slot sidebar-ad" aria-hidden="true">Espacio reservado para anuncio</div> -->
+            <details class="info-accordion" open>
+              <summary>¿Para qué sirve la UIT?</summary>
+              <div class="info-accordion-body">
+                <p>Define topes de multa, deducciones de renta (7 UIT), asignación familiar relativa a RMV, y muchos umbrales legales.</p>
+              </div>
+            </details>
+          </aside>
+        </div>
+        <section class="more-tools">
+          <h2 class="more-tools-title">Más de Mikelvra</h2>
+          <div class="more-tools-grid">
+            <a class="more-tools-link" href="/herramientas/impuesto-renta.html"><span class="icon-badge">🧾</span><span><strong>Renta 5ta</strong><small>Tramos UIT</small></span></a>
+            <a class="more-tools-link" href="/herramientas/igv.html"><span class="icon-badge">🧾</span><span><strong>IGV</strong><small>18%</small></span></a>
+          </div>
+        </section>
+      </main>
+      <div id="site-footer"></div>
+    </div>
+  </div>
+  <script src="/assets/js/navbar.js"></script>
+  <script src="/assets/js/include.js"></script>
+  <script>
+    function recalcular() {
+      // Validación de campos
+      var __el = document.getElementById("valor");
+      var __ok = UI.validateField(__el, { required: true, min: 0.01, type: "number", message: "Ingresa un valor válido mayor a 0." });
+      if (!__ok) { UI.setResultVisible("resultado", false); return; }
+
+      var modo = document.getElementById("modo").value;
+      var valor = parseFloat(document.getElementById("valor").value) || 0;
+      var aSoles = modo === "uit-a-soles";
+      document.getElementById("labelValor").textContent = aSoles ? "Cantidad de UIT" : "Monto en soles (S/)";
+      document.getElementById("labelResultado").textContent = aSoles ? "Equivalente en soles" : "Equivalente en UIT";
+      var r = Calc.convertirUIT({ modo: modo, valor: valor });
+      document.getElementById("resultadoTotal").textContent = aSoles
+        ? UI.formatSoles(r.resultado)
+        : r.resultado.toFixed(4) + " UIT";
+      UI.setResultVisible("resultado", valor > 0);
+    }
+    UI.wireLiveInputs(document.querySelector(".calc-card"), recalcular);
+    UI.wireResultExport("resultado");
+    UI.syncExportButtons("resultado");
+    recalcular();
+  </script>
+</body>
+</html>

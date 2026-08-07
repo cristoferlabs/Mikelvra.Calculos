@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="es-PE">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Calculadora de Impuesto a la Renta 5ta Categoría Perú 2026 | Mikelvra</title>
+  <meta name="description" content="Calcula tu impuesto a la renta de quinta categoría en Perú 2026 según la UIT vigente (S/5,500) y los tramos progresivos de SUNAT." />
+  <link rel="canonical" href="https://mikelvra.com/herramientas/impuesto-renta.html" />
+  <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/assets/css/style.css" />
+  <script src="/assets/js/calculadoras.js"></script>
+  <script src="/assets/js/ui-helpers.js"></script>
+  <!-- Ver comentario de AdSense/Analytics en index.html -->
+</head>
+<body>
+  <div class="app-shell">
+    <div id="site-header"></div>
+
+    <div class="main-area">
+<main class="content">
+        <div class="breadcrumb"><a href="/index.html">Inicio</a> / Impuesto a la Renta</div>
+        <div class="page-header">
+          <h1>Calculadora de Impuesto a la Renta 2026</h1>
+          <p class="lead">
+            Estima tu impuesto a la renta anual de quinta categoría según la UIT 2026 (S/ 5,500) y los
+            tramos progresivos vigentes. El resultado se actualiza al instante mientras escribes.
+          </p>
+          <div class="page-header-actions no-print">
+            <button type="button" class="btn-secondary btn-sm" data-action="pdf" data-target="resultado">Descargar PDF</button>
+            <button type="button" class="btn-secondary btn-sm" data-action="compartir" data-target="resultado">Compartir</button>
+          </div>
+        </div>
+
+        <div class="calc-layout">
+          <div class="calc-card">
+            <div class="form-group">
+              <label for="sueldo">Sueldo bruto mensual (S/)</label>
+              <input type="number" id="sueldo" min="0" step="0.01" placeholder="Ej. 4500" />
+              <p class="hint">No incluyas gratificaciones: están exoneradas del impuesto a la renta de 5ta categoría.</p>
+            </div>
+
+            <div class="form-group">
+              <label for="meses">Meses trabajados en el año</label>
+              <input type="number" id="meses" min="1" max="12" step="1" value="12" />
+            </div>
+
+            <div class="result-box" id="resultado" aria-live="polite" aria-atomic="true">
+              <strong>Impuesto a la renta anual estimado</strong>
+              <div class="result-total" id="resultadoTotal">S/ 0.00</div>
+              <table class="result-breakdown">
+                <tr><td>Ingreso anual proyectado</td><td id="rIngreso">S/ 0.00</td></tr>
+                <tr><td>Deducción de 7 UIT</td><td id="rDeduccion">S/ 0.00</td></tr>
+                <tr><td>Renta neta imponible</td><td id="rRentaNeta">S/ 0.00</td></tr>
+                <tr><td>Tasa efectiva</td><td id="rTasaEfectiva">0%</td></tr>
+                <tr><td>Retención mensual promedio</td><td id="rMensual">S/ 0.00</td></tr>
+              </table>
+              <div class="result-actions no-print">
+                <button type="button" class="btn-secondary btn-sm" data-action="pdf">Descargar PDF</button>
+                <button type="button" class="btn-secondary btn-sm" data-action="compartir">Compartir</button>
+              </div>
+            </div>
+
+            <div class="disclaimer">
+              Cálculo educativo y simplificado: no considera otras deducciones adicionales (como las 3 UIT por
+              gastos personales que permite la ley), bonificaciones extraordinarias, ni el cronograma real de
+              retenciones mes a mes que aplica tu empleador. Para tu declaración o retención exacta, consulta a
+              un contador o la página oficial de SUNAT.
+            </div>
+
+            <h2 style="margin-top:28px;">Tabla de tramos 2026 (UIT = S/ 5,500)</h2>
+            <div class="table-scroll">
+              <table class="data-table">
+                <thead><tr><th>Tramo</th><th>Renta neta imponible</th><th>Tasa</th></tr></thead>
+                <tbody>
+                  <tr><td>1</td><td>Hasta 5 UIT (S/ 27,500)</td><td>8%</td></tr>
+                  <tr><td>2</td><td>De 5 a 20 UIT (S/ 27,500 – S/ 110,000)</td><td>14%</td></tr>
+                  <tr><td>3</td><td>De 20 a 35 UIT (S/ 110,000 – S/ 192,500)</td><td>17%</td></tr>
+                  <tr><td>4</td><td>De 35 a 45 UIT (S/ 192,500 – S/ 247,500)</td><td>20%</td></tr>
+                  <tr><td>5</td><td>Más de 45 UIT (S/ 247,500)</td><td>30%</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <aside class="side-panel">
+            <!-- ads (activar tras AdSense): <div class="ad-slot sidebar-ad" aria-hidden="true">Espacio reservado para anuncio</div> -->
+            <details class="info-accordion" open>
+              <summary>¿Por qué se resta 7 UIT?</summary>
+              <div class="info-accordion-body">
+                <p>La ley permite una deducción fija de 7 UIT (S/ 38,500 en 2026) antes de calcular el impuesto,
+                como mínimo no imponible para todo trabajador dependiente.</p>
+              </div>
+            </details>
+            <details class="info-accordion">
+              <summary>¿Y las gratificaciones?</summary>
+              <div class="info-accordion-body">
+                <p>Las gratificaciones legales de julio y diciembre están inafectas al impuesto a la renta y a
+                los descuentos de AFP/ONP, por eso no se incluyen en este cálculo.</p>
+              </div>
+            </details>
+            <div class="info-card">
+              <h4>Base legal</h4>
+              <p>TUO de la Ley del Impuesto a la Renta, D.S. N.° 179-2004-EF, artículo 34, y su reglamento,
+              D.S. N.° 122-94-EF.</p>
+            </div>
+          </aside>
+        </div>
+
+        <section class="more-tools">
+          <h2 class="more-tools-title">Más de Mikelvra</h2>
+          <div class="more-tools-grid">
+            <a class="more-tools-link" href="/herramientas/afp-vs-onp.html">
+              <span class="icon-badge">📊</span>
+              <span><strong>AFP vs ONP</strong><small>Compara el descuento mensual</small></span>
+            </a>
+            <a class="more-tools-link" href="/herramientas/sueldo-neto.html">
+              <span class="icon-badge">🧮</span>
+              <span><strong>Sueldo Neto</strong><small>De bruto a neto y viceversa</small></span>
+            </a>
+            <a class="more-tools-link" href="/herramientas/cuanto-me-deben.html">
+              <span class="icon-badge">⚡</span>
+              <span><strong>Mi situación laboral</strong><small>Ingreso anual + acumulado</small></span>
+            </a>
+          </div>
+        </section>
+      </main>
+
+      <div id="site-footer"></div>
+    </div>
+  </div>
+
+  <script src="/assets/js/navbar.js"></script>
+  <script src="/assets/js/include.js"></script>
+  <script>
+    function recalcular() {
+      // Validación de campos
+      var __el = document.getElementById("sueldo");
+      var __ok = UI.validateField(__el, { required: true, min: 0.01, type: "number", message: "Ingresa un sueldo válido mayor a 0." });
+      if (!__ok) { UI.setResultVisible("resultado", false); return; }
+
+      var sueldo = parseFloat(document.getElementById("sueldo").value) || 0;
+      var meses = parseInt(document.getElementById("meses").value, 10) || 12;
+
+      var r = Calc.calcularImpuestoRenta({ sueldoBrutoMensual: sueldo, mesesTrabajados: meses });
+
+      document.getElementById("rIngreso").textContent = UI.formatSoles(r.ingresoAnual);
+      document.getElementById("rDeduccion").textContent = UI.formatSoles(r.deduccion);
+      document.getElementById("rRentaNeta").textContent = UI.formatSoles(r.rentaNeta);
+      document.getElementById("rTasaEfectiva").textContent = r.tasaEfectiva.toFixed(2) + "%";
+      document.getElementById("rMensual").textContent = UI.formatSoles(r.mensual);
+      document.getElementById("resultadoTotal").textContent = UI.formatSoles(r.impuesto);
+
+      UI.setResultVisible("resultado", sueldo > 0);
+    }
+
+    UI.wireLiveInputs(document.querySelector(".calc-card"), recalcular);
+    UI.wireResultExport("resultado");
+    UI.syncExportButtons("resultado");
+    recalcular();
+  </script>
+</body>
+</html>

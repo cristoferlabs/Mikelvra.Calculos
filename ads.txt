@@ -1,0 +1,5 @@
+# Reemplaza pub-0000000000000000 con tu ID real de editor de AdSense
+# una vez que tu cuenta sea aprobada. Lo encuentras en:
+# AdSense > Cuenta > Información de la cuenta > ID de editor.
+#
+# google.com, pub-0000000000000000, DIRECT, f08c47fec0942fa0

@@ -1,0 +1,54 @@
+{
+  "updatedAt": "2026-08-07T10:50:33.822Z",
+  "year": 2026,
+  "events": [
+    {
+      "id": "cts-may-2026",
+      "tipo": "cts",
+      "label": "Depósito CTS (mayo)",
+      "date": "2026-05-15"
+    },
+    {
+      "id": "grat-jul-2026",
+      "tipo": "grat",
+      "label": "Gratificación de julio",
+      "date": "2026-07-15"
+    },
+    {
+      "id": "cts-nov-2026",
+      "tipo": "cts",
+      "label": "Depósito CTS (noviembre)",
+      "date": "2026-11-15"
+    },
+    {
+      "id": "grat-dic-2026",
+      "tipo": "grat",
+      "label": "Gratificación de diciembre",
+      "date": "2026-12-15"
+    },
+    {
+      "id": "cts-may-2027",
+      "tipo": "cts",
+      "label": "Depósito CTS (mayo)",
+      "date": "2027-05-15"
+    },
+    {
+      "id": "grat-jul-2027",
+      "tipo": "grat",
+      "label": "Gratificación de julio",
+      "date": "2027-07-15"
+    },
+    {
+      "id": "cts-nov-2027",
+      "tipo": "cts",
+      "label": "Depósito CTS (noviembre)",
+      "date": "2027-11-15"
+    },
+    {
+      "id": "grat-dic-2027",
+      "tipo": "grat",
+      "label": "Gratificación de diciembre",
+      "date": "2027-12-15"
+    }
+  ]
+}

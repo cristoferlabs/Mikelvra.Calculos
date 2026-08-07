@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es-PE">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cotización con IGV y firma | Mikelvra</title>
+  <meta name="description" content="Cotización simple en blanco y negro con IGV y firma." />
+  <link rel="canonical" href="https://mikelvra.com/generadores/cotizacion-igv.html" />
+  <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/assets/css/style.css" />
+  <script src="/assets/js/calculadoras.js"></script>
+  <script src="/assets/js/ui-helpers.js"></script>
+  <script src="/assets/js/documentos.js"></script>
+  <script src="/assets/js/firma.js"></script>
+</head>
+<body class="page-generator">
+  <div class="app-shell">
+    <div id="site-header"></div>
+    <div class="main-area">
+      <main class="content">
+        <div class="breadcrumb no-print"><a href="/index.html">Inicio</a> / Cotización con IGV</div>
+        <div class="page-header no-print">
+          <h1>Cotización con IGV</h1>
+          <p class="lead">Datos | vista previa. Firma del emisor sin marco.</p>
+        </div>
+        <div class="gen-layout">
+          <section class="gen-form no-print" id="formPanel">
+            <h2 class="gen-panel-title"><span class="gen-ico" aria-hidden="true">S/</span> Datos de la cotización</h2>
+            <div class="form-group"><label for="emisor">Emisor / razón social</label><input type="text" id="emisor" /></div>
+            <div class="form-group"><label for="ruc">RUC</label><input type="text" id="ruc" inputmode="numeric" /></div>
+            <div class="form-group"><label for="cliente">Cliente</label><input type="text" id="cliente" /></div>
+            <div class="form-group"><label for="numero">N.° de cotización</label><input type="text" id="numero" value="001-2026" /></div>
+            <div class="form-group"><label for="fecha">Fecha</label><input type="date" id="fecha" /></div>
+            <div class="form-group"><label for="descripcion">Descripción</label><input type="text" id="descripcion" /></div>
+            <div class="form-group"><label for="monto">Valor de venta sin IGV (S/)</label><input type="number" id="monto" min="0" step="0.01" /></div>
+            <div class="form-group"><label for="validez">Validez</label><input type="text" id="validez" value="15 días calendario" /></div>
+            <div class="form-group"><label for="condiciones">Condiciones</label><input type="text" id="condiciones" value="Pago contra entrega / transferencia" /></div>
+            <p class="gen-section-label">Firma</p>
+            <div class="sig-panel">
+              <p>Firma del emisor.</p>
+              <div class="sig-canvas-wrap"><canvas id="sigCanvas" width="640" height="200"></canvas></div>
+              <div class="sig-actions"><button type="button" class="btn-secondary btn-sm" id="btnClearFirma">Borrar firma</button></div>
+            </div>
+            <div class="gen-actions"><button type="button" class="btn" data-action="pdf" data-target="resultado">Descargar PDF</button></div>
+          </section>
+          <section class="gen-preview-card">
+            <p class="vista-previa-label no-print">📄 Vista previa</p>
+            <div class="result-box visible" id="resultado"><div class="doc-preview" id="preview"></div></div>
+          </section>
+        </div>
+      </main>
+      <div id="site-footer"></div>
+    </div>
+  </div>
+  <script src="/assets/js/navbar.js"></script>
+  <script src="/assets/js/include.js"></script>
+  <script>
+    document.getElementById("fecha").value = new Date().toISOString().slice(0, 10);
+    var firmaUrl = "";
+    var pad = Firma.createPad(document.getElementById("sigCanvas"));
+    pad.onChange(function () { firmaUrl = pad.isEmpty() ? "" : pad.getDataURL(); build(); });
+    document.getElementById("btnClearFirma").addEventListener("click", function () { pad.clear(); firmaUrl = ""; build(); });
+    function build() {
+      var monto = parseFloat(document.getElementById("monto").value) || 0;
+      var igv = Calc.calcularIGV({ monto: monto, modo: "agregar" });
+      Docs.renderPreview(document.getElementById("preview"), Docs.cotizacionIGV({
+        emisor: document.getElementById("emisor").value || "[Emisor]",
+        ruc: document.getElementById("ruc").value || "—",
+        cliente: document.getElementById("cliente").value || "[Cliente]",
+        numero: document.getElementById("numero").value,
+        fecha: document.getElementById("fecha").value,
+        descripcion: document.getElementById("descripcion").value || "[Descripción]",
+        validez: document.getElementById("validez").value,
+        condiciones: document.getElementById("condiciones").value,
+        firmaDataUrl: firmaUrl,
+      }, igv));
+    }
+    UI.wireLiveInputs(document.getElementById("formPanel"), build);
+    UI.wireResultExport("resultado");
+    document.addEventListener("mikelvra:data", build);
+    build();
+  </script>
+</body>
+</html>

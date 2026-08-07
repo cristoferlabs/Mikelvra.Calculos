@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="es-PE">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Calculadora de Gratificación Perú 2026 (Julio/Diciembre) | Mikelvra</title>
+  <meta name="description" content="Calcula tu gratificación de julio o diciembre 2026 en Perú, incluyendo la bonificación extraordinaria del 9% o 6.75%. Herramienta gratuita y actualizada." />
+  <link rel="canonical" href="https://mikelvra.com/herramientas/gratificacion.html" />
+  <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/assets/css/style.css" />
+  <script src="/assets/js/calculadoras.js"></script>
+  <script src="/assets/js/ui-helpers.js"></script>
+  <!-- Ver comentario de AdSense/Analytics en index.html -->
+</head>
+<body>
+  <div class="app-shell">
+    <div id="site-header"></div>
+
+    <div class="main-area">
+      <main class="content">
+        <div class="breadcrumb"><a href="/index.html">Inicio</a> / Gratificación</div>
+        <div class="page-header">
+          <h1>Calculadora de Gratificación 2026</h1>
+          <p class="lead">
+            Calcula el monto que te corresponde recibir en julio o diciembre, incluyendo la
+            bonificación extraordinaria (9% o 6.75% si estás afiliado a una EPS). El resultado
+            se actualiza al instante mientras escribes.
+          </p>
+          <div class="page-header-actions no-print">
+            <button type="button" class="btn-secondary btn-sm" data-action="pdf" data-target="resultado">Descargar PDF</button>
+            <button type="button" class="btn-secondary btn-sm" data-action="compartir" data-target="resultado">Compartir</button>
+          </div>
+        </div>
+
+        <div class="calc-layout">
+          <div class="calc-card">
+            <div class="form-group">
+              <label for="sueldo">Sueldo básico mensual (S/)</label>
+              <input type="number" id="sueldo" min="0" step="0.01" placeholder="Ej. 1500" />
+            </div>
+
+            <div class="form-group">
+              <label class="checkbox-row">
+                <input type="checkbox" id="tieneAsignacion" />
+                Recibo asignación familiar (S/ 113.00)
+              </label>
+              <p class="hint">Aplica si tienes hijos menores de 18 años (o hasta 24 si estudian).</p>
+            </div>
+
+            <div class="form-group">
+              <label for="mesesCompletos">Meses completos trabajados en el semestre</label>
+              <select id="mesesCompletos">
+                <option value="6" selected>6 (semestre completo)</option>
+                <option value="5">5</option>
+                <option value="4">4</option>
+                <option value="3">3</option>
+                <option value="2">2</option>
+                <option value="1">1</option>
+              </select>
+              <p class="hint">Un mes cuenta como completo si trabajaste al menos 15 días calendario en él.</p>
+            </div>
+
+            <div class="form-group">
+              <label for="regimenSalud">Régimen de salud</label>
+              <select id="regimenSalud">
+                <option value="0.09" selected>EsSalud (bonificación extraordinaria 9%)</option>
+                <option value="0.0675">EPS (bonificación extraordinaria 6.75%)</option>
+              </select>
+            </div>
+
+            <div class="result-box" id="resultado" aria-live="polite" aria-atomic="true">
+              <strong>Total a recibir</strong>
+              <div class="result-total" id="resultadoTotal">S/ 0.00</div>
+              <table class="result-breakdown">
+                <tr><td>Remuneración computable</td><td id="rRemuneracion">S/ 0.00</td></tr>
+                <tr><td>Gratificación base</td><td id="rGratBase">S/ 0.00</td></tr>
+                <tr><td>Bonificación extraordinaria</td><td id="rBono">S/ 0.00</td></tr>
+              </table>
+              <div class="result-actions no-print">
+                <button type="button" class="btn-secondary btn-sm" data-action="pdf">Descargar PDF</button>
+                <button type="button" class="btn-secondary btn-sm" data-action="compartir">Compartir</button>
+              </div>
+            </div>
+
+            <div class="disclaimer">
+              Cálculo referencial basado en la fórmula vigente del MTPE (remuneración computable ÷ 6 × meses
+              completos, más la bonificación extraordinaria). No incluye conceptos variables adicionales
+              (horas extra regulares, comisiones, etc.). Verifica tu caso específico con RR. HH. o un especialista laboral.
+            </div>
+          </div>
+
+          <aside class="side-panel">
+            <!-- ads (activar tras AdSense): <div class="ad-slot sidebar-ad" aria-hidden="true">Espacio reservado para anuncio</div> -->
+            <details class="info-accordion" open>
+              <summary>¿Qué es la remuneración computable?</summary>
+              <div class="info-accordion-body">
+                <p>Incluye tu sueldo básico más conceptos remunerativos fijos y permanentes, como la asignación
+                familiar. No incluye horas extra ni bonos variables ocasionales.</p>
+              </div>
+            </details>
+            <details class="info-accordion">
+              <summary>¿Cuándo se paga?</summary>
+              <div class="info-accordion-body">
+                <p>La gratificación se abona en la primera quincena de julio y de diciembre, junto con la
+                bonificación extraordinaria.</p>
+              </div>
+            </details>
+            <div class="info-card">
+              <h4>Base legal</h4>
+              <p>Ley N.° 27735 (Ley que regula el otorgamiento de gratificaciones para trabajadores del
+              régimen de la actividad privada) y su reglamento, D.S. N.° 005-2002-TR.</p>
+            </div>
+          </aside>
+        </div>
+
+        <section class="more-tools">
+          <h2 class="more-tools-title">Más de Mikelvra</h2>
+          <div class="more-tools-grid">
+            <a class="more-tools-link" href="/herramientas/cts.html">
+              <span class="icon-badge">💰</span>
+              <span><strong>CTS</strong><small>Depósito de mayo y noviembre</small></span>
+            </a>
+            <a class="more-tools-link" href="/herramientas/vacaciones.html">
+              <span class="icon-badge">🏖️</span>
+              <span><strong>Vacaciones</strong><small>Remuneración completa o trunca</small></span>
+            </a>
+            <a class="more-tools-link" href="/herramientas/liquidacion.html">
+              <span class="icon-badge">📄</span>
+              <span><strong>Liquidación</strong><small>Al momento del cese</small></span>
+            </a>
+          </div>
+        </section>
+      </main>
+
+      <div id="site-footer"></div>
+    </div>
+  </div>
+
+  <script src="/assets/js/navbar.js"></script>
+  <script src="/assets/js/include.js"></script>
+  <script>
+    function recalcular() {
+      // Validación de campos
+      var __el = document.getElementById("sueldo");
+      var __ok = UI.validateField(__el, { required: true, min: 0.01, type: "number", message: "Ingresa un sueldo válido mayor a 0." });
+      if (!__ok) { UI.setResultVisible("resultado", false); return; }
+
+      var sueldo = parseFloat(document.getElementById("sueldo").value) || 0;
+      var r = Calc.calcularGratificacion({
+        sueldo: sueldo,
+        tieneAsignacion: document.getElementById("tieneAsignacion").checked,
+        mesesCompletos: parseInt(document.getElementById("mesesCompletos").value, 10),
+        tasaBono: parseFloat(document.getElementById("regimenSalud").value),
+      });
+
+      document.getElementById("rRemuneracion").textContent = UI.formatSoles(r.remuneracionComputable);
+      document.getElementById("rGratBase").textContent = UI.formatSoles(r.gratBase);
+      document.getElementById("rBono").textContent = UI.formatSoles(r.bono);
+      document.getElementById("resultadoTotal").textContent = UI.formatSoles(r.total);
+
+      UI.setResultVisible("resultado", sueldo > 0);
+    }
+
+    UI.prefillsueldo("sueldo");
+    UI.wireLiveInputs(document.querySelector(".calc-card"), recalcular);
+    UI.wireResultExport("resultado");
+    UI.syncExportButtons("resultado");
+    recalcular();
+  </script>
+</body>
+</html>

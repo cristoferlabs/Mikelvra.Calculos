@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es-PE">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Certificado de trabajo con firma | Mikelvra</title>
+  <meta name="description" content="Certificado de trabajo simple en blanco y negro con firma." />
+  <link rel="canonical" href="https://mikelvra.com/generadores/certificado-trabajo.html" />
+  <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/assets/css/style.css" />
+  <script src="/assets/js/ui-helpers.js"></script>
+  <script src="/assets/js/documentos.js"></script>
+  <script src="/assets/js/firma.js"></script>
+</head>
+<body class="page-generator">
+  <div class="app-shell">
+    <div id="site-header"></div>
+    <div class="main-area">
+      <main class="content">
+        <div class="breadcrumb no-print"><a href="/index.html">Inicio</a> / Certificado de trabajo</div>
+        <div class="page-header no-print">
+          <h1>Certificado de trabajo</h1>
+          <p class="lead">Datos | vista previa. Firma del empleador sin marco.</p>
+        </div>
+        <div class="gen-layout">
+          <section class="gen-form no-print" id="formPanel">
+            <h2 class="gen-panel-title"><span class="gen-ico" aria-hidden="true">✎</span> Datos del certificado</h2>
+            <div class="form-group"><label for="nombre">Trabajador</label><input type="text" id="nombre" /></div>
+            <div class="form-group"><label for="dni">DNI</label><input type="text" id="dni" inputmode="numeric" /></div>
+            <div class="form-group"><label for="cargo">Cargo</label><input type="text" id="cargo" /></div>
+            <div class="form-group"><label for="empresa">Empresa emisora</label><input type="text" id="empresa" /></div>
+            <div class="form-group"><label for="firmante">Quien firma (opcional)</label><input type="text" id="firmante" /></div>
+            <div class="form-group"><label for="ciudad">Ciudad</label><input type="text" id="ciudad" value="Lima" /></div>
+            <div class="form-group"><label for="fechaIngreso">Fecha de ingreso</label><input type="date" id="fechaIngreso" /></div>
+            <div class="form-group"><label for="fechaCese">Fecha de cese</label><input type="date" id="fechaCese" /></div>
+            <div class="form-group"><label for="fechaDoc">Fecha del documento</label><input type="date" id="fechaDoc" /></div>
+            <p class="gen-section-label">Firma</p>
+            <div class="sig-panel">
+              <p>Firma del representante.</p>
+              <div class="sig-canvas-wrap"><canvas id="sigCanvas" width="640" height="200"></canvas></div>
+              <div class="sig-actions"><button type="button" class="btn-secondary btn-sm" id="btnClearFirma">Borrar firma</button></div>
+            </div>
+            <div class="gen-actions"><button type="button" class="btn" data-action="pdf" data-target="resultado">Descargar PDF</button></div>
+          </section>
+          <section class="gen-preview-card">
+            <p class="vista-previa-label no-print">📄 Vista previa</p>
+            <div class="result-box visible" id="resultado"><div class="doc-preview" id="preview"></div></div>
+          </section>
+        </div>
+      </main>
+      <div id="site-footer"></div>
+    </div>
+  </div>
+  <script src="/assets/js/navbar.js"></script>
+  <script src="/assets/js/include.js"></script>
+  <script>
+    document.getElementById("fechaDoc").value = new Date().toISOString().slice(0, 10);
+    var firmaUrl = "";
+    var pad = Firma.createPad(document.getElementById("sigCanvas"));
+    pad.onChange(function () { firmaUrl = pad.isEmpty() ? "" : pad.getDataURL(); build(); });
+    document.getElementById("btnClearFirma").addEventListener("click", function () { pad.clear(); firmaUrl = ""; build(); });
+    function build() {
+      Docs.renderPreview(document.getElementById("preview"), Docs.certificadoTrabajo({
+        nombre: document.getElementById("nombre").value || "[Trabajador]",
+        dni: document.getElementById("dni").value || "________",
+        cargo: document.getElementById("cargo").value || "[Cargo]",
+        empresa: document.getElementById("empresa").value || "[Empresa]",
+        firmante: document.getElementById("firmante").value,
+        ciudad: document.getElementById("ciudad").value,
+        fechaIngreso: document.getElementById("fechaIngreso").value,
+        fechaCese: document.getElementById("fechaCese").value,
+        fechaDoc: document.getElementById("fechaDoc").value,
+        firmaDataUrl: firmaUrl,
+      }));
+    }
+    UI.wireLiveInputs(document.getElementById("formPanel"), build);
+    UI.wireResultExport("resultado");
+    build();
+  </script>
+</body>
+</html>

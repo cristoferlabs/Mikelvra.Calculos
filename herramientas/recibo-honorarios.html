@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es-PE">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Recibo por Honorarios — Retención 8% | Mikelvra</title>
+  <meta name="description" content="Calcula la retención del 8% en recibos por honorarios y el neto a cobrar. Perú 2026." />
+  <link rel="canonical" href="https://mikelvra.com/herramientas/recibo-honorarios.html" />
+  <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/assets/css/style.css" />
+  <script src="/assets/js/calculadoras.js"></script>
+  <script src="/assets/js/ui-helpers.js"></script>
+</head>
+<body>
+  <div class="app-shell">
+    <div id="site-header"></div>
+    <div class="main-area">
+      <main class="content">
+        <div class="breadcrumb"><a href="/index.html">Inicio</a> / Recibo por honorarios</div>
+        <div class="page-header">
+          <h1>Recibo por Honorarios 2026</h1>
+          <p class="lead">Calcula la retención de renta de 4ta categoría (8%) y el monto neto del recibo.</p>
+        </div>
+        <div class="calc-layout">
+          <div class="calc-card">
+            <div class="form-group">
+              <label for="monto">Monto bruto del recibo (S/)</label>
+              <input type="number" id="monto" min="0" step="0.01" placeholder="Ej. 1000" />
+            </div>
+            <div class="form-group">
+              <label class="checkbox-row">
+                <input type="checkbox" id="conRetencion" checked />
+                Aplicar retención del 8%
+              </label>
+              <p class="hint">Si tienes suspensión de retenciones vigente, desmárcalo.</p>
+            </div>
+            <div class="result-box" id="resultado" aria-live="polite">
+              <strong>Neto a recibir</strong>
+              <div class="result-total" id="resultadoTotal">S/ 0.00</div>
+              <table class="result-breakdown">
+                <tr><td>Bruto</td><td id="rBruto">S/ 0.00</td></tr>
+                <tr><td>Retención 8%</td><td id="rRet">S/ 0.00</td></tr>
+                <tr><td>Neto</td><td id="rNeto">S/ 0.00</td></tr>
+              </table>
+            </div>
+            <div class="disclaimer">Referencial. La suspensión de retenciones depende de tu proyección anual ante SUNAT.</div>
+          </div>
+          <aside class="side-panel">
+            <!-- ads (activar tras AdSense): <div class="ad-slot sidebar-ad" aria-hidden="true">Espacio reservado para anuncio</div> -->
+            <details class="info-accordion" open>
+              <summary>¿Cuándo no retienen?</summary>
+              <div class="info-accordion-body">
+                <p>Si proyectas no superar 7 UIT anuales de rentas de 4ta, puedes solicitar suspensión de retenciones.</p>
+              </div>
+            </details>
+          </aside>
+        </div>
+        <section class="more-tools">
+          <h2 class="more-tools-title">Más de Mikelvra</h2>
+          <div class="more-tools-grid">
+            <a class="more-tools-link" href="/herramientas/renta-4ta.html"><span class="icon-badge">🧾</span><span><strong>Renta 4ta</strong><small>Impuesto anual</small></span></a>
+            <a class="more-tools-link" href="/herramientas/igv.html"><span class="icon-badge">🧾</span><span><strong>IGV</strong><small>18%</small></span></a>
+          </div>
+        </section>
+      </main>
+      <div id="site-footer"></div>
+    </div>
+  </div>
+  <script src="/assets/js/navbar.js"></script>
+  <script src="/assets/js/include.js"></script>
+  <script>
+    function recalcular() {
+      // Validación de campos
+      var __el = document.getElementById("monto");
+      var __ok = UI.validateField(__el, { required: true, min: 0.01, type: "number", message: "Ingresa un monto válido mayor a 0." });
+      if (!__ok) { UI.setResultVisible("resultado", false); return; }
+
+      var monto = parseFloat(document.getElementById("monto").value) || 0;
+      var r = Calc.calcularReciboHonorarios({
+        montoBruto: monto,
+        conRetencion: document.getElementById("conRetencion").checked,
+      });
+      document.getElementById("resultadoTotal").textContent = UI.formatSoles(r.neto);
+      document.getElementById("rBruto").textContent = UI.formatSoles(r.bruto);
+      document.getElementById("rRet").textContent = UI.formatSoles(r.retencion);
+      document.getElementById("rNeto").textContent = UI.formatSoles(r.neto);
+      UI.setResultVisible("resultado", monto > 0);
+    }
+    UI.wireLiveInputs(document.querySelector(".calc-card"), recalcular);
+    UI.wireResultExport("resultado");
+    UI.syncExportButtons("resultado");
+    recalcular();
+  </script>
+</body>
+</html>

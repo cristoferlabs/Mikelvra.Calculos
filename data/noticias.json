@@ -1,6 +1,13 @@
 {
-  "updatedAt": "2026-08-22T12:20:38.498Z",
+  "updatedAt": "2026-08-23T12:20:41.801Z",
   "items": [
+    {
+      "title": "MEF y sectores articulan el diseño del Presupuesto Público 2027 con prioridades claras y responsabilidad fiscal",
+      "url": "https://www.gob.pe/institucion/mef/noticias/1433502-mef-y-sectores-articulan-el-diseno-del-presupuesto-publico-2027-con-prioridades-claras-y-responsabilidad-fiscal",
+      "source": "MEF",
+      "publishedAt": "",
+      "summary": ""
+    },
     {
       "title": "MEF: Arequipa pone en marcha hoja de ruta para elevar su competitividad, productividad y capacidad de generar inversiones",
       "url": "https://www.gob.pe/institucion/mef/noticias/1433004-mef-arequipa-pone-en-marcha-hoja-de-ruta-para-elevar-su-competitividad-productividad-y-capacidad-de-generar-inversiones",
@@ -65,13 +72,6 @@
       "summary": ""
     },
     {
-      "title": "Elmer Cuba juró como nuevo ministro de Economía y Finanzas",
-      "url": "https://www.gob.pe/institucion/mef/noticias/1423627-elmer-cuba-juro-como-nuevo-ministro-de-economia-y-finanzas",
-      "source": "MEF",
-      "publishedAt": "",
-      "summary": ""
-    },
-    {
       "title": "Ministro Juan Sheput amplía el diálogo social con centrales sindicales",
       "url": "https://www.gob.pe/institucion/mtpe/noticias/1432081-ministro-juan-sheput-amplia-el-dialogo-social-con-centrales-sindicales",
       "source": "MTPE",
@@ -88,6 +88,20 @@
     {
       "title": "Junín se levanta con trabajo: Gobierno activa 31 intervenciones y generará 1,600 empleos temporales",
       "url": "https://www.gob.pe/institucion/mtpe/noticias/1430678-junin-se-levanta-con-trabajo-gobierno-activa-31-intervenciones-y-generara-1-600-empleos-temporales",
+      "source": "MTPE",
+      "publishedAt": "",
+      "summary": ""
+    },
+    {
+      "title": "EsSalud ordena la planificación anual de medicamentos y activa compras inmediatas frente al desabastecimiento",
+      "url": "https://www.gob.pe/institucion/mtpe/noticias/1433534-essalud-ordena-la-planificacion-anual-de-medicamentos-y-activa-compras-inmediatas-frente-al-desabastecimiento",
+      "source": "MTPE",
+      "publishedAt": "",
+      "summary": ""
+    },
+    {
+      "title": "MTPE construye puentes entre trabajadores y empleadores para impulsar una nueva agenda laboral",
+      "url": "https://www.gob.pe/institucion/mtpe/noticias/1433500-mtpe-construye-puentes-entre-trabajadores-y-empleadores-para-impulsar-una-nueva-agenda-laboral",
       "source": "MTPE",
       "publishedAt": "",
       "summary": ""
@@ -123,20 +137,6 @@
     {
       "title": "Ministro de Trabajo visita zonas afectadas por sismos y supervisa acciones que generan empleo temporal en Junín",
       "url": "https://www.gob.pe/institucion/mtpe/noticias/1430275-ministro-de-trabajo-visita-zonas-afectadas-por-sismos-y-supervisa-acciones-que-generan-empleo-temporal-en-junin",
-      "source": "MTPE",
-      "publishedAt": "",
-      "summary": ""
-    },
-    {
-      "title": "Ministro Juan Sheput abre una nueva etapa de diálogo social para impulsar la formalización y el empleo",
-      "url": "https://www.gob.pe/institucion/mtpe/noticias/1430161-ministro-juan-sheput-abre-una-nueva-etapa-de-dialogo-social-para-impulsar-la-formalizacion-y-el-empleo",
-      "source": "MTPE",
-      "publishedAt": "",
-      "summary": ""
-    },
-    {
-      "title": "14 años impulsando acuerdos para tener trabajos más seguros y saludables",
-      "url": "https://www.gob.pe/institucion/mtpe/noticias/1430214-14-anos-impulsando-acuerdos-para-tener-trabajos-mas-seguros-y-saludables",
       "source": "MTPE",
       "publishedAt": "",
       "summary": ""

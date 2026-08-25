@@ -1,6 +1,13 @@
 {
-  "updatedAt": "2026-08-24T12:29:10.997Z",
+  "updatedAt": "2026-08-25T12:29:45.327Z",
   "items": [
+    {
+      "title": "MEF: mayor recaudación tributaria por boom minero permitió que el déficit fiscal siga bajando a julio del 2026",
+      "url": "https://www.gob.pe/institucion/mef/noticias/1433764-mef-mayor-recaudacion-tributaria-por-boom-minero-permitio-que-el-deficit-fiscal-siga-bajando-a-julio-del-2026",
+      "source": "MEF",
+      "publishedAt": "",
+      "summary": ""
+    },
     {
       "title": "MEF: Inversión privada logra un crecimiento de 17,6 % en el segundo trimestre del 2026, su más alta tasa desde el 2010",
       "url": "https://www.gob.pe/institucion/mef/noticias/1433596-mef-inversion-privada-logra-un-crecimiento-de-17-6-en-el-segundo-trimestre-del-2026-su-mas-alta-tasa-desde-el-2010",
@@ -65,29 +72,8 @@
       "summary": ""
     },
     {
-      "title": "MEF fortalece su comunicación con la ciudadanía a través de su canal oficial de WhatsApp",
-      "url": "https://www.gob.pe/institucion/mef/noticias/1423668-mef-fortalece-su-comunicacion-con-la-ciudadania-a-traves-de-su-canal-oficial-de-whatsapp",
-      "source": "MEF",
-      "publishedAt": "",
-      "summary": ""
-    },
-    {
-      "title": "Ministro Juan Sheput amplía el diálogo social con centrales sindicales",
-      "url": "https://www.gob.pe/institucion/mtpe/noticias/1432081-ministro-juan-sheput-amplia-el-dialogo-social-con-centrales-sindicales",
-      "source": "MTPE",
-      "publishedAt": "",
-      "summary": ""
-    },
-    {
-      "title": "Gobierno garantiza atención inmediata con inmunoglobulina humana y corrige fallas de abastecimiento en EsSalud",
-      "url": "https://www.gob.pe/institucion/mtpe/noticias/1430794-gobierno-garantiza-atencion-inmediata-con-inmunoglobulina-humana-y-corrige-fallas-de-abastecimiento-en-essalud",
-      "source": "MTPE",
-      "publishedAt": "",
-      "summary": ""
-    },
-    {
-      "title": "Junín se levanta con trabajo: Gobierno activa 31 intervenciones y generará 1,600 empleos temporales",
-      "url": "https://www.gob.pe/institucion/mtpe/noticias/1430678-junin-se-levanta-con-trabajo-gobierno-activa-31-intervenciones-y-generara-1-600-empleos-temporales",
+      "title": "Gobierno convoca al CNTPE para el 3 de setiembre y abre una nueva etapa de concertación laboral",
+      "url": "https://www.gob.pe/institucion/mtpe/noticias/1433994-gobierno-convoca-al-cntpe-para-el-3-de-setiembre-y-abre-una-nueva-etapa-de-concertacion-laboral",
       "source": "MTPE",
       "publishedAt": "",
       "summary": ""
@@ -114,8 +100,22 @@
       "summary": ""
     },
     {
+      "title": "Ministro Juan Sheput: &quot;Piura no puede esperar a que lleguen las lluvias para recién actuar&quot;",
+      "url": "https://www.gob.pe/institucion/mtpe/noticias/1434276-ministro-juan-sheput-piura-no-puede-esperar-a-que-lleguen-las-lluvias-para-recien-actuar",
+      "source": "MTPE",
+      "publishedAt": "",
+      "summary": ""
+    },
+    {
       "title": "MTPE y Hyundai preparan a trabajadores peruanos para los nuevos empleos de la industria naval",
       "url": "https://www.gob.pe/institucion/mtpe/noticias/1432297-mtpe-y-hyundai-preparan-a-trabajadores-peruanos-para-los-nuevos-empleos-de-la-industria-naval",
+      "source": "MTPE",
+      "publishedAt": "",
+      "summary": ""
+    },
+    {
+      "title": "Ministro Juan Sheput amplía el diálogo social con centrales sindicales",
+      "url": "https://www.gob.pe/institucion/mtpe/noticias/1432081-ministro-juan-sheput-amplia-el-dialogo-social-con-centrales-sindicales",
       "source": "MTPE",
       "publishedAt": "",
       "summary": ""
@@ -135,8 +135,8 @@
       "summary": ""
     },
     {
-      "title": "Ministro de Trabajo visita zonas afectadas por sismos y supervisa acciones que generan empleo temporal en Junín",
-      "url": "https://www.gob.pe/institucion/mtpe/noticias/1430275-ministro-de-trabajo-visita-zonas-afectadas-por-sismos-y-supervisa-acciones-que-generan-empleo-temporal-en-junin",
+      "title": "Gobierno garantiza atención inmediata con inmunoglobulina humana y corrige fallas de abastecimiento en EsSalud",
+      "url": "https://www.gob.pe/institucion/mtpe/noticias/1430794-gobierno-garantiza-atencion-inmediata-con-inmunoglobulina-humana-y-corrige-fallas-de-abastecimiento-en-essalud",
       "source": "MTPE",
       "publishedAt": "",
       "summary": ""

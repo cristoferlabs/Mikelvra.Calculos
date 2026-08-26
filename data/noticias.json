@@ -1,6 +1,13 @@
 {
-  "updatedAt": "2026-08-25T12:29:45.327Z",
+  "updatedAt": "2026-08-26T12:32:54.278Z",
   "items": [
+    {
+      "title": "MEF destaca estudio de la OCDE para fortalecer el sistema tributario y acompañar el crecimiento económico del país",
+      "url": "https://www.gob.pe/institucion/mef/noticias/1434698-mef-destaca-estudio-de-la-ocde-para-fortalecer-el-sistema-tributario-y-acompanar-el-crecimiento-economico-del-pais",
+      "source": "MEF",
+      "publishedAt": "",
+      "summary": ""
+    },
     {
       "title": "MEF: mayor recaudación tributaria por boom minero permitió que el déficit fiscal siga bajando a julio del 2026",
       "url": "https://www.gob.pe/institucion/mef/noticias/1433764-mef-mayor-recaudacion-tributaria-por-boom-minero-permitio-que-el-deficit-fiscal-siga-bajando-a-julio-del-2026",
@@ -18,6 +25,13 @@
     {
       "title": "MEF y sectores articulan el diseño del Presupuesto Público 2027 con prioridades claras y responsabilidad fiscal",
       "url": "https://www.gob.pe/institucion/mef/noticias/1433502-mef-y-sectores-articulan-el-diseno-del-presupuesto-publico-2027-con-prioridades-claras-y-responsabilidad-fiscal",
+      "source": "MEF",
+      "publishedAt": "",
+      "summary": ""
+    },
+    {
+      "title": "CAF y el Grupo BID reafirman su respaldo y cooperación con las políticas para impulsar el desarrollo económico del Perú al 2031",
+      "url": "https://www.gob.pe/institucion/mef/noticias/1434750-caf-y-el-grupo-bid-reafirman-su-respaldo-y-cooperacion-con-las-politicas-para-impulsar-el-desarrollo-economico-del-peru-al-2031",
       "source": "MEF",
       "publishedAt": "",
       "summary": ""
@@ -58,22 +72,22 @@
       "summary": ""
     },
     {
-      "title": "MEF: Gobierno designa a los nuevos titulares de la SUNAT y del Tribunal Fiscal",
-      "url": "https://www.gob.pe/institucion/mef/noticias/1426811-mef-gobierno-designa-a-los-nuevos-titulares-de-la-sunat-y-del-tribunal-fiscal",
-      "source": "MEF",
-      "publishedAt": "",
-      "summary": ""
-    },
-    {
-      "title": "Ministro Elmer Cuba participa en la Gran Parada Cívico Militar por el 205.° Aniversario de la Independencia del Perú",
-      "url": "https://www.gob.pe/institucion/mef/noticias/1423695-ministro-elmer-cuba-participa-en-la-gran-parada-civico-militar-por-el-205-aniversario-de-la-independencia-del-peru",
-      "source": "MEF",
+      "title": "Más empleo y prevención: Gobierno moviliza recursos para proteger a las familias frente a las lluvias",
+      "url": "https://www.gob.pe/institucion/mtpe/noticias/1434709-mas-empleo-y-prevencion-gobierno-moviliza-recursos-para-proteger-a-las-familias-frente-a-las-lluvias",
+      "source": "MTPE",
       "publishedAt": "",
       "summary": ""
     },
     {
       "title": "Gobierno convoca al CNTPE para el 3 de setiembre y abre una nueva etapa de concertación laboral",
       "url": "https://www.gob.pe/institucion/mtpe/noticias/1433994-gobierno-convoca-al-cntpe-para-el-3-de-setiembre-y-abre-una-nueva-etapa-de-concertacion-laboral",
+      "source": "MTPE",
+      "publishedAt": "",
+      "summary": ""
+    },
+    {
+      "title": "Ministro Juan Sheput: &quot;Piura no puede esperar a que lleguen las lluvias para recién actuar&quot;",
+      "url": "https://www.gob.pe/institucion/mtpe/noticias/1434276-ministro-juan-sheput-piura-no-puede-esperar-a-que-lleguen-las-lluvias-para-recien-actuar",
       "source": "MTPE",
       "publishedAt": "",
       "summary": ""
@@ -95,13 +109,6 @@
     {
       "title": "Ministro Juan Sheput articula con regiones una agenda nacional para generar más empleo formal",
       "url": "https://www.gob.pe/institucion/mtpe/noticias/1433438-ministro-juan-sheput-articula-con-regiones-una-agenda-nacional-para-generar-mas-empleo-formal",
-      "source": "MTPE",
-      "publishedAt": "",
-      "summary": ""
-    },
-    {
-      "title": "Ministro Juan Sheput: &quot;Piura no puede esperar a que lleguen las lluvias para recién actuar&quot;",
-      "url": "https://www.gob.pe/institucion/mtpe/noticias/1434276-ministro-juan-sheput-piura-no-puede-esperar-a-que-lleguen-las-lluvias-para-recien-actuar",
       "source": "MTPE",
       "publishedAt": "",
       "summary": ""
@@ -130,13 +137,6 @@
     {
       "title": "Ministro de Trabajo Juan Sheput: “EsSalud ya está saliendo de cuidados intensivos”",
       "url": "https://www.gob.pe/institucion/mtpe/noticias/1430919-ministro-de-trabajo-juan-sheput-essalud-ya-esta-saliendo-de-cuidados-intensivos",
-      "source": "MTPE",
-      "publishedAt": "",
-      "summary": ""
-    },
-    {
-      "title": "Gobierno garantiza atención inmediata con inmunoglobulina humana y corrige fallas de abastecimiento en EsSalud",
-      "url": "https://www.gob.pe/institucion/mtpe/noticias/1430794-gobierno-garantiza-atencion-inmediata-con-inmunoglobulina-humana-y-corrige-fallas-de-abastecimiento-en-essalud",
       "source": "MTPE",
       "publishedAt": "",
       "summary": ""

@@ -1,6 +1,13 @@
 {
-  "updatedAt": "2026-08-28T21:36:10.850Z",
+  "updatedAt": "2026-08-29T15:57:38.412Z",
   "items": [
+    {
+      "title": "El Poder Ejecutivo propone para el 2027 un presupuesto descentralizado, con énfasis en seguridad ciudadana e inclusión social",
+      "url": "https://www.gob.pe/institucion/mef/noticias/1436216-el-poder-ejecutivo-propone-para-el-2027-un-presupuesto-descentralizado-con-enfasis-en-seguridad-ciudadana-e-inclusion-social",
+      "source": "MEF",
+      "publishedAt": "",
+      "summary": ""
+    },
     {
       "title": "MEF: PBI crecerá 3,4 % en el 2026 y 2027 y 4 % en los siguientes años gracias a la inversión privada",
       "url": "https://www.gob.pe/institucion/mef/noticias/1435798-mef-pbi-crecera-3-4-en-el-2026-y-2027-y-4-en-los-siguientes-anos-gracias-a-la-inversion-privada",
@@ -65,9 +72,9 @@
       "summary": ""
     },
     {
-      "title": "Gobierno destina S/ 105 millones para garantizar continuidad del transporte ante alza de combustibles",
-      "url": "https://www.gob.pe/institucion/mef/noticias/1430874-gobierno-destina-s-105-millones-para-garantizar-continuidad-del-transporte-ante-alza-de-combustibles",
-      "source": "MEF",
+      "title": "Ministro Juan Sheput activa soporte de la Sunafil para fortalecer la inspección laboral en las regiones",
+      "url": "https://www.gob.pe/institucion/mtpe/noticias/1436072-ministro-juan-sheput-activa-soporte-de-la-sunafil-para-fortalecer-la-inspeccion-laboral-en-las-regiones",
+      "source": "MTPE",
       "publishedAt": "",
       "summary": ""
     },
@@ -79,15 +86,8 @@
       "summary": ""
     },
     {
-      "title": "Más empleo y prevención: Gobierno moviliza recursos para proteger a las familias frente a las lluvias",
-      "url": "https://www.gob.pe/institucion/mtpe/noticias/1434709-mas-empleo-y-prevencion-gobierno-moviliza-recursos-para-proteger-a-las-familias-frente-a-las-lluvias",
-      "source": "MTPE",
-      "publishedAt": "",
-      "summary": ""
-    },
-    {
-      "title": "Gobierno convoca al CNTPE para el 3 de setiembre y abre una nueva etapa de concertación laboral",
-      "url": "https://www.gob.pe/institucion/mtpe/noticias/1433994-gobierno-convoca-al-cntpe-para-el-3-de-setiembre-y-abre-una-nueva-etapa-de-concertacion-laboral",
+      "title": "Gobierno moviliza S/ 1,7 millones para llevar empleo temporal y recuperación a 10 distritos de Arequipa",
+      "url": "https://www.gob.pe/institucion/mtpe/noticias/1436220-gobierno-moviliza-s-1-7-millones-para-llevar-empleo-temporal-y-recuperacion-a-10-distritos-de-arequipa",
       "source": "MTPE",
       "publishedAt": "",
       "summary": ""
@@ -100,8 +100,8 @@
       "summary": ""
     },
     {
-      "title": "Ministro Juan Sheput activa soporte de la Sunafil para fortalecer la inspección laboral en las regiones",
-      "url": "https://www.gob.pe/institucion/mtpe/noticias/1436072-ministro-juan-sheput-activa-soporte-de-la-sunafil-para-fortalecer-la-inspeccion-laboral-en-las-regiones",
+      "title": "Más empleo y prevención: Gobierno moviliza recursos para proteger a las familias frente a las lluvias",
+      "url": "https://www.gob.pe/institucion/mtpe/noticias/1434709-mas-empleo-y-prevencion-gobierno-moviliza-recursos-para-proteger-a-las-familias-frente-a-las-lluvias",
       "source": "MTPE",
       "publishedAt": "",
       "summary": ""
@@ -109,6 +109,13 @@
     {
       "title": "Ministro Juan Sheput: &quot;Piura no puede esperar a que lleguen las lluvias para recién actuar&quot;",
       "url": "https://www.gob.pe/institucion/mtpe/noticias/1434276-ministro-juan-sheput-piura-no-puede-esperar-a-que-lleguen-las-lluvias-para-recien-actuar",
+      "source": "MTPE",
+      "publishedAt": "",
+      "summary": ""
+    },
+    {
+      "title": "Gobierno convoca al CNTPE para el 3 de setiembre y abre una nueva etapa de concertación laboral",
+      "url": "https://www.gob.pe/institucion/mtpe/noticias/1433994-gobierno-convoca-al-cntpe-para-el-3-de-setiembre-y-abre-una-nueva-etapa-de-concertacion-laboral",
       "source": "MTPE",
       "publishedAt": "",
       "summary": ""
@@ -130,13 +137,6 @@
     {
       "title": "Ministro Juan Sheput articula con regiones una agenda nacional para generar más empleo formal",
       "url": "https://www.gob.pe/institucion/mtpe/noticias/1433438-ministro-juan-sheput-articula-con-regiones-una-agenda-nacional-para-generar-mas-empleo-formal",
-      "source": "MTPE",
-      "publishedAt": "",
-      "summary": ""
-    },
-    {
-      "title": "MTPE y Hyundai preparan a trabajadores peruanos para los nuevos empleos de la industria naval",
-      "url": "https://www.gob.pe/institucion/mtpe/noticias/1432297-mtpe-y-hyundai-preparan-a-trabajadores-peruanos-para-los-nuevos-empleos-de-la-industria-naval",
       "source": "MTPE",
       "publishedAt": "",
       "summary": ""

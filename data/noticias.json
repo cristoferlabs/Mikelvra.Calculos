@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-29T15:57:38.412Z",
+  "updatedAt": "2026-08-30T15:45:05.020Z",
   "items": [
     {
       "title": "El Poder Ejecutivo propone para el 2027 un presupuesto descentralizado, con énfasis en seguridad ciudadana e inclusión social",
@@ -25,6 +25,13 @@
     {
       "title": "CAF y el Grupo BID reafirman su respaldo y cooperación con las políticas para impulsar el desarrollo económico del Perú al 2031",
       "url": "https://www.gob.pe/institucion/mef/noticias/1434750-caf-y-el-grupo-bid-reafirman-su-respaldo-y-cooperacion-con-las-politicas-para-impulsar-el-desarrollo-economico-del-peru-al-2031",
+      "source": "MEF",
+      "publishedAt": "",
+      "summary": ""
+    },
+    {
+      "title": "MEF hace obligatorio el uso de BIM en 14 tipologías de inversión pública para elevar la calidad y eficiencia de los proyectos",
+      "url": "https://www.gob.pe/institucion/mef/noticias/1436317-mef-hace-obligatorio-el-uso-de-bim-en-14-tipologias-de-inversion-publica-para-elevar-la-calidad-y-eficiencia-de-los-proyectos",
       "source": "MEF",
       "publishedAt": "",
       "summary": ""
@@ -65,13 +72,6 @@
       "summary": ""
     },
     {
-      "title": "MEF: Ejecutivo y sector privado articulan acciones para reducir riesgos y atender los efectos del FEN",
-      "url": "https://www.gob.pe/institucion/mef/noticias/1431961-mef-ejecutivo-y-sector-privado-articulan-acciones-para-reducir-riesgos-y-atender-los-efectos-del-fen",
-      "source": "MEF",
-      "publishedAt": "",
-      "summary": ""
-    },
-    {
       "title": "Ministro Juan Sheput activa soporte de la Sunafil para fortalecer la inspección laboral en las regiones",
       "url": "https://www.gob.pe/institucion/mtpe/noticias/1436072-ministro-juan-sheput-activa-soporte-de-la-sunafil-para-fortalecer-la-inspeccion-laboral-en-las-regiones",
       "source": "MTPE",
@@ -81,6 +81,13 @@
     {
       "title": "Gobierno moviliza al sector privado para generar más empleo formal para los adultos mayores",
       "url": "https://www.gob.pe/institucion/mtpe/noticias/1435022-gobierno-moviliza-al-sector-privado-para-generar-mas-empleo-formal-para-los-adultos-mayores",
+      "source": "MTPE",
+      "publishedAt": "",
+      "summary": ""
+    },
+    {
+      "title": "Ministro Sheput en Atico: Delegación de facultades permitirá hacer obras de prevención de manera rápida",
+      "url": "https://www.gob.pe/institucion/mtpe/noticias/1436270-ministro-sheput-en-atico-delegacion-de-facultades-permitira-hacer-obras-de-prevencion-de-manera-rapida",
       "source": "MTPE",
       "publishedAt": "",
       "summary": ""
@@ -130,13 +137,6 @@
     {
       "title": "MTPE construye puentes entre trabajadores y empleadores para impulsar una nueva agenda laboral",
       "url": "https://www.gob.pe/institucion/mtpe/noticias/1433500-mtpe-construye-puentes-entre-trabajadores-y-empleadores-para-impulsar-una-nueva-agenda-laboral",
-      "source": "MTPE",
-      "publishedAt": "",
-      "summary": ""
-    },
-    {
-      "title": "Ministro Juan Sheput articula con regiones una agenda nacional para generar más empleo formal",
-      "url": "https://www.gob.pe/institucion/mtpe/noticias/1433438-ministro-juan-sheput-articula-con-regiones-una-agenda-nacional-para-generar-mas-empleo-formal",
       "source": "MTPE",
       "publishedAt": "",
       "summary": ""

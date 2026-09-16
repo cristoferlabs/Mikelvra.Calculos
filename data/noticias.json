@@ -1,6 +1,13 @@
 {
-  "updatedAt": "2026-09-15T15:56:25.431Z",
+  "updatedAt": "2026-09-16T15:48:32.761Z",
   "items": [
+    {
+      "title": "MEF: La economía peruana creció 3,6% en julio de 2026, tasa mayor a la registrada en el mes previo y acumuló 28 meses de expansión continua",
+      "url": "https://www.gob.pe/institucion/mef/noticias/1444808-mef-la-economia-peruana-crecio-3-6-en-julio-de-2026-tasa-mayor-a-la-registrada-en-el-mes-previo-y-acumulo-28-meses-de-expansion-continua",
+      "source": "MEF",
+      "publishedAt": "",
+      "summary": ""
+    },
     {
       "title": "MEF actualiza normas de información financiera para fortalecer la transparencia y confianza en el mercado",
       "url": "https://www.gob.pe/institucion/mef/noticias/1443447-mef-actualiza-normas-de-informacion-financiera-para-fortalecer-la-transparencia-y-confianza-en-el-mercado",
@@ -65,9 +72,16 @@
       "summary": ""
     },
     {
-      "title": "Gobierno prevé la consolidación de un nuevo ciclo de inversiones entre el 2026 y 2030, lo que permitirá dinamizar la actividad económica",
-      "url": "https://www.gob.pe/institucion/mef/noticias/1436916-gobierno-preve-la-consolidacion-de-un-nuevo-ciclo-de-inversiones-entre-el-2026-y-2030-lo-que-permitira-dinamizar-la-actividad-economica",
-      "source": "MEF",
+      "title": "Ministro Juan Sheput: “En los próximos días va a haber un cambio, un cambio inmediato” en EsSalud",
+      "url": "https://www.gob.pe/institucion/mtpe/noticias/1444637-ministro-juan-sheput-en-los-proximos-dias-va-a-haber-un-cambio-un-cambio-inmediato-en-essalud",
+      "source": "MTPE",
+      "publishedAt": "",
+      "summary": ""
+    },
+    {
+      "title": "Ministro Juan Sheput pone en marcha acuerdo con trabajadores y empleadores para proteger el empleo frente a El Niño",
+      "url": "https://www.gob.pe/institucion/mtpe/noticias/1444455-ministro-juan-sheput-pone-en-marcha-acuerdo-con-trabajadores-y-empleadores-para-proteger-el-empleo-frente-a-el-nino",
+      "source": "MTPE",
       "publishedAt": "",
       "summary": ""
     },
@@ -123,20 +137,6 @@
     {
       "title": "Ministro Juan Sheput: “La inteligencia artificial debe transformar el empleo, no desplazar a los trabajadores”",
       "url": "https://www.gob.pe/institucion/mtpe/noticias/1441283-ministro-juan-sheput-la-inteligencia-artificial-debe-transformar-el-empleo-no-desplazar-a-los-trabajadores",
-      "source": "MTPE",
-      "publishedAt": "",
-      "summary": ""
-    },
-    {
-      "title": "Ministerio de Trabajo logra acuerdos colectivos en beneficio de más de 3 mil trabajadores del sector minero y financiero",
-      "url": "https://www.gob.pe/institucion/mtpe/noticias/1440099-ministerio-de-trabajo-logra-acuerdos-colectivos-en-beneficio-de-mas-de-3-mil-trabajadores-del-sector-minero-y-financiero",
-      "source": "MTPE",
-      "publishedAt": "",
-      "summary": ""
-    },
-    {
-      "title": "MTPE se prepara para los cambios que traerán la inteligencia artificial y la robotización al trabajo",
-      "url": "https://www.gob.pe/institucion/mtpe/noticias/1439998-mtpe-se-prepara-para-los-cambios-que-traeran-la-inteligencia-artificial-y-la-robotizacion-al-trabajo",
       "source": "MTPE",
       "publishedAt": "",
       "summary": ""

@@ -1,6 +1,13 @@
 {
-  "updatedAt": "2026-09-18T15:29:21.036Z",
+  "updatedAt": "2026-09-19T15:04:16.386Z",
   "items": [
+    {
+      "title": "MEF habilita plataforma web para que mototaxistas accedan al beneficio de S/4 por galón de combustible",
+      "url": "https://www.gob.pe/institucion/mef/noticias/1446479-mef-habilita-plataforma-web-para-que-mototaxistas-accedan-al-beneficio-de-s-4-por-galon-de-combustible",
+      "source": "MEF",
+      "publishedAt": "",
+      "summary": ""
+    },
     {
       "title": "Gobierno establece subsidio temporal para conductores de mototaxi de Loreto, Ucayali y Madre de Dios",
       "url": "https://www.gob.pe/institucion/mef/noticias/1446030-gobierno-establece-subsidio-temporal-para-conductores-de-mototaxi-de-loreto-ucayali-y-madre-de-dios",
@@ -65,9 +72,9 @@
       "summary": ""
     },
     {
-      "title": "Ministro Elmer Cuba: Presupuesto 2027 prioriza recursos para mejorar los servicios y la calidad de vida de la población",
-      "url": "https://www.gob.pe/institucion/mef/noticias/1438934-ministro-elmer-cuba-presupuesto-2027-prioriza-recursos-para-mejorar-los-servicios-y-la-calidad-de-vida-de-la-poblacion",
-      "source": "MEF",
+      "title": "Gobierno amplía a Tumbes la reforma de la fiscalización laboral y abre nuevas oportunidades de empleo para los jóvenes",
+      "url": "https://www.gob.pe/institucion/mtpe/noticias/1446141-gobierno-amplia-a-tumbes-la-reforma-de-la-fiscalizacion-laboral-y-abre-nuevas-oportunidades-de-empleo-para-los-jovenes",
+      "source": "MTPE",
       "publishedAt": "",
       "summary": ""
     },
@@ -88,6 +95,13 @@
     {
       "title": "Ministro Sheput impulsa cooperación con EE. UU. para afrontar los desafíos del futuro laboral y ampliar las oportunidades para los jóvenes",
       "url": "https://www.gob.pe/institucion/mtpe/noticias/1445115-ministro-sheput-impulsa-cooperacion-con-ee-uu-para-afrontar-los-desafios-del-futuro-laboral-y-ampliar-las-oportunidades-para-los-jovenes",
+      "source": "MTPE",
+      "publishedAt": "",
+      "summary": ""
+    },
+    {
+      "title": "MTPE se anticipa al impacto de la inteligencia artificial para proteger el empleo y los derechos laborales",
+      "url": "https://www.gob.pe/institucion/mtpe/noticias/1446552-mtpe-se-anticipa-al-impacto-de-la-inteligencia-artificial-para-proteger-el-empleo-y-los-derechos-laborales",
       "source": "MTPE",
       "publishedAt": "",
       "summary": ""
@@ -123,20 +137,6 @@
     {
       "title": "Ministro Juan Sheput: “EsSalud ya está sobrediagnosticado; estamos aquí para tomar acciones concretas y mejorar la atención al paciente”",
       "url": "https://www.gob.pe/institucion/mtpe/noticias/1442938-ministro-juan-sheput-essalud-ya-esta-sobrediagnosticado-estamos-aqui-para-tomar-acciones-concretas-y-mejorar-la-atencion-al-paciente",
-      "source": "MTPE",
-      "publishedAt": "",
-      "summary": ""
-    },
-    {
-      "title": "Gobierno se anticipa al Fenómeno El Niño y fortalece la capacidad de respuesta de EsSalud en Piura",
-      "url": "https://www.gob.pe/institucion/mtpe/noticias/1442388-gobierno-se-anticipa-al-fenomeno-el-nino-y-fortalece-la-capacidad-de-respuesta-de-essalud-en-piura",
-      "source": "MTPE",
-      "publishedAt": "",
-      "summary": ""
-    },
-    {
-      "title": "Ministerio de Trabajo inicia proceso de fortalecimiento y modernización del Sector para responder a los desafíos del empleo",
-      "url": "https://www.gob.pe/institucion/mtpe/noticias/1442113-ministerio-de-trabajo-inicia-proceso-de-fortalecimiento-y-modernizacion-del-sector-para-responder-a-los-desafios-del-empleo",
       "source": "MTPE",
       "publishedAt": "",
       "summary": ""

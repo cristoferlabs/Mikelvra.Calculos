@@ -1,6 +1,13 @@
 {
-  "updatedAt": "2026-09-22T15:58:39.257Z",
+  "updatedAt": "2026-09-23T15:48:56.575Z",
   "items": [
+    {
+      "title": "El Perú destaca en foro de las Naciones Unidas su posición estratégica en la transición energética y seguridad alimentaria mundial",
+      "url": "https://www.gob.pe/institucion/mef/noticias/1447837-el-peru-destaca-en-foro-de-las-naciones-unidas-su-posicion-estrategica-en-la-transicion-energetica-y-seguridad-alimentaria-mundial",
+      "source": "MEF",
+      "publishedAt": "",
+      "summary": ""
+    },
     {
       "title": "MEF lidera plataforma regional que aborda los desafíos económicos, fiscales y financieros del cambio climático",
       "url": "https://www.gob.pe/institucion/mef/noticias/1447408-mef-lidera-plataforma-regional-que-aborda-los-desafios-economicos-fiscales-y-financieros-del-cambio-climatico",
@@ -65,9 +72,30 @@
       "summary": ""
     },
     {
-      "title": "MEF: Gobierno impulsa crecimiento con inversión, productividad y una gestión pública orientada a resultados",
-      "url": "https://www.gob.pe/institucion/mef/noticias/1441380-mef-gobierno-impulsa-crecimiento-con-inversion-productividad-y-una-gestion-publica-orientada-a-resultados",
-      "source": "MEF",
+      "title": "CNTPE respalda por unanimidad candidatura de Javier González-Olaechea a la Dirección General de la OIT y fortalece diálogo social tripartito",
+      "url": "https://www.gob.pe/institucion/mtpe/noticias/1447624-cntpe-respalda-por-unanimidad-candidatura-de-javier-gonzalez-olaechea-a-la-direccion-general-de-la-oit-y-fortalece-dialogo-social-tripartito",
+      "source": "MTPE",
+      "publishedAt": "",
+      "summary": ""
+    },
+    {
+      "title": "MTPE crea comisión para fortalecer Sunafil y mejorar la fiscalización laboral en todo el país",
+      "url": "https://www.gob.pe/institucion/mtpe/noticias/1446675-mtpe-crea-comision-para-fortalecer-sunafil-y-mejorar-la-fiscalizacion-laboral-en-todo-el-pais",
+      "source": "MTPE",
+      "publishedAt": "",
+      "summary": ""
+    },
+    {
+      "title": "Ministro Juan Sheput: “Trabajar no tiene por qué significar un daño para la vida ni para la salud de las personas”",
+      "url": "https://www.gob.pe/institucion/mtpe/noticias/1447839-ministro-juan-sheput-trabajar-no-tiene-por-que-significar-un-dano-para-la-vida-ni-para-la-salud-de-las-personas",
+      "source": "MTPE",
+      "publishedAt": "",
+      "summary": ""
+    },
+    {
+      "title": "MTPE se anticipa al impacto de la inteligencia artificial para proteger el empleo y los derechos laborales",
+      "url": "https://www.gob.pe/institucion/mtpe/noticias/1446552-mtpe-se-anticipa-al-impacto-de-la-inteligencia-artificial-para-proteger-el-empleo-y-los-derechos-laborales",
+      "source": "MTPE",
       "publishedAt": "",
       "summary": ""
     },
@@ -81,6 +109,13 @@
     {
       "title": "Ministro Juan Sheput despliega en Tumbes una agenda laboral con empleo juvenil, formalización y prevención ante El Niño",
       "url": "https://www.gob.pe/institucion/mtpe/noticias/1445968-ministro-juan-sheput-despliega-en-tumbes-una-agenda-laboral-con-empleo-juvenil-formalizacion-y-prevencion-ante-el-nino",
+      "source": "MTPE",
+      "publishedAt": "",
+      "summary": ""
+    },
+    {
+      "title": "Ministro de Trabajo, Juan Sheput, llevará a Tumbes agenda por el empleo juvenil y la prevención frente a el Niño",
+      "url": "https://www.gob.pe/institucion/mtpe/noticias/1445427-ministro-de-trabajo-juan-sheput-llevara-a-tumbes-agenda-por-el-empleo-juvenil-y-la-prevencion-frente-a-el-nino",
       "source": "MTPE",
       "publishedAt": "",
       "summary": ""
@@ -100,43 +135,8 @@
       "summary": ""
     },
     {
-      "title": "MTPE crea comisión para fortalecer Sunafil y mejorar la fiscalización laboral en todo el país",
-      "url": "https://www.gob.pe/institucion/mtpe/noticias/1446675-mtpe-crea-comision-para-fortalecer-sunafil-y-mejorar-la-fiscalizacion-laboral-en-todo-el-pais",
-      "source": "MTPE",
-      "publishedAt": "",
-      "summary": ""
-    },
-    {
-      "title": "MTPE se anticipa al impacto de la inteligencia artificial para proteger el empleo y los derechos laborales",
-      "url": "https://www.gob.pe/institucion/mtpe/noticias/1446552-mtpe-se-anticipa-al-impacto-de-la-inteligencia-artificial-para-proteger-el-empleo-y-los-derechos-laborales",
-      "source": "MTPE",
-      "publishedAt": "",
-      "summary": ""
-    },
-    {
-      "title": "Ministro de Trabajo, Juan Sheput, llevará a Tumbes agenda por el empleo juvenil y la prevención frente a el Niño",
-      "url": "https://www.gob.pe/institucion/mtpe/noticias/1445427-ministro-de-trabajo-juan-sheput-llevara-a-tumbes-agenda-por-el-empleo-juvenil-y-la-prevencion-frente-a-el-nino",
-      "source": "MTPE",
-      "publishedAt": "",
-      "summary": ""
-    },
-    {
       "title": "Ministro Juan Sheput: “En los próximos días va a haber un cambio, un cambio inmediato” en EsSalud",
       "url": "https://www.gob.pe/institucion/mtpe/noticias/1444637-ministro-juan-sheput-en-los-proximos-dias-va-a-haber-un-cambio-un-cambio-inmediato-en-essalud",
-      "source": "MTPE",
-      "publishedAt": "",
-      "summary": ""
-    },
-    {
-      "title": "Ministro Juan Sheput pone en marcha acuerdo con trabajadores y empleadores para proteger el empleo frente a El Niño",
-      "url": "https://www.gob.pe/institucion/mtpe/noticias/1444455-ministro-juan-sheput-pone-en-marcha-acuerdo-con-trabajadores-y-empleadores-para-proteger-el-empleo-frente-a-el-nino",
-      "source": "MTPE",
-      "publishedAt": "",
-      "summary": ""
-    },
-    {
-      "title": "Juan Sheput: Las críticas de los que no quieren cambios no detendrán la renovación de EsSalud ni su recuperación al servicio del asegurado",
-      "url": "https://www.gob.pe/institucion/mtpe/noticias/1443469-juan-sheput-las-criticas-de-los-que-no-quieren-cambios-no-detendran-la-renovacion-de-essalud-ni-su-recuperacion-al-servicio-del-asegurado",
       "source": "MTPE",
       "publishedAt": "",
       "summary": ""

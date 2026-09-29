@@ -1,6 +1,13 @@
 {
-  "updatedAt": "2026-09-28T18:59:02.656Z",
+  "updatedAt": "2026-09-29T17:19:06.313Z",
   "items": [
+    {
+      "title": "MEF: Perú tiene espacio para elevar su productividad y competitividad para acelerar su crecimiento",
+      "url": "https://www.gob.pe/institucion/mef/noticias/1450218-mef-peru-tiene-espacio-para-elevar-su-productividad-y-competitividad-para-acelerar-su-crecimiento",
+      "source": "MEF",
+      "publishedAt": "",
+      "summary": ""
+    },
     {
       "title": "Mototaxistas de Loreto, Ucayali y Madre de Dios pueden recibir hasta S/100 al mes para combustible: ¿cómo acceder?",
       "url": "https://www.gob.pe/institucion/mef/noticias/1448554-mototaxistas-de-loreto-ucayali-y-madre-de-dios-pueden-recibir-hasta-s-100-al-mes-para-combustible-como-acceder",
@@ -65,13 +72,6 @@
       "summary": ""
     },
     {
-      "title": "MEF: La economía peruana creció 3,6% en julio de 2026, tasa mayor a la registrada en el mes previo y acumuló 28 meses de expansión continua",
-      "url": "https://www.gob.pe/institucion/mef/noticias/1444808-mef-la-economia-peruana-crecio-3-6-en-julio-de-2026-tasa-mayor-a-la-registrada-en-el-mes-previo-y-acumulo-28-meses-de-expansion-continua",
-      "source": "MEF",
-      "publishedAt": "",
-      "summary": ""
-    },
-    {
       "title": "Ministerio de Trabajo y Fundación Romero impulsan 400 mil nuevas becas para fortalecer la empleabilidad en el país",
       "url": "https://www.gob.pe/institucion/mtpe/noticias/1448627-ministerio-de-trabajo-y-fundacion-romero-impulsan-400-mil-nuevas-becas-para-fortalecer-la-empleabilidad-en-el-pais",
       "source": "MTPE",
@@ -95,6 +95,13 @@
     {
       "title": "Diálogo liderado por el Ministerio de Trabajo permite acuerdo para 25 mil trabajadores de EsSalud y deja sin efecto huelga nacional",
       "url": "https://www.gob.pe/institucion/mtpe/noticias/1448003-dialogo-liderado-por-el-ministerio-de-trabajo-permite-acuerdo-para-25-mil-trabajadores-de-essalud-y-deja-sin-efecto-huelga-nacional",
+      "source": "MTPE",
+      "publishedAt": "",
+      "summary": ""
+    },
+    {
+      "title": "Presidenta Keiko Fujimori suscribe decreto supremo que aumenta Remuneración Mínima Vital hasta S/ 1300 en beneficio de 600 mil trabajadores",
+      "url": "https://www.gob.pe/institucion/mtpe/noticias/1450229-presidenta-keiko-fujimori-suscribe-decreto-supremo-que-aumenta-remuneracion-minima-vital-hasta-s-1300-en-beneficio-de-600-mil-trabajadores",
       "source": "MTPE",
       "publishedAt": "",
       "summary": ""
@@ -130,13 +137,6 @@
     {
       "title": "CNTPE respalda por unanimidad candidatura de Javier González-Olaechea a la Dirección General de la OIT y fortalece diálogo social tripartito",
       "url": "https://www.gob.pe/institucion/mtpe/noticias/1447624-cntpe-respalda-por-unanimidad-candidatura-de-javier-gonzalez-olaechea-a-la-direccion-general-de-la-oit-y-fortalece-dialogo-social-tripartito",
-      "source": "MTPE",
-      "publishedAt": "",
-      "summary": ""
-    },
-    {
-      "title": "MTPE crea comisión para fortalecer Sunafil y mejorar la fiscalización laboral en todo el país",
-      "url": "https://www.gob.pe/institucion/mtpe/noticias/1446675-mtpe-crea-comision-para-fortalecer-sunafil-y-mejorar-la-fiscalizacion-laboral-en-todo-el-pais",
       "source": "MTPE",
       "publishedAt": "",
       "summary": ""

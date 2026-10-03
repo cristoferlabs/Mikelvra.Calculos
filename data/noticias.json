@@ -1,6 +1,20 @@
 {
-  "updatedAt": "2026-10-02T17:05:07.928Z",
+  "updatedAt": "2026-10-03T15:26:47.156Z",
   "items": [
+    {
+      "title": "MEF: Mototaxistas de Loreto, Ucayali y Madre de Dios ya pueden consultar el estado de sus comprobantes para el subsidio",
+      "url": "https://www.gob.pe/institucion/mef/noticias/1452444-mef-mototaxistas-de-loreto-ucayali-y-madre-de-dios-ya-pueden-consultar-el-estado-de-sus-comprobantes-para-el-subsidio",
+      "source": "MEF",
+      "publishedAt": "",
+      "summary": ""
+    },
+    {
+      "title": "Publicación de proyectos de Bases Estándar - Ley N° 32069 para opiniones, comentarios y sugerencias",
+      "url": "https://www.gob.pe/institucion/mef/noticias/1452362-publicacion-de-proyectos-de-bases-estandar-ley-n-32069-para-opiniones-comentarios-y-sugerencias",
+      "source": "MEF",
+      "publishedAt": "",
+      "summary": ""
+    },
     {
       "title": "MEF preside sesión de Naciones Unidas sobre normas internacionales de contabilidad",
       "url": "https://www.gob.pe/institucion/mef/noticias/1452002-mef-preside-sesion-de-naciones-unidas-sobre-normas-internacionales-de-contabilidad",
@@ -58,20 +72,6 @@
       "summary": ""
     },
     {
-      "title": "MEF: Los mototaxistas no necesitan empadronarse ante las municipalidades para acceder al subsidio económico de S/ 4",
-      "url": "https://www.gob.pe/institucion/mef/noticias/1446746-mef-los-mototaxistas-no-necesitan-empadronarse-ante-las-municipalidades-para-acceder-al-subsidio-economico-de-s-4",
-      "source": "MEF",
-      "publishedAt": "",
-      "summary": ""
-    },
-    {
-      "title": "MEF habilita plataforma web para que mototaxistas accedan al beneficio de S/4 por galón de combustible",
-      "url": "https://www.gob.pe/institucion/mef/noticias/1446479-mef-habilita-plataforma-web-para-que-mototaxistas-accedan-al-beneficio-de-s-4-por-galon-de-combustible",
-      "source": "MEF",
-      "publishedAt": "",
-      "summary": ""
-    },
-    {
       "title": "Ministro Juan Sheput inicia acompañamiento a negociación colectiva 2027 de construcción civil y destaca 22 años de diálogo",
       "url": "https://www.gob.pe/institucion/mtpe/noticias/1451869-ministro-juan-sheput-inicia-acompanamiento-a-negociacion-colectiva-2027-de-construccion-civil-y-destaca-22-anos-de-dialogo",
       "source": "MTPE",
@@ -81,6 +81,27 @@
     {
       "title": "Perú busca llegar a la dirección de la OIT con candidatura de Javier González-Olaechea",
       "url": "https://www.gob.pe/institucion/mtpe/noticias/1451287-peru-busca-llegar-a-la-direccion-de-la-oit-con-candidatura-de-javier-gonzalez-olaechea",
+      "source": "MTPE",
+      "publishedAt": "",
+      "summary": ""
+    },
+    {
+      "title": "MTPE lleva a Junín campaña para reducir riesgos y accidentes en construcción civil",
+      "url": "https://www.gob.pe/institucion/mtpe/noticias/1452432-mtpe-lleva-a-junin-campana-para-reducir-riesgos-y-accidentes-en-construccion-civil",
+      "source": "MTPE",
+      "publishedAt": "",
+      "summary": ""
+    },
+    {
+      "title": "Ministerio de Trabajo conectará a estudiantes de secundaria técnica con oportunidades de empleo formal",
+      "url": "https://www.gob.pe/institucion/mtpe/noticias/1452356-ministerio-de-trabajo-conectara-a-estudiantes-de-secundaria-tecnica-con-oportunidades-de-empleo-formal",
+      "source": "MTPE",
+      "publishedAt": "",
+      "summary": ""
+    },
+    {
+      "title": "Gobierno impulsa empleo y desarrollo local con nueva infraestructura deportiva en Amazonas",
+      "url": "https://www.gob.pe/institucion/mtpe/noticias/1452203-gobierno-impulsa-empleo-y-desarrollo-local-con-nueva-infraestructura-deportiva-en-amazonas",
       "source": "MTPE",
       "publishedAt": "",
       "summary": ""
@@ -116,27 +137,6 @@
     {
       "title": "Ministerio de Trabajo ofrece más de 1,000 oportunidades laborales en Trujillo con énfasis en los jóvenes",
       "url": "https://www.gob.pe/institucion/mtpe/noticias/1449425-ministerio-de-trabajo-ofrece-mas-de-1-000-oportunidades-laborales-en-trujillo-con-enfasis-en-los-jovenes",
-      "source": "MTPE",
-      "publishedAt": "",
-      "summary": ""
-    },
-    {
-      "title": "Ministerio de Trabajo pone fin a huelga de 40 días en Minera Orex y restablece la paz laboral en Arequipa",
-      "url": "https://www.gob.pe/institucion/mtpe/noticias/1449393-ministerio-de-trabajo-pone-fin-a-huelga-de-40-dias-en-minera-orex-y-restablece-la-paz-laboral-en-arequipa",
-      "source": "MTPE",
-      "publishedAt": "",
-      "summary": ""
-    },
-    {
-      "title": "Ministerio de trabajo acerca hoy más de 1000 oportunidades de empleo formal a Trujillo",
-      "url": "https://www.gob.pe/institucion/mtpe/noticias/1449360-ministerio-de-trabajo-acerca-hoy-mas-de-1000-oportunidades-de-empleo-formal-a-trujillo",
-      "source": "MTPE",
-      "publishedAt": "",
-      "summary": ""
-    },
-    {
-      "title": "Ministerio de Trabajo y Fundación Romero impulsan 400 mil nuevas becas para fortalecer la empleabilidad en el país",
-      "url": "https://www.gob.pe/institucion/mtpe/noticias/1448627-ministerio-de-trabajo-y-fundacion-romero-impulsan-400-mil-nuevas-becas-para-fortalecer-la-empleabilidad-en-el-pais",
       "source": "MTPE",
       "publishedAt": "",
       "summary": ""

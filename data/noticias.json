@@ -1,6 +1,27 @@
 {
-  "updatedAt": "2026-10-14T16:12:45.139Z",
+  "updatedAt": "2026-10-15T15:59:50.137Z",
   "items": [
+    {
+      "title": "Gobierno destina más de S/ 16 millones para financiar subsidio a mototaxistas de tres regiones de la Amazonía",
+      "url": "https://www.gob.pe/institucion/mef/noticias/1457087-gobierno-destina-mas-de-s-16-millones-para-financiar-subsidio-a-mototaxistas-de-tres-regiones-de-la-amazonia",
+      "source": "MEF",
+      "publishedAt": "",
+      "summary": ""
+    },
+    {
+      "title": "MEF anuncia que actuará con firmeza para evitar el enfriamiento de la economía y proteger a las microempresas",
+      "url": "https://www.gob.pe/institucion/mef/noticias/1456976-mef-anuncia-que-actuara-con-firmeza-para-evitar-el-enfriamiento-de-la-economia-y-proteger-a-las-microempresas",
+      "source": "MEF",
+      "publishedAt": "",
+      "summary": ""
+    },
+    {
+      "title": "Gobierno transfiere más de S/19 millones a gobiernos regionales para cumplir con beneficios laborales en el sector Educación",
+      "url": "https://www.gob.pe/institucion/mef/noticias/1456586-gobierno-transfiere-mas-de-s-19-millones-a-gobiernos-regionales-para-cumplir-con-beneficios-laborales-en-el-sector-educacion",
+      "source": "MEF",
+      "publishedAt": "",
+      "summary": ""
+    },
     {
       "title": "Inversión privada creció 15,5% en Perú y exportaciones alcanzarían los US$100 000 millones en 2026",
       "url": "https://www.gob.pe/institucion/mef/noticias/1454647-inversion-privada-crecio-15-5-en-peru-y-exportaciones-alcanzarian-los-us-100-000-millones-en-2026",
@@ -51,27 +72,6 @@
       "summary": ""
     },
     {
-      "title": "Perú fortalece cooperación con organismos financieros internacionales para impulsar proyectos estratégicos de desarrollo",
-      "url": "https://www.gob.pe/institucion/mef/noticias/1451789-peru-fortalece-cooperacion-con-organismos-financieros-internacionales-para-impulsar-proyectos-estrategicos-de-desarrollo",
-      "source": "MEF",
-      "publishedAt": "",
-      "summary": ""
-    },
-    {
-      "title": "MEF: Perú tiene espacio para elevar su productividad y competitividad para acelerar su crecimiento",
-      "url": "https://www.gob.pe/institucion/mef/noticias/1450218-mef-peru-tiene-espacio-para-elevar-su-productividad-y-competitividad-para-acelerar-su-crecimiento",
-      "source": "MEF",
-      "publishedAt": "",
-      "summary": ""
-    },
-    {
-      "title": "Mototaxistas de Loreto, Ucayali y Madre de Dios pueden recibir hasta S/100 al mes para combustible: ¿cómo acceder?",
-      "url": "https://www.gob.pe/institucion/mef/noticias/1448554-mototaxistas-de-loreto-ucayali-y-madre-de-dios-pueden-recibir-hasta-s-100-al-mes-para-combustible-como-acceder",
-      "source": "MEF",
-      "publishedAt": "",
-      "summary": ""
-    },
-    {
       "title": "Gobierno pone al paciente en el centro y acelera cirugías en EsSalud para reducir tiempos de espera",
       "url": "https://www.gob.pe/institucion/mtpe/noticias/1454299-gobierno-pone-al-paciente-en-el-centro-y-acelera-cirugias-en-essalud-para-reducir-tiempos-de-espera",
       "source": "MTPE",
@@ -88,6 +88,13 @@
     {
       "title": "Ministro Juan Sheput inicia acompañamiento a negociación colectiva 2027 de construcción civil y destaca 22 años de diálogo",
       "url": "https://www.gob.pe/institucion/mtpe/noticias/1451869-ministro-juan-sheput-inicia-acompanamiento-a-negociacion-colectiva-2027-de-construccion-civil-y-destaca-22-anos-de-dialogo",
+      "source": "MTPE",
+      "publishedAt": "",
+      "summary": ""
+    },
+    {
+      "title": "Ministerio de Trabajo articula acción nacional para prevenir accidentes y proteger a los trabajadores en construcción",
+      "url": "https://www.gob.pe/institucion/mtpe/noticias/1456682-ministerio-de-trabajo-articula-accion-nacional-para-prevenir-accidentes-y-proteger-a-los-trabajadores-en-construccion",
       "source": "MTPE",
       "publishedAt": "",
       "summary": ""
@@ -135,9 +142,23 @@
       "summary": ""
     },
     {
-      "title": "El Ministerio de Trabajo recuerda las facilidades laborales para votar y cumplir como miembro de mesa este 4 de octubre",
-      "url": "https://www.gob.pe/institucion/mtpe/noticias/1452448-el-ministerio-de-trabajo-recuerda-las-facilidades-laborales-para-votar-y-cumplir-como-miembro-de-mesa-este-4-de-octubre",
-      "source": "MTPE",
+      "title": "Conciertos de “BTS” generan más de S/ 5.8 millones por ventas de alimentos, bebidas y merchandising",
+      "url": "https://www.gob.pe/institucion/sunat/noticias/1457113-conciertos-de-bts-generan-mas-de-s-5-8-millones-por-ventas-de-alimentos-bebidas-y-merchandising",
+      "source": "SUNAT",
+      "publishedAt": "",
+      "summary": ""
+    },
+    {
+      "title": "Más de 980 mil docentes y estudiantes promueven formalización en la semana de la educación tributaria 2026",
+      "url": "https://www.gob.pe/institucion/sunat/noticias/1457099-mas-de-980-mil-docentes-y-estudiantes-promueven-formalizacion-en-la-semana-de-la-educacion-tributaria-2026",
+      "source": "SUNAT",
+      "publishedAt": "",
+      "summary": ""
+    },
+    {
+      "title": "SUNAT: recaudación tributaria creció 18,3% en setiembre",
+      "url": "https://www.gob.pe/institucion/sunat/noticias/1457096-sunat-recaudacion-tributaria-crecio-18-3-en-setiembre",
+      "source": "SUNAT",
       "publishedAt": "",
       "summary": ""
     },
@@ -186,27 +207,6 @@
     {
       "title": "SUNAT rematará 70 bienes inmuebles valorizados en más de S/ 10 millones",
       "url": "https://www.gob.pe/institucion/sunat/noticias/1431140-sunat-rematara-70-bienes-inmuebles-valorizados-en-mas-de-s-10-millones",
-      "source": "SUNAT",
-      "publishedAt": "",
-      "summary": ""
-    },
-    {
-      "title": "SUNAT: recaudación tributaria creció 20,4% en julio",
-      "url": "https://www.gob.pe/institucion/sunat/noticias/1429361-sunat-recaudacion-tributaria-crecio-20-4-en-julio",
-      "source": "SUNAT",
-      "publishedAt": "",
-      "summary": ""
-    },
-    {
-      "title": "SUNAT incautó 2.5 toneladas de mercurio líquido valorizado en más de 4 millones de dólares",
-      "url": "https://www.gob.pe/institucion/sunat/noticias/1425598-sunat-incauto-2-5-toneladas-de-mercurio-liquido-valorizado-en-mas-de-4-millones-de-dolares",
-      "source": "SUNAT",
-      "publishedAt": "",
-      "summary": ""
-    },
-    {
-      "title": "SUNAT fortalece control de insumos químicos fiscalizados",
-      "url": "https://www.gob.pe/institucion/sunat/noticias/1425592-sunat-fortalece-control-de-insumos-quimicos-fiscalizados",
       "source": "SUNAT",
       "publishedAt": "",
       "summary": ""

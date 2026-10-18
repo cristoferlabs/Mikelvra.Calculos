@@ -1,6 +1,13 @@
 {
-  "updatedAt": "2026-10-17T14:41:32.948Z",
+  "updatedAt": "2026-10-18T15:07:22.091Z",
   "items": [
+    {
+      "title": "MEF: La trayectoria del déficit fiscal fortalece la respuesta del Estado ante choques adversos, sin afectar la sostenibilidad fiscal",
+      "url": "https://www.gob.pe/institucion/mef/noticias/1458756-mef-la-trayectoria-del-deficit-fiscal-fortalece-la-respuesta-del-estado-ante-choques-adversos-sin-afectar-la-sostenibilidad-fiscal",
+      "source": "MEF",
+      "publishedAt": "",
+      "summary": ""
+    },
     {
       "title": "MEF, MINEM y MINAM coordinan acciones para agilizar inversiones minero-energéticas",
       "url": "https://www.gob.pe/institucion/mef/noticias/1457764-mef-minem-y-minam-coordinan-acciones-para-agilizar-inversiones-minero-energeticas",
@@ -65,9 +72,16 @@
       "summary": ""
     },
     {
-      "title": "MEF: Mototaxistas de Loreto, Ucayali y Madre de Dios ya pueden consultar el estado de sus comprobantes para el subsidio",
-      "url": "https://www.gob.pe/institucion/mef/noticias/1452444-mef-mototaxistas-de-loreto-ucayali-y-madre-de-dios-ya-pueden-consultar-el-estado-de-sus-comprobantes-para-el-subsidio",
-      "source": "MEF",
+      "title": "Ministerio de Trabajo impulsará mayor participación de mujeres en el sector construcción",
+      "url": "https://www.gob.pe/institucion/mtpe/noticias/1458714-ministerio-de-trabajo-impulsara-mayor-participacion-de-mujeres-en-el-sector-construccion",
+      "source": "MTPE",
+      "publishedAt": "",
+      "summary": ""
+    },
+    {
+      "title": "Ministro Juan Sheput: relanzamiento de “Hospital Perú” llevará más de 4 000 atenciones a asegurados en Iquitos",
+      "url": "https://www.gob.pe/institucion/mtpe/noticias/1458658-ministro-juan-sheput-relanzamiento-de-hospital-peru-llevara-mas-de-4-000-atenciones-a-asegurados-en-iquitos",
+      "source": "MTPE",
       "publishedAt": "",
       "summary": ""
     },
@@ -88,20 +102,6 @@
     {
       "title": "Gobierno avanza en la promoción del empleo formal: cerca de 15 mil personas consiguieron trabajo mediante los servicios del MTPE",
       "url": "https://www.gob.pe/institucion/mtpe/noticias/1457284-gobierno-avanza-en-la-promocion-del-empleo-formal-cerca-de-15-mil-personas-consiguieron-trabajo-mediante-los-servicios-del-mtpe",
-      "source": "MTPE",
-      "publishedAt": "",
-      "summary": ""
-    },
-    {
-      "title": "Gobierno pone al paciente en el centro y acelera cirugías en EsSalud para reducir tiempos de espera",
-      "url": "https://www.gob.pe/institucion/mtpe/noticias/1454299-gobierno-pone-al-paciente-en-el-centro-y-acelera-cirugias-en-essalud-para-reducir-tiempos-de-espera",
-      "source": "MTPE",
-      "publishedAt": "",
-      "summary": ""
-    },
-    {
-      "title": "Ministro Juan Sheput: relanzamiento de “Hospital Perú” llevará más de 4 000 atenciones a asegurados en Iquitos",
-      "url": "https://www.gob.pe/institucion/mtpe/noticias/1458658-ministro-juan-sheput-relanzamiento-de-hospital-peru-llevara-mas-de-4-000-atenciones-a-asegurados-en-iquitos",
       "source": "MTPE",
       "publishedAt": "",
       "summary": ""

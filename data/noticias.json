@@ -1,6 +1,13 @@
 {
-  "updatedAt": "2026-10-18T15:07:22.091Z",
+  "updatedAt": "2026-10-19T17:59:20.304Z",
   "items": [
+    {
+      "title": "MEF destina recursos para acciones limpieza y descolmatación de ríos frente al fenómeno El Niño",
+      "url": "https://www.gob.pe/institucion/mef/noticias/1458866-mef-destina-recursos-para-acciones-limpieza-y-descolmatacion-de-rios-frente-al-fenomeno-el-nino",
+      "source": "MEF",
+      "publishedAt": "",
+      "summary": ""
+    },
     {
       "title": "MEF: La trayectoria del déficit fiscal fortalece la respuesta del Estado ante choques adversos, sin afectar la sostenibilidad fiscal",
       "url": "https://www.gob.pe/institucion/mef/noticias/1458756-mef-la-trayectoria-del-deficit-fiscal-fortalece-la-respuesta-del-estado-ante-choques-adversos-sin-afectar-la-sostenibilidad-fiscal",
@@ -65,15 +72,36 @@
       "summary": ""
     },
     {
-      "title": "Crédito suplementario contempla S/8 228 millones para la continuidad de obras, servicios sociales y atención ante el fenómeno El Niño",
-      "url": "https://www.gob.pe/institucion/mef/noticias/1453049-credito-suplementario-contempla-s-8-228-millones-para-la-continuidad-de-obras-servicios-sociales-y-atencion-ante-el-fenomeno-el-nino",
-      "source": "MEF",
+      "title": "Diálogo social promovido por el Gobierno logra acuerdos para 950 trabajadores del sector público y privado",
+      "url": "https://www.gob.pe/institucion/mtpe/noticias/1458768-dialogo-social-promovido-por-el-gobierno-logra-acuerdos-para-950-trabajadores-del-sector-publico-y-privado",
+      "source": "MTPE",
+      "publishedAt": "",
+      "summary": ""
+    },
+    {
+      "title": "Ministro Sheput anuncia medidas para aprovechar el talento de peruanos en el exterior y preparar a jóvenes para empleos del futuro",
+      "url": "https://www.gob.pe/institucion/mtpe/noticias/1458761-ministro-sheput-anuncia-medidas-para-aprovechar-el-talento-de-peruanos-en-el-exterior-y-preparar-a-jovenes-para-empleos-del-futuro",
+      "source": "MTPE",
       "publishedAt": "",
       "summary": ""
     },
     {
       "title": "Ministerio de Trabajo impulsará mayor participación de mujeres en el sector construcción",
       "url": "https://www.gob.pe/institucion/mtpe/noticias/1458714-ministerio-de-trabajo-impulsara-mayor-participacion-de-mujeres-en-el-sector-construccion",
+      "source": "MTPE",
+      "publishedAt": "",
+      "summary": ""
+    },
+    {
+      "title": "Gobierno pone al paciente en el centro y acelera cirugías en EsSalud para reducir tiempos de espera",
+      "url": "https://www.gob.pe/institucion/mtpe/noticias/1454299-gobierno-pone-al-paciente-en-el-centro-y-acelera-cirugias-en-essalud-para-reducir-tiempos-de-espera",
+      "source": "MTPE",
+      "publishedAt": "",
+      "summary": ""
+    },
+    {
+      "title": "Ministro Juan Sheput: “EsSalud empieza a recuperarse con más medicamentos y el paciente como prioridad”",
+      "url": "https://www.gob.pe/institucion/mtpe/noticias/1458854-ministro-juan-sheput-essalud-empieza-a-recuperarse-con-mas-medicamentos-y-el-paciente-como-prioridad",
       "source": "MTPE",
       "publishedAt": "",
       "summary": ""
@@ -109,34 +137,6 @@
     {
       "title": "Ministerio de Trabajo articula acción nacional para prevenir accidentes y proteger a los trabajadores en construcción",
       "url": "https://www.gob.pe/institucion/mtpe/noticias/1456682-ministerio-de-trabajo-articula-accion-nacional-para-prevenir-accidentes-y-proteger-a-los-trabajadores-en-construccion",
-      "source": "MTPE",
-      "publishedAt": "",
-      "summary": ""
-    },
-    {
-      "title": "Ministerio de Trabajo impulsa la inclusión laboral con más de 300 vacantes para personas con discapacidad",
-      "url": "https://www.gob.pe/institucion/mtpe/noticias/1456144-ministerio-de-trabajo-impulsa-la-inclusion-laboral-con-mas-de-300-vacantes-para-personas-con-discapacidad",
-      "source": "MTPE",
-      "publishedAt": "",
-      "summary": ""
-    },
-    {
-      "title": "Gobierno impulsa mejoras en EsSalud Lambayeque para garantizar la atención ante El Niño y la llegada del papa León XIV",
-      "url": "https://www.gob.pe/institucion/mtpe/noticias/1455230-gobierno-impulsa-mejoras-en-essalud-lambayeque-para-garantizar-la-atencion-ante-el-nino-y-la-llegada-del-papa-leon-xiv",
-      "source": "MTPE",
-      "publishedAt": "",
-      "summary": ""
-    },
-    {
-      "title": "Gobierno refuerza prevención ante El Niño y anuncia mejoras en la atención de EsSalud en Lambayeque",
-      "url": "https://www.gob.pe/institucion/mtpe/noticias/1454913-gobierno-refuerza-prevencion-ante-el-nino-y-anuncia-mejoras-en-la-atencion-de-essalud-en-lambayeque",
-      "source": "MTPE",
-      "publishedAt": "",
-      "summary": ""
-    },
-    {
-      "title": "Ministro Juan Sheput: “Solo con trabajo decente la formalidad tendrá sentido y generará bienestar para las familias”",
-      "url": "https://www.gob.pe/institucion/mtpe/noticias/1454867-ministro-juan-sheput-solo-con-trabajo-decente-la-formalidad-tendra-sentido-y-generara-bienestar-para-las-familias",
       "source": "MTPE",
       "publishedAt": "",
       "summary": ""

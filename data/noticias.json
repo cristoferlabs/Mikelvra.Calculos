@@ -1,6 +1,13 @@
 {
-  "updatedAt": "2026-10-22T16:19:34.962Z",
+  "updatedAt": "2026-10-23T16:09:17.596Z",
   "items": [
+    {
+      "title": "MEF: el Perú es uno de los pocos países del mundo con capacidad de implementar políticas contracíclicas",
+      "url": "https://www.gob.pe/institucion/mef/noticias/1461030-mef-el-peru-es-uno-de-los-pocos-paises-del-mundo-con-capacidad-de-implementar-politicas-contraciclicas",
+      "source": "MEF",
+      "publishedAt": "",
+      "summary": ""
+    },
     {
       "title": "Orientaciones para el Inventario y Registro de Bienes Muebles Patrimoniales",
       "url": "https://www.gob.pe/institucion/mef/noticias/1459160-orientaciones-para-el-inventario-y-registro-de-bienes-muebles-patrimoniales",
@@ -65,9 +72,9 @@
       "summary": ""
     },
     {
-      "title": "MEF: Medidas de expansión fiscal y solidez económica permitirán frenar choques macroeconómicos externos",
-      "url": "https://www.gob.pe/institucion/mef/noticias/1454075-mef-medidas-de-expansion-fiscal-y-solidez-economica-permitiran-frenar-choques-macroeconomicos-externos",
-      "source": "MEF",
+      "title": "Ministro Juan Sheput: “Gobierno impulsará capacitación en construcción civil para que más trabajadores accedan a empleos en nuevas obras”",
+      "url": "https://www.gob.pe/institucion/mtpe/noticias/1461166-ministro-juan-sheput-gobierno-impulsara-capacitacion-en-construccion-civil-para-que-mas-trabajadores-accedan-a-empleos-en-nuevas-obras",
+      "source": "MTPE",
       "publishedAt": "",
       "summary": ""
     },
@@ -79,15 +86,8 @@
       "summary": ""
     },
     {
-      "title": "Empleo en Arequipa crece 8,9 %: ministro Juan Sheput llega a la región para impulsar trabajo formal y abrir más oportunidades",
-      "url": "https://www.gob.pe/institucion/mtpe/noticias/1459339-empleo-en-arequipa-crece-8-9-ministro-juan-sheput-llega-a-la-region-para-impulsar-trabajo-formal-y-abrir-mas-oportunidades",
-      "source": "MTPE",
-      "publishedAt": "",
-      "summary": ""
-    },
-    {
-      "title": "MTPE relanza Fondoempleo: S/120 millones para capacitar en los empleos que necesita cada región",
-      "url": "https://www.gob.pe/institucion/mtpe/noticias/1459064-mtpe-relanza-fondoempleo-s-120-millones-para-capacitar-en-los-empleos-que-necesita-cada-region",
+      "title": "Gobierno establece días no laborables compensables por la visita del Papa León XIV al Perú",
+      "url": "https://www.gob.pe/institucion/mtpe/noticias/1461346-gobierno-establece-dias-no-laborables-compensables-por-la-visita-del-papa-leon-xiv-al-peru",
       "source": "MTPE",
       "publishedAt": "",
       "summary": ""
@@ -102,6 +102,20 @@
     {
       "title": "Ministro Juan Sheput: Gobierno impulsa cambios para acelerar el acceso de los jóvenes al empleo formal",
       "url": "https://www.gob.pe/institucion/mtpe/noticias/1460130-ministro-juan-sheput-gobierno-impulsa-cambios-para-acelerar-el-acceso-de-los-jovenes-al-empleo-formal",
+      "source": "MTPE",
+      "publishedAt": "",
+      "summary": ""
+    },
+    {
+      "title": "Empleo en Arequipa crece 8,9 %: ministro Juan Sheput llega a la región para impulsar trabajo formal y abrir más oportunidades",
+      "url": "https://www.gob.pe/institucion/mtpe/noticias/1459339-empleo-en-arequipa-crece-8-9-ministro-juan-sheput-llega-a-la-region-para-impulsar-trabajo-formal-y-abrir-mas-oportunidades",
+      "source": "MTPE",
+      "publishedAt": "",
+      "summary": ""
+    },
+    {
+      "title": "MTPE relanza Fondoempleo: S/120 millones para capacitar en los empleos que necesita cada región",
+      "url": "https://www.gob.pe/institucion/mtpe/noticias/1459064-mtpe-relanza-fondoempleo-s-120-millones-para-capacitar-en-los-empleos-que-necesita-cada-region",
       "source": "MTPE",
       "publishedAt": "",
       "summary": ""
@@ -123,20 +137,6 @@
     {
       "title": "Ministro Sheput anuncia medidas para aprovechar el talento de peruanos en el exterior y preparar a jóvenes para empleos del futuro",
       "url": "https://www.gob.pe/institucion/mtpe/noticias/1458761-ministro-sheput-anuncia-medidas-para-aprovechar-el-talento-de-peruanos-en-el-exterior-y-preparar-a-jovenes-para-empleos-del-futuro",
-      "source": "MTPE",
-      "publishedAt": "",
-      "summary": ""
-    },
-    {
-      "title": "Ministerio de Trabajo impulsará mayor participación de mujeres en el sector construcción",
-      "url": "https://www.gob.pe/institucion/mtpe/noticias/1458714-ministerio-de-trabajo-impulsara-mayor-participacion-de-mujeres-en-el-sector-construccion",
-      "source": "MTPE",
-      "publishedAt": "",
-      "summary": ""
-    },
-    {
-      "title": "Ministro Juan Sheput: relanzamiento de “Hospital Perú” llevará más de 4 000 atenciones a asegurados en Iquitos",
-      "url": "https://www.gob.pe/institucion/mtpe/noticias/1458658-ministro-juan-sheput-relanzamiento-de-hospital-peru-llevara-mas-de-4-000-atenciones-a-asegurados-en-iquitos",
       "source": "MTPE",
       "publishedAt": "",
       "summary": ""

@@ -1,6 +1,20 @@
 {
-  "updatedAt": "2026-10-23T16:09:17.596Z",
+  "updatedAt": "2026-10-24T15:05:21.823Z",
   "items": [
+    {
+      "title": "MEF aprueba la nueva Estrategia de Gestión Financiera del Riesgo de Desastres",
+      "url": "https://www.gob.pe/institucion/mef/noticias/1461999-mef-aprueba-la-nueva-estrategia-de-gestion-financiera-del-riesgo-de-desastres",
+      "source": "MEF",
+      "publishedAt": "",
+      "summary": ""
+    },
+    {
+      "title": "Ministro Elmer Cuba: Política contracíclica está orientada a mantener y fortalecer el empleo",
+      "url": "https://www.gob.pe/institucion/mef/noticias/1461805-ministro-elmer-cuba-politica-contraciclica-esta-orientada-a-mantener-y-fortalecer-el-empleo",
+      "source": "MEF",
+      "publishedAt": "",
+      "summary": ""
+    },
     {
       "title": "MEF: el Perú es uno de los pocos países del mundo con capacidad de implementar políticas contracíclicas",
       "url": "https://www.gob.pe/institucion/mef/noticias/1461030-mef-el-peru-es-uno-de-los-pocos-paises-del-mundo-con-capacidad-de-implementar-politicas-contraciclicas",
@@ -58,29 +72,15 @@
       "summary": ""
     },
     {
-      "title": "Gobierno transfiere más de S/19 millones a gobiernos regionales para cumplir con beneficios laborales en el sector Educación",
-      "url": "https://www.gob.pe/institucion/mef/noticias/1456586-gobierno-transfiere-mas-de-s-19-millones-a-gobiernos-regionales-para-cumplir-con-beneficios-laborales-en-el-sector-educacion",
-      "source": "MEF",
-      "publishedAt": "",
-      "summary": ""
-    },
-    {
-      "title": "Inversión privada creció 15,5% en Perú y exportaciones alcanzarían los US$100 000 millones en 2026",
-      "url": "https://www.gob.pe/institucion/mef/noticias/1454647-inversion-privada-crecio-15-5-en-peru-y-exportaciones-alcanzarian-los-us-100-000-millones-en-2026",
-      "source": "MEF",
-      "publishedAt": "",
-      "summary": ""
-    },
-    {
-      "title": "Ministro Juan Sheput: “Gobierno impulsará capacitación en construcción civil para que más trabajadores accedan a empleos en nuevas obras”",
-      "url": "https://www.gob.pe/institucion/mtpe/noticias/1461166-ministro-juan-sheput-gobierno-impulsara-capacitacion-en-construccion-civil-para-que-mas-trabajadores-accedan-a-empleos-en-nuevas-obras",
+      "title": "¿Buscas trabajo? Megaferia del Ministerio de Trabajo ofrecerá más de 5 mil empleos formales en San Juan de Lurigancho",
+      "url": "https://www.gob.pe/institucion/mtpe/noticias/1462125-buscas-trabajo-megaferia-del-ministerio-de-trabajo-ofrecera-mas-de-5-mil-empleos-formales-en-san-juan-de-lurigancho",
       "source": "MTPE",
       "publishedAt": "",
       "summary": ""
     },
     {
-      "title": "Gobierno fortalece en Arequipa a las microempresas y amplía las oportunidades de empleo formal",
-      "url": "https://www.gob.pe/institucion/mtpe/noticias/1459722-gobierno-fortalece-en-arequipa-a-las-microempresas-y-amplia-las-oportunidades-de-empleo-formal",
+      "title": "Gobierno generará más de 35 mil empleos temporales en cerca de 700 distritos del país",
+      "url": "https://www.gob.pe/institucion/mtpe/noticias/1461788-gobierno-generara-mas-de-35-mil-empleos-temporales-en-cerca-de-700-distritos-del-pais",
       "source": "MTPE",
       "publishedAt": "",
       "summary": ""
@@ -88,6 +88,13 @@
     {
       "title": "Gobierno establece días no laborables compensables por la visita del Papa León XIV al Perú",
       "url": "https://www.gob.pe/institucion/mtpe/noticias/1461346-gobierno-establece-dias-no-laborables-compensables-por-la-visita-del-papa-leon-xiv-al-peru",
+      "source": "MTPE",
+      "publishedAt": "",
+      "summary": ""
+    },
+    {
+      "title": "Ministro Juan Sheput: “Gobierno impulsará capacitación en construcción civil para que más trabajadores accedan a empleos en nuevas obras”",
+      "url": "https://www.gob.pe/institucion/mtpe/noticias/1461166-ministro-juan-sheput-gobierno-impulsara-capacitacion-en-construccion-civil-para-que-mas-trabajadores-accedan-a-empleos-en-nuevas-obras",
       "source": "MTPE",
       "publishedAt": "",
       "summary": ""
@@ -102,6 +109,13 @@
     {
       "title": "Ministro Juan Sheput: Gobierno impulsa cambios para acelerar el acceso de los jóvenes al empleo formal",
       "url": "https://www.gob.pe/institucion/mtpe/noticias/1460130-ministro-juan-sheput-gobierno-impulsa-cambios-para-acelerar-el-acceso-de-los-jovenes-al-empleo-formal",
+      "source": "MTPE",
+      "publishedAt": "",
+      "summary": ""
+    },
+    {
+      "title": "Gobierno fortalece en Arequipa a las microempresas y amplía las oportunidades de empleo formal",
+      "url": "https://www.gob.pe/institucion/mtpe/noticias/1459722-gobierno-fortalece-en-arequipa-a-las-microempresas-y-amplia-las-oportunidades-de-empleo-formal",
       "source": "MTPE",
       "publishedAt": "",
       "summary": ""
@@ -123,20 +137,6 @@
     {
       "title": "Ministro Juan Sheput: “EsSalud empieza a recuperarse con más medicamentos y el paciente como prioridad”",
       "url": "https://www.gob.pe/institucion/mtpe/noticias/1458854-ministro-juan-sheput-essalud-empieza-a-recuperarse-con-mas-medicamentos-y-el-paciente-como-prioridad",
-      "source": "MTPE",
-      "publishedAt": "",
-      "summary": ""
-    },
-    {
-      "title": "Diálogo social promovido por el Gobierno logra acuerdos para 950 trabajadores del sector público y privado",
-      "url": "https://www.gob.pe/institucion/mtpe/noticias/1458768-dialogo-social-promovido-por-el-gobierno-logra-acuerdos-para-950-trabajadores-del-sector-publico-y-privado",
-      "source": "MTPE",
-      "publishedAt": "",
-      "summary": ""
-    },
-    {
-      "title": "Ministro Sheput anuncia medidas para aprovechar el talento de peruanos en el exterior y preparar a jóvenes para empleos del futuro",
-      "url": "https://www.gob.pe/institucion/mtpe/noticias/1458761-ministro-sheput-anuncia-medidas-para-aprovechar-el-talento-de-peruanos-en-el-exterior-y-preparar-a-jovenes-para-empleos-del-futuro",
       "source": "MTPE",
       "publishedAt": "",
       "summary": ""
